@@ -1,0 +1,26 @@
+# Prefácio {.unnumbered}
+
+Este livro é o material de **nivelamento em Python** das disciplinas de Ciência de Dados e Fundamentos de Inteligência Artificial.
+
+**Público-alvo:** estudantes que **já programam em outra linguagem** (C, Java, JavaScript...). Por isso, os fundamentos de lógica são apresentados de forma direta, com ênfase no que é específico do Python e no que costuma surpreender quem vem de outras linguagens. O peso maior recai sobre os recursos idiomáticos da linguagem, complexidade algorítmica e estruturas de dados.
+
+## Como o livro está organizado {.unnumbered}
+
+- **Parte I — Fundamentos da linguagem:** a base do Python, de variáveis a funções e anotações de tipo.
+- **Parte II — Coleções e texto:** como armazenar e manipular dados com as coleções nativas, strings e comprehensions.
+- **Parte III — Recursos intermediários:** o que torna o código pythônico e profissional — exceções, pip/venv, OOP, generators, decorators, dataclasses, biblioteca padrão, CLI, testes e arquivos.
+- **Parte IV — Complexidade e algoritmos:** o ferramental para raciocinar sobre eficiência (Big-O) e recursão.
+- **Parte V — Estruturas de dados:** pilha, fila, listas ligadas, árvores e grafos, com implementações completas.
+- **Parte VI — Prática:** exercícios integradores organizados por bloco.
+
+A ordem foi pensada para que cada capítulo use apenas o que veio antes: Big-O e recursão precedem as estruturas de dados porque são usados nelas; decorators precedem dataclasses; type hints precedem dataclasses e testes.
+
+## Ambientes recomendados {.unnumbered}
+
+- **Google Colab** (colab.research.google.com): roda no navegador, sem instalação.
+- **Jupyter Notebook:** ambiente interativo local, via Anaconda.
+- **VS Code + Python:** para scripts `.py` tradicionais e para os capítulos de CLI e testes.
+
+## Convenções {.unnumbered}
+
+Blocos de código são executáveis em qualquer um dos ambientes acima. Saídas esperadas aparecem como comentários (`# 42`). Seguimos o guia de estilo **PEP 8**: `snake_case` para variáveis e funções, `PascalCase` para classes, 4 espaços de indentação.

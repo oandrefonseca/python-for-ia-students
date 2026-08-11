@@ -1,0 +1,72 @@
+# Grafos (Graphs)
+
+Um grafo é um conjunto de **vértices** conectados por **arestas**. Modela redes sociais, mapas, dependências entre tarefas, recomendação — e é a base de muitos algoritmos de IA. Podem ser direcionados ou não, com ou sem pesos nas arestas.
+
+## Representação por lista de adjacência
+
+A forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o `defaultdict` do Capítulo 18:
+
+```python
+from collections import defaultdict, deque
+
+class Grafo:
+    def __init__(self):
+        self.adjacencia: defaultdict = defaultdict(list)
+
+    def adicionar_aresta(self, u, v) -> None:
+        self.adjacencia[u].append(v)
+        self.adjacencia[v].append(u)     # não-direcionado; remova p/ direcionado
+
+    def bfs(self, inicio) -> list:
+        """Busca em largura — usa FILA (Capítulo 25)."""
+        visitados = {inicio}
+        fila = deque([inicio])
+        ordem = []
+        while fila:
+            no = fila.popleft()
+            ordem.append(no)
+            for vizinho in self.adjacencia[no]:
+                if vizinho not in visitados:
+                    visitados.add(vizinho)
+                    fila.append(vizinho)
+        return ordem
+
+    def dfs(self, inicio, visitados=None) -> list:
+        """Busca em profundidade — usa PILHA via recursão (Capítulos 23-24)."""
+        if visitados is None:
+            visitados = set()
+        visitados.add(inicio)
+        ordem = [inicio]
+        for vizinho in self.adjacencia[inicio]:
+            if vizinho not in visitados:
+                ordem += self.dfs(vizinho, visitados)
+        return ordem
+
+
+g = Grafo()
+for u, v in [("A", "B"), ("A", "C"), ("B", "D"), ("C", "D")]:
+    g.adicionar_aresta(u, v)
+
+print(g.bfs("A"))    # ['A', 'B', 'C', 'D'] — expande por camadas
+print(g.dfs("A"))    # ['A', 'B', 'D', 'C'] — vai fundo antes de voltar
+```
+
+## BFS × DFS
+
+| Critério | BFS | DFS |
+|----------|-----|-----|
+| Estrutura auxiliar | Fila (FIFO) | Pilha (recursão) |
+| Ordem de expansão | Por camadas (vizinhos primeiro) | Fundo primeiro |
+| Encontra caminho mais curto (sem pesos)? | **Sim** | Não garante |
+| Custo | O(V + E) | O(V + E) |
+
+O `set` de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do `set` (Capítulo 22) mantém o custo linear.
+
+## O fechamento do livro
+
+Repare como tudo se conectou: **BFS usa a fila** do Capítulo 25, **DFS usa pilha/recursão** dos Capítulos 23–24, a **lista de adjacência** usa o `defaultdict` do Capítulo 18, o nó com referências generaliza a **lista ligada** do Capítulo 26, e os custos O(V + E) se leem com o vocabulário do Capítulo 22.
+
+::: {.callout-note}
+## Conexão com IA
+Busca em grafos é a base dos algoritmos de caminho (Dijkstra, A*) estudados em IA, de sistemas de recomendação, e as próprias redes neurais são **grafos computacionais** — vértices que computam, arestas que carregam valores.
+:::

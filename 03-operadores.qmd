@@ -1,0 +1,64 @@
+# Operadores
+
+## Aritméticos
+
+```python
+a, b = 10, 3
+
+print(a + b)   # 13  soma
+print(a - b)   # 7   subtração
+print(a * b)   # 30  multiplicação
+print(a / b)   # 3.3333...  divisão real (sempre float)
+print(a // b)  # 3   divisão inteira (descarta a parte decimal)
+print(a % b)   # 1   resto da divisão (módulo)
+print(a ** b)  # 1000  potenciação
+```
+
+O operador `%` é muito usado para testar paridade: `n % 2 == 0` indica que `n` é par.
+
+## Relacionais (comparação)
+
+```python
+print(5 == 5)   # True   igualdade
+print(5 != 3)   # True   diferença
+print(5 > 3)    # True
+print(5 <= 4)   # False
+```
+
+Python permite **comparações encadeadas**, um recurso elegante:
+
+```python
+if 0 <= media <= 10:
+    print("Média válida")
+```
+
+## Lógicos
+
+```python
+idade = 20
+tem_matricula = True
+
+print(idade >= 18 and tem_matricula)   # True: ambas verdadeiras
+print(idade < 18 or tem_matricula)     # True: pelo menos uma verdadeira
+print(not tem_matricula)               # False: inverte o valor
+```
+
+`and` e `or` avaliam em curto-circuito: `x != 0 and 10 / x > 1` nunca divide por zero.
+
+## Atribuição composta
+
+```python
+contador = 0
+contador += 1    # equivale a contador = contador + 1
+contador *= 3    # equivale a contador = contador * 3
+```
+
+Não existem `contador++` nem `--contador` em Python.
+
+## Identidade e pertencimento
+
+```python
+print(3 in [1, 2, 3])        # True  — pertencimento
+print("a" not in "python")   # True
+print(x is None)             # identidade de objeto (use com None)
+```

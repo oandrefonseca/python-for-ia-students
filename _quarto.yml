@@ -1,0 +1,65 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: pt-BR
+
+book:
+  title: "Nivelamento em Python"
+  subtitle: "Ciência de Dados e Fundamentos de Inteligência Artificial"
+  author: "Equipe Docente"
+  date: today
+  chapters:
+    - index.qmd
+    - part: "Parte I — Fundamentos da linguagem"
+      chapters:
+        - 01-introducao.qmd
+        - 02-variaveis-tipos.qmd
+        - 03-operadores.qmd
+        - 04-entrada-saida.qmd
+        - 05-condicionais.qmd
+        - 06-repeticao.qmd
+        - 07-funcoes.qmd
+        - 08-type-hints.qmd
+    - part: "Parte II — Coleções e texto"
+      chapters:
+        - 09-colecoes.qmd
+        - 10-strings.qmd
+        - 11-comprehensions.qmd
+    - part: "Parte III — Recursos intermediários da linguagem"
+      chapters:
+        - 12-erros.qmd
+        - 13-modulos-pip-venv.qmd
+        - 14-oop.qmd
+        - 15-iteradores-generators.qmd
+        - 16-decorators.qmd
+        - 17-dataclasses.qmd
+        - 18-biblioteca-padrao.qmd
+        - 19-cli.qmd
+        - 20-testes.qmd
+        - 21-arquivos-csv-json.qmd
+    - part: "Parte IV — Complexidade e algoritmos"
+      chapters:
+        - 22-big-o.qmd
+        - 23-recursao.qmd
+    - part: "Parte V — Estruturas de dados"
+      chapters:
+        - 24-pilha.qmd
+        - 25-fila.qmd
+        - 26-listas-ligadas.qmd
+        - 27-arvores.qmd
+        - 28-grafos.qmd
+    - part: "Parte VI — Prática"
+      chapters:
+        - 29-exercicios.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+    code-copy: true
+    code-line-numbers: false
+
+execute:
+  enabled: false

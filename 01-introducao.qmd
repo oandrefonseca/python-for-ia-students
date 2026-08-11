@@ -1,0 +1,35 @@
+# Introdução à linguagem Python
+
+Python é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica, criada por Guido van Rossum e lançada em 1991. Ela se tornou a linguagem padrão em Ciência de Dados e Inteligência Artificial por três motivos principais: a sintaxe é legível e próxima do pseudocódigo, o ecossistema de bibliotecas científicas é vasto (NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow) e a comunidade é enorme, o que facilita encontrar soluções e documentação.
+
+## Características importantes
+
+- **Interpretada:** o código é executado linha a linha, sem etapa de compilação explícita.
+- **Tipagem dinâmica:** não é preciso declarar o tipo de uma variável; o interpretador infere em tempo de execução.
+- **Tipagem forte:** o interpretador não converte tipos silenciosamente em operações incompatíveis (`"2" + 2` gera `TypeError`, ao contrário do JavaScript).
+- **Indentação obrigatória:** blocos de código são delimitados por indentação (4 espaços), não por chaves `{}`. Não há `;` ao fim das linhas.
+- **Tudo é objeto:** inteiros, funções, classes e módulos são objetos de primeira classe.
+
+## O que muda para quem vem de C, Java ou JavaScript
+
+- Não há `++`, `--` nem `switch` clássico (há `match/case` desde o Python 3.10).
+- Valores "falsy": `0`, `0.0`, `""`, `[]`, `{}`, `set()` e `None` avaliam como `False` em contexto booleano; o resto é `True`. Isso permite `if lista:` em vez de `if len(lista) > 0:`.
+- Idiomas que surpreendem:
+
+```python
+a, b = b, a                       # troca sem variável temporária
+x = 5 if condicao else 10         # operador ternário
+if 0 <= nota <= 10:               # comparação encadeada
+    ...
+```
+
+## O primeiro programa
+
+```python
+print("Olá, turma de Ciência de Dados!")
+```
+
+::: {.callout-note}
+## Estilo de código
+A convenção da comunidade é o **PEP 8**: `snake_case` para variáveis e funções (`media_final`), `PascalCase` para classes (`ContaBancaria`), 4 espaços de indentação.
+:::

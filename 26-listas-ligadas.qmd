@@ -1,0 +1,86 @@
+# Listas ligadas (Linked Lists)
+
+Uma lista ligada é uma sequência de **nós**, cada um contendo um valor e uma referência ao próximo. Diferente da lista do Python (um array dinâmico), os elementos não ficam contíguos na memória.
+
+## O nó — duas formas de escrevê-lo
+
+Forma clássica e forma com `@dataclass` (Capítulo 17); escolha seu estilo:
+
+```python
+# Clássica
+class No:
+    def __init__(self, valor):
+        self.valor = valor
+        self.proximo = None
+
+# Com dataclass
+from dataclasses import dataclass
+from typing import Optional
+
+@dataclass
+class No:
+    valor: int
+    proximo: Optional["No"] = None
+```
+
+## A lista ligada
+
+```python
+class ListaLigada:
+    def __init__(self):
+        self.cabeca: Optional[No] = None
+
+    def inserir_inicio(self, valor) -> None:     # O(1)
+        novo = No(valor)
+        novo.proximo = self.cabeca
+        self.cabeca = novo
+
+    def inserir_fim(self, valor) -> None:        # O(n)
+        novo = No(valor)
+        if not self.cabeca:
+            self.cabeca = novo
+            return
+        atual = self.cabeca
+        while atual.proximo:
+            atual = atual.proximo
+        atual.proximo = novo
+
+    def buscar(self, valor) -> bool:             # O(n)
+        atual = self.cabeca
+        while atual:
+            if atual.valor == valor:
+                return True
+            atual = atual.proximo
+        return False
+
+    def percorrer(self) -> None:
+        atual = self.cabeca
+        while atual:
+            print(atual.valor, end=" -> ")
+            atual = atual.proximo
+        print("None")
+
+
+lista = ListaLigada()
+lista.inserir_inicio(3)
+lista.inserir_inicio(2)
+lista.inserir_fim(4)
+lista.percorrer()        # 2 -> 3 -> 4 -> None
+```
+
+## Lista ligada × lista do Python
+
+| Operação | Lista ligada | `list` (array dinâmico) |
+|----------|--------------|-------------------------|
+| Acesso por índice | O(n) | **O(1)** |
+| Inserir no início | **O(1)** | O(n) |
+| Inserir no fim | O(n)* | O(1) amortizado |
+| Buscar valor | O(n) | O(n) |
+
+\* O(1) se mantivermos uma referência à cauda.
+
+## Por que estudar, se o Python já tem `list`?
+
+Porque o conceito de **nós encadeados por referência** é a base das estruturas seguintes: uma árvore é um nó com dois "próximos" (Capítulo 27), um grafo generaliza para vários vizinhos (Capítulo 28), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.
+
+Variantes que você encontrará na literatura: **duplamente ligada** (referência também ao anterior — é como o `deque` funciona) e **circular** (o último aponta para o primeiro).

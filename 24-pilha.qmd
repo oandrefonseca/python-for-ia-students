@@ -1,0 +1,90 @@
+# Estruturas de dados: Pilha (Stack)
+
+## Conceito
+
+A pilha segue a política **LIFO** (*Last In, First Out*): o último elemento inserido é o primeiro a sair. A analogia clássica é uma pilha de pratos — só se coloca e se retira pelo topo.
+
+```
+        push(4)  →  |  4  | ← topo (próximo a sair)
+                    |  3  |
+                    |  2  |
+                    |  1  | ← base
+```
+
+**Operações fundamentais** (todas em O(1)):
+
+| Operação | Descrição |
+|----------|-----------|
+| `push(x)` | Insere `x` no topo |
+| `pop()` | Remove e retorna o elemento do topo |
+| `peek()` | Consulta o topo sem remover |
+| `is_empty()` | Verifica se a pilha está vazia |
+
+## Implementação com lista
+
+A lista do Python oferece `append` (push) e `pop` em O(1) no final, o que a torna ideal para pilhas:
+
+```python
+class Pilha:
+    def __init__(self):
+        self._itens: list = []
+
+    def push(self, item) -> None:
+        self._itens.append(item)
+
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("pop em pilha vazia")
+        return self._itens.pop()
+
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("peek em pilha vazia")
+        return self._itens[-1]
+
+    def is_empty(self) -> bool:
+        return not self._itens
+
+    def __len__(self) -> int:
+        return len(self._itens)
+
+    def __repr__(self) -> str:
+        return f"Pilha(base → topo: {self._itens})"
+
+
+p = Pilha()
+p.push(1)
+p.push(2)
+p.push(3)
+print(p)           # Pilha(base → topo: [1, 2, 3])
+print(p.pop())     # 3  (último a entrar, primeiro a sair)
+print(p.peek())    # 2
+print(len(p))      # 2
+```
+
+## Aplicações típicas
+
+- **Desfazer/refazer (Ctrl+Z)** em editores;
+- **Histórico de navegação** (botão "voltar");
+- **Pilha de chamadas** de funções — é ela que a recursão consome (Capítulo 23);
+- **Validação de expressões** com parênteses balanceados;
+- **Busca em profundidade (DFS)** em grafos (Capítulo 28) — tema que reaparecerá em IA.
+
+## Exemplo aplicado: parênteses balanceados
+
+```python
+def balanceada(expressao: str) -> bool:
+    pares = {")": "(", "]": "[", "}": "{"}
+    pilha = Pilha()
+    for caractere in expressao:
+        if caractere in "([{":
+            pilha.push(caractere)
+        elif caractere in ")]}":
+            if pilha.is_empty() or pilha.pop() != pares[caractere]:
+                return False
+    return pilha.is_empty()
+
+print(balanceada("(a + b) * [c - d]"))   # True
+print(balanceada("(a + b]"))             # False
+print(balanceada("((a + b)"))            # False
+```

@@ -1,0 +1,68 @@
+# Noções de orientação a objetos
+
+Uma **classe** é um molde que define atributos (dados) e métodos (comportamentos); um **objeto** é uma instância desse molde. Este capítulo é a base para as estruturas de dados da Parte V, que implementaremos como classes.
+
+```python
+class Aluno:
+    def __init__(self, nome: str, curso: str):
+        self.nome = nome          # atributos de instância
+        self.curso = curso
+        self.notas: list[float] = []
+
+    def adicionar_nota(self, nota: float) -> None:
+        self.notas.append(nota)
+
+    def media(self) -> float:
+        if not self.notas:
+            return 0.0
+        return sum(self.notas) / len(self.notas)
+
+
+a1 = Aluno("Ana", "Ciência de Dados")
+a1.adicionar_nota(8.5)
+a1.adicionar_nota(9.0)
+print(f"{a1.nome}: média {a1.media():.1f}")
+```
+
+Pontos essenciais:
+
+- `__init__` é o construtor, executado na criação do objeto;
+- `self` referencia o próprio objeto e é sempre o primeiro parâmetro dos métodos;
+- atributos guardam o **estado**; métodos definem o **comportamento**.
+
+## Métodos especiais (dunder)
+
+Métodos com nomes entre underscores duplos integram a classe à linguagem:
+
+```python
+class ContaBancaria:
+    def __init__(self, titular: str, saldo: float = 0):
+        self.titular = titular
+        self.saldo = saldo
+
+    def __repr__(self) -> str:              # representação legível
+        return f"Conta({self.titular}, R${self.saldo:.2f})"
+
+    def __eq__(self, outra) -> bool:        # comportamento do ==
+        return self.titular == outra.titular
+
+c = ContaBancaria("Ana", 100)
+print(c)          # Conta(Ana, R$100.00)
+```
+
+Outros que você reencontrará: `__len__` (habilita `len(obj)`), `__getitem__` (habilita `obj[i]`), `__iter__` (Capítulo 15).
+
+## Herança e encapsulamento
+
+```python
+class ContaPoupanca(ContaBancaria):         # herda de ContaBancaria
+    def render(self, taxa: float) -> None:
+        self.saldo *= (1 + taxa)
+```
+
+O encapsulamento em Python é por convenção: o prefixo `_atributo` sinaliza "uso interno".
+
+::: {.callout-note}
+## Aonde isso vai dar
+Escrever `__init__`, `__repr__` e `__eq__` à mão para classes que só guardam dados é repetitivo. No Capítulo 17 (**Dataclasses**) você verá a forma moderna de gerar tudo isso com uma linha — mas antes precisamos de decorators (Capítulo 16), o mecanismo que a sustenta.
+:::

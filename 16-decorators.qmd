@@ -1,0 +1,61 @@
+# Decorators
+
+Um decorator é uma função que **recebe outra função e devolve uma versão modificada** — sem alterar o código original. Isso só é possível porque funções são objetos de primeira classe (Capítulo 7). Decorators aparecem em todo framework: `@app.route` (Flask), `@property`, `@staticmethod`, `@dataclass` (próximo capítulo).
+
+## Construindo um decorator
+
+```python
+import time
+
+def cronometrar(func):
+    def wrapper(*args, **kwargs):
+        inicio = time.perf_counter()
+        resultado = func(*args, **kwargs)
+        print(f"{func.__name__} levou {time.perf_counter() - inicio:.4f}s")
+        return resultado
+    return wrapper
+
+
+@cronometrar                       # equivale a: processar = cronometrar(processar)
+def processar(n):
+    return sum(range(n))
+
+processar(1_000_000)
+```
+
+A linha `@cronometrar` é açúcar sintático para `processar = cronometrar(processar)`. O `wrapper` usa `*args, **kwargs` para aceitar qualquer assinatura.
+
+## Decorators com parâmetros
+
+```python
+def repetir(n):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(n):
+                resultado = func(*args, **kwargs)
+            return resultado
+        return wrapper
+    return decorator
+
+@repetir(3)
+def cumprimentar():
+    print("Olá!")
+```
+
+## Decorators prontos que você usará
+
+- `@property` — transforma método em atributo calculado;
+- `@staticmethod` e `@classmethod` — métodos sem `self` / com a classe;
+- `@functools.lru_cache` — **memoização** automática, que reaparece na Recursão:
+
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib(n):
+    return n if n < 2 else fib(n - 1) + fib(n - 2)
+```
+
+::: {.callout-tip}
+Ao escrever seus próprios decorators, use `@functools.wraps(func)` no `wrapper` para preservar nome e docstring da função original.
+:::

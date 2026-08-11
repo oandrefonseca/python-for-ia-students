@@ -1,0 +1,65 @@
+# Estruturas de repetição
+
+## Laço `while`
+
+Repete enquanto a condição for verdadeira. Ideal quando não se sabe de antemão quantas repetições ocorrerão:
+
+```python
+contador = 1
+while contador <= 5:
+    print(f"Iteração {contador}")
+    contador += 1
+```
+
+## Laço `for` e a função `range()`
+
+O `for` do Python percorre **qualquer iterável** (lista, string, range, arquivo...), não um contador:
+
+```python
+for i in range(5):          # 0, 1, 2, 3, 4
+    print(i)
+
+for i in range(2, 11, 2):   # 2, 4, 6, 8, 10 (início, fim exclusivo, passo)
+    print(i)
+
+for letra in "dados":
+    print(letra)
+```
+
+## `break`, `continue` e `else` em laços
+
+```python
+for n in range(2, 20):
+    if n % 7 == 0:
+        print(f"{n} é o primeiro múltiplo de 7 encontrado")
+        break            # interrompe o laço
+    if n % 2 == 0:
+        continue         # pula para a próxima iteração
+    print(n, "é ímpar")
+```
+
+O `else` de um laço executa apenas se **não** houve `break` — útil em buscas:
+
+```python
+for x in numeros:
+    if x < 0:
+        print("há negativo")
+        break
+else:
+    print("todos não-negativos")
+```
+
+## `enumerate` e `zip`
+
+Evitam o gerenciamento manual de índices:
+
+```python
+alunos = ["Ana", "Bruno", "Carla"]
+notas = [9.0, 6.5, 8.0]
+
+for indice, aluno in enumerate(alunos):
+    print(indice, aluno)
+
+for aluno, nota in zip(alunos, notas):
+    print(f"{aluno}: {nota}")
+```

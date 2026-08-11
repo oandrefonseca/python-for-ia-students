@@ -1,0 +1,34 @@
+# Entrada e saída de dados
+
+A função `input()` lê texto do usuário e **sempre retorna `str`**; converta quando precisar de número:
+
+```python
+nome = input("Digite seu nome: ")
+idade = int(input("Digite sua idade: "))
+print("Olá,", nome, "- você tem", idade, "anos.")
+```
+
+## f-strings (formatação moderna)
+
+As f-strings permitem interpolar variáveis diretamente no texto e controlar a formatação. São o padrão recomendado e serão usadas em todo o livro:
+
+```python
+nota1, nota2 = 8.5, 7.25
+media = (nota1 + nota2) / 2
+
+print(f"A média foi {media:.2f}")      # .2f → duas casas decimais
+print(f"Percentual: {0.8734:.1%}")     # → 87.3%
+print(f"{'Nome':<10}{'Nota':>6}")      # alinhamento em colunas
+print(f"{1234567:,}")                  # → 1,234,567 (separador de milhar)
+```
+
+## Parâmetros úteis do print
+
+```python
+print("a", "b", "c", sep="-")   # a-b-c
+print("sem quebra", end=" ")    # não pula linha ao final
+```
+
+::: {.callout-tip}
+Em notebooks (Colab/Jupyter), a última expressão da célula é exibida automaticamente, sem `print`. Em scripts `.py`, o `print` é obrigatório para exibir.
+:::

@@ -1,0 +1,80 @@
+# Dataclasses
+
+Escrever classes que só guardam dados exige `__init__`, `__repr__` e `__eq__` repetitivos (Capítulo 14). O decorator `@dataclass` (Capítulo 16) gera tudo isso automaticamente a partir das **anotações de tipo** (Capítulo 8) — este capítulo une os três.
+
+## Antes e depois
+
+```python
+# Forma clássica
+class PontoClassico:
+    def __init__(self, x: float, y: float):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"Ponto(x={self.x}, y={self.y})"
+
+    def __eq__(self, outro):
+        return (self.x, self.y) == (outro.x, outro.y)
+
+
+# Forma moderna
+from dataclasses import dataclass
+
+@dataclass
+class Ponto:
+    x: float
+    y: float
+
+p1 = Ponto(1.0, 2.0)
+p2 = Ponto(1.0, 2.0)
+print(p1)          # Ponto(x=1.0, y=2.0)  — __repr__ automático
+print(p1 == p2)    # True                 — __eq__ automático
+```
+
+## Valores padrão e campos mutáveis
+
+```python
+from dataclasses import dataclass, field
+
+@dataclass
+class Aluno:
+    nome: str
+    curso: str = "Ciência de Dados"
+    notas: list[float] = field(default_factory=list)   # NUNCA use notas: list = []
+
+    def media(self) -> float:
+        return sum(self.notas) / len(self.notas) if self.notas else 0.0
+```
+
+O `field(default_factory=list)` cria uma lista **nova** por instância — a mesma armadilha do valor padrão mutável vista em Funções.
+
+## Opções úteis
+
+```python
+@dataclass(frozen=True)      # instâncias imutáveis (podem ser chave de dict)
+class Coordenada:
+    lat: float
+    lon: float
+
+@dataclass(order=True)       # gera <, <=, >, >= (comparação campo a campo)
+class Versao:
+    maior: int
+    menor: int
+```
+
+## Conexão com as estruturas de dados
+
+Dataclasses são ideais para representar **nós** de listas ligadas, árvores e grafos (Parte V):
+
+```python
+from dataclasses import dataclass
+from typing import Optional
+
+@dataclass
+class No:
+    valor: int
+    proximo: Optional["No"] = None
+```
+
+Nos capítulos da Parte V mostraremos as duas formas — clássica e com dataclass — para você escolher seu estilo.

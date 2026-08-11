@@ -1,0 +1,72 @@
+# Biblioteca padrão essencial
+
+Módulos que evitam reinventar a roda no dia a dia de dados. "Baterias inclusas" é um lema do Python: muita coisa já vem pronta, sem `pip install`.
+
+## `collections`
+
+```python
+from collections import Counter, defaultdict, deque
+
+# Counter: contagem em uma linha
+Counter("banana")                    # Counter({'a': 3, 'n': 2, 'b': 1})
+Counter(palavras).most_common(3)     # os 3 mais frequentes
+
+# defaultdict: dicionário com valor padrão (evita KeyError)
+grupos = defaultdict(list)
+for nome, turma in registros:
+    grupos[turma].append(nome)
+
+# deque: fila de duas pontas, O(1) nas extremidades
+fila = deque([1, 2, 3])
+fila.appendleft(0)
+fila.popleft()
+```
+
+O `deque` será a base da Fila (Capítulo 25) e o `defaultdict`, da lista de adjacência de Grafos (Capítulo 28).
+
+## `itertools`
+
+```python
+from itertools import product, combinations, permutations, chain
+
+list(combinations([1, 2, 3], 2))     # [(1,2), (1,3), (2,3)]
+list(permutations("ab"))             # [('a','b'), ('b','a')]
+list(product([0, 1], repeat=2))      # produto cartesiano
+list(chain([1, 2], [3, 4]))          # concatena iteráveis
+```
+
+Todas as funções de `itertools` retornam **iteradores** (Capítulo 15) — memória constante mesmo para combinações enormes.
+
+## `datetime`
+
+```python
+from datetime import datetime, timedelta
+
+agora = datetime.now()
+ontem = agora - timedelta(days=1)
+agora.strftime("%d/%m/%Y %H:%M")               # formatar
+datetime.strptime("11/08/2026", "%d/%m/%Y")    # interpretar
+```
+
+## `pathlib`
+
+```python
+from pathlib import Path
+
+p = Path("dados") / "arquivo.csv"    # caminhos multiplataforma com /
+p.exists(); p.suffix; p.stem
+list(Path(".").glob("*.csv"))        # todos os CSVs da pasta
+```
+
+## `functools`
+
+```python
+from functools import lru_cache, reduce
+
+@lru_cache(maxsize=None)             # memoização (visto em Decorators)
+def fib(n): ...
+
+reduce(lambda acc, x: acc + x, [1, 2, 3, 4])   # 10
+```
+
+Outros que valem conhecer: `math`, `random`, `statistics`, `os`, `json` e `csv` (próximos capítulos), `re` (expressões regulares).

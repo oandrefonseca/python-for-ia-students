@@ -1,0 +1,62 @@
+# Interface de linha de comando
+
+Até aqui o código rodou em notebooks. Este capítulo transforma scripts em **ferramentas de terminal** — a forma como se distribui um pré-processamento de dados ou o treino de um modelo.
+
+## Executando scripts
+
+```bash
+python script.py
+```
+
+## O idioma `if __name__ == "__main__"`
+
+Todo módulo tem a variável `__name__`: vale `"__main__"` quando o arquivo é executado diretamente, e o nome do módulo quando é importado. O idioma separa "código de biblioteca" de "ponto de entrada":
+
+```python
+def processar(caminho: str) -> int:
+    ...
+
+if __name__ == "__main__":       # só roda com `python script.py`,
+    processar("dados.csv")       # não quando alguém faz `import script`
+```
+
+## Argumentos com `sys.argv`
+
+A forma crua: `sys.argv` é a lista de argumentos da linha de comando (o item 0 é o nome do script):
+
+```python
+import sys
+print(sys.argv)      # python script.py dados.csv → ['script.py', 'dados.csv']
+```
+
+## `argparse` — a forma profissional
+
+O módulo `argparse` valida argumentos, converte tipos e gera `--help` automaticamente:
+
+```python
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description="Resume um CSV de notas.")
+    parser.add_argument("arquivo", help="caminho do CSV de entrada")
+    parser.add_argument("--separador", default=",", help="separador de colunas")
+    parser.add_argument("--top", type=int, default=5, help="quantos exibir")
+    parser.add_argument("-v", "--verboso", action="store_true")
+
+    args = parser.parse_args()
+    print(args.arquivo, args.separador, args.top, args.verboso)
+
+if __name__ == "__main__":
+    main()
+```
+
+Uso no terminal:
+
+```bash
+python resumo.py notas.csv --top 3 -v
+python resumo.py --help          # ajuda gerada automaticamente
+```
+
+::: {.callout-tip}
+Padrão de projeto para os trabalhos da disciplina: funções puras testáveis no corpo do módulo + um `main()` com `argparse` + o guard `__main__`. O próximo capítulo (Testes) fecha esse ciclo.
+:::

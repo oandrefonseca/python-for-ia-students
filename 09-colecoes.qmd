@@ -1,0 +1,97 @@
+# Coleções nativas: listas, tuplas, dicionários e conjuntos
+
+## Listas (`list`) — mutáveis e ordenadas
+
+A lista é a coleção mais versátil do Python: aceita tipos mistos, cresce dinamicamente e mantém a ordem de inserção.
+
+```python
+frutas = ["maçã", "banana", "uva"]
+
+frutas.append("manga")        # adiciona ao final
+frutas.insert(1, "pera")      # insere na posição 1
+frutas.remove("uva")          # remove pela primeira ocorrência do valor
+ultimo = frutas.pop()         # remove e retorna o último elemento
+print(len(frutas))            # tamanho
+print("banana" in frutas)     # pertencimento → True
+frutas.sort()                 # ordena no lugar
+ordenada = sorted(frutas)     # retorna nova lista ordenada
+```
+
+### Indexação e fatiamento (slicing)
+
+Fundamentais aqui e, depois, em NumPy e Pandas:
+
+```python
+numeros = [10, 20, 30, 40, 50]
+
+print(numeros[0])      # 10  (primeiro)
+print(numeros[-1])     # 50  (último)
+print(numeros[1:4])    # [20, 30, 40]  (índices 1 a 3)
+print(numeros[:3])     # [10, 20, 30]
+print(numeros[::2])    # [10, 30, 50]  (de 2 em 2)
+print(numeros[::-1])   # [50, 40, 30, 20, 10]  (invertida)
+```
+
+::: {.callout-warning}
+## Referência ≠ cópia
+Listas são passadas por referência: `b = a` **não** cria cópia, apenas outra referência ao mesmo objeto. Use `b = a.copy()` ou `b = a[:]`. Para estruturas aninhadas, `copy.deepcopy(a)`.
+:::
+
+## Tuplas (`tuple`) — imutáveis e ordenadas
+
+```python
+coordenada = (5.2, -35.8)
+x, y = coordenada          # desempacotamento
+# coordenada[0] = 10       # ERRO: tupla não pode ser alterada
+```
+
+Use tuplas para dados que não devem mudar (coordenadas, registros fixos) e como chaves de dicionário.
+
+## Dicionários (`dict`) — pares chave-valor
+
+Estrutura essencial em Ciência de Dados: é a base de JSONs, de registros e do próprio Pandas. Busca por chave em **O(1)**.
+
+```python
+aluno = {
+    "nome": "Carla",
+    "curso": "Ciência de Dados",
+    "notas": [8.0, 9.5, 7.0],
+}
+
+print(aluno["nome"])                 # acesso direto (KeyError se não existir)
+print(aluno.get("idade", "N/D"))     # acesso seguro com valor padrão
+aluno["idade"] = 21                  # inserção/atualização
+
+for chave, valor in aluno.items():
+    print(chave, "→", valor)
+
+print(list(aluno.keys()))
+print(list(aluno.values()))
+```
+
+## Conjuntos (`set`) — elementos únicos, sem ordem
+
+Pertencimento em **O(1)** e operações de conjunto — úteis em pré-processamento de dados:
+
+```python
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+print(a | b)   # união: {1, 2, 3, 4, 5, 6}
+print(a & b)   # interseção: {3, 4}
+print(a - b)   # diferença: {1, 2}
+
+repetidos = [1, 1, 2, 3, 3, 3]
+unicos = set(repetidos)     # {1, 2, 3} — remove duplicatas em uma linha
+```
+
+## Quadro comparativo
+
+| Estrutura | Sintaxe | Mutável? | Ordenada? | Duplicatas? | Busca por valor | Uso típico |
+|-----------|---------|----------|-----------|-------------|-----------------|------------|
+| Lista | `[1, 2]` | Sim | Sim | Sim | O(n) | Sequências gerais |
+| Tupla | `(1, 2)` | Não | Sim | Sim | O(n) | Registros fixos |
+| Dicionário | `{"a": 1}` | Sim | Sim (inserção) | Chaves não | **O(1)** | Mapeamentos |
+| Conjunto | `{1, 2}` | Sim | Não | Não | **O(1)** | Unicidade |
+
+Os custos O(1) e O(n) serão formalizados no Capítulo sobre Big-O.

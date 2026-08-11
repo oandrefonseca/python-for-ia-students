@@ -1,0 +1,67 @@
+# Iteradores e generators
+
+Um dos recursos mais importantes do Python para Ciência de Dados, porque permite **processar dados que não cabem em memória**.
+
+## Iterável × iterador
+
+Um *iterável* pode ser percorrido (lista, string, dict, arquivo); um *iterador* produz valores um a um via `next()` e sinaliza o fim com a exceção `StopIteration`. O `for` cria e consome um iterador internamente:
+
+```python
+it = iter([10, 20, 30])
+next(it)   # 10
+next(it)   # 20
+next(it)   # 30
+# next(it) → StopIteration
+```
+
+## Generators com `yield`
+
+Uma função generator produz valores sob demanda, mantendo o estado entre chamadas, sem construir a coleção inteira na memória:
+
+```python
+def contar_ate(n):
+    i = 1
+    while i <= n:
+        yield i          # devolve um valor e "pausa" aqui
+        i += 1
+
+for numero in contar_ate(5):
+    print(numero)        # 1, 2, 3, 4, 5
+```
+
+Generators podem ser infinitos — quem consome decide quando parar:
+
+```python
+def naturais():
+    n = 0
+    while True:
+        yield n
+        n += 1
+```
+
+## O ponto central: memória
+
+```python
+# Lista: materializa 10 milhões de itens na RAM de uma vez
+soma = sum([x ** 2 for x in range(10_000_000)])
+
+# Generator expression: produz um item por vez, memória constante
+soma = sum(x ** 2 for x in range(10_000_000))    # note os parênteses
+```
+
+A *generator expression* usa a mesma sintaxe da list comprehension, trocando colchetes por parênteses.
+
+## Aplicação típica: arquivos grandes
+
+```python
+def ler_linhas(caminho):
+    with open(caminho) as f:
+        for linha in f:          # o próprio arquivo é um iterador de linhas
+            yield linha.strip()
+```
+
+Um pipeline de generators processa gigabytes com memória constante — o mesmo princípio que o Pandas usa com `chunksize` e que frameworks de ML usam em *data loaders*.
+
+::: {.callout-warning}
+Um generator se **esgota**: depois de consumido, não produz mais valores. Para percorrer de novo, crie outro.
+:::

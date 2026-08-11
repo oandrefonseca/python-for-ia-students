@@ -1,0 +1,44 @@
+# Compreensões (comprehensions)
+
+Sintaxe compacta e idiomática para construir coleções — onipresente em código de Ciência de Dados.
+
+## List comprehension
+
+```python
+quadrados = [x ** 2 for x in range(10)]
+pares = [x for x in range(20) if x % 2 == 0]
+
+# Equivalente "tradicional" do primeiro exemplo:
+quadrados = []
+for x in range(10):
+    quadrados.append(x ** 2)
+```
+
+Com transformação condicional (if/else antes do `for`):
+
+```python
+rotulos = ["par" if x % 2 == 0 else "ímpar" for x in range(5)]
+```
+
+Aninhada (matrizes):
+
+```python
+matriz = [[i * j for j in range(3)] for i in range(3)]
+```
+
+## Dict e set comprehension
+
+```python
+notas = {"Ana": 8, "Bruno": 5, "Carla": 9}
+
+aprovados = {nome: nota for nome, nota in notas.items() if nota >= 7}
+iniciais = {nome[0] for nome in notas}
+```
+
+## Quando usar (e quando não)
+
+Prefira comprehensions quando o objetivo é **construir uma coleção** a partir de outra — é mais legível e geralmente mais rápido que `for` + `append`. Para lógica complexa (vários `if`s, efeitos colaterais, mais de duas dimensões), o laço explícito continua preferível: legibilidade vence concisão.
+
+::: {.callout-tip}
+No Capítulo sobre generators você verá a *generator expression* — a mesma sintaxe com parênteses, `(x ** 2 for x in ...)` — que produz os valores sob demanda, sem materializar a lista na memória.
+:::

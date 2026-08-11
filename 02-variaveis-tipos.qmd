@@ -1,0 +1,47 @@
+# Primeiros passos: variáveis e tipos de dados
+
+Uma variável é um nome que referencia um valor na memória. Em Python, a atribuição é feita com `=`, sem declaração de tipo:
+
+```python
+nome = "Ana"          # str  (texto)
+idade = 22            # int  (número inteiro)
+altura = 1.68         # float (número real)
+aprovada = True       # bool (booleano: True ou False)
+nota = None           # NoneType (ausência de valor)
+```
+
+A função `type()` revela o tipo de qualquer objeto:
+
+```python
+print(type(nome))     # <class 'str'>
+print(type(idade))    # <class 'int'>
+print(type(altura))   # <class 'float'>
+```
+
+## Conversão de tipos (casting)
+
+```python
+numero_texto = "42"
+numero = int(numero_texto)      # 42 (int)
+pi_texto = str(3.14)            # "3.14" (str)
+inteiro = int(3.99)             # 3 (trunca, não arredonda)
+real = float("2.5")             # 2.5 (float)
+```
+
+::: {.callout-warning}
+`int("3.5")` lança `ValueError` — a string precisa representar um inteiro. Para converter, passe antes por `float`: `int(float("3.5"))`.
+:::
+
+## Regras de nomenclatura
+
+- Nomes podem conter letras, números e `_`, mas não podem começar com número.
+- Python diferencia maiúsculas de minúsculas (`Nota` ≠ `nota`).
+- Convenção (PEP 8): `snake_case`, como `media_final` e `calcular_imc`.
+
+## Atribuição múltipla e desempacotamento
+
+```python
+x, y, z = 1, 2, 3
+a = b = 0             # ambos referenciam 0
+x, y = y, x           # troca de valores
+```

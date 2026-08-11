@@ -1,0 +1,70 @@
+# Complexidade e notação Big-O
+
+A notação Big-O descreve como o tempo (ou a memória) de um algoritmo **cresce em função do tamanho da entrada** `n`, ignorando constantes e termos menores. É o vocabulário que justifica toda escolha de estrutura de dados na Parte V.
+
+## As classes de complexidade
+
+| Notação | Nome | Exemplo |
+|---------|------|---------|
+| O(1) | Constante | Acesso a `lista[i]`, busca em `dict`/`set` |
+| O(log n) | Logarítmica | Busca binária, busca em BST balanceada |
+| O(n) | Linear | Percorrer uma lista, `x in lista` |
+| O(n log n) | Linearítmica | Ordenações eficientes (`sorted`) |
+| O(n²) | Quadrática | Laços aninhados, bubble sort |
+| O(2ⁿ) | Exponencial | Fibonacci recursivo ingênuo |
+
+## Por que isso importa na prática
+
+```python
+# Buscar em lista: O(n) — percorre até encontrar
+if item in minha_lista: ...
+
+# Buscar em set/dict: O(1) — acesso direto por hash
+if item in meu_set: ...
+```
+
+Para milhões de buscas repetidas, trocar `list` por `set` pode transformar minutos em milissegundos. Um experimento simples:
+
+```python
+import time
+
+n = 10_000_000
+como_lista = list(range(n))
+como_set = set(como_lista)
+
+inicio = time.perf_counter()
+-1 in como_lista                 # pior caso: percorre tudo
+print(f"lista: {time.perf_counter() - inicio:.3f}s")
+
+inicio = time.perf_counter()
+-1 in como_set                   # hash: tempo constante
+print(f"set:   {time.perf_counter() - inicio:.6f}s")
+```
+
+## Classificando código
+
+```python
+def soma(lista):                 # O(n): uma passada
+    total = 0
+    for x in lista:
+        total += x
+    return total
+
+def tem_duplicata_ingenuo(lista):    # O(n²): laços aninhados
+    for i in range(len(lista)):
+        for j in range(i + 1, len(lista)):
+            if lista[i] == lista[j]:
+                return True
+    return False
+
+def tem_duplicata(lista):        # O(n): usa set
+    return len(set(lista)) != len(lista)
+```
+
+## Complexidade de espaço
+
+O mesmo raciocínio vale para memória: a versão com `set` acima usa espaço O(n) extra, enquanto a ingênua usa O(1). Generators (Capítulo 15) são o exemplo clássico de troca consciente: tempo igual, espaço O(1) em vez de O(n).
+
+::: {.callout-note}
+O objetivo neste nivelamento é **saber classificar e comparar** — não demonstrações formais. Nas estruturas da Parte V, cada operação virá com seu custo anotado; aqui está o vocabulário para lê-los.
+:::

@@ -1,0 +1,48 @@
+# Strings em profundidade
+
+Strings são sequências **imutáveis** de caracteres — todo método retorna uma nova string, nunca altera a original:
+
+```python
+frase = "  Ciência de Dados na UFRN  "
+
+print(frase.strip())            # remove espaços das bordas
+print(frase.lower())            # minúsculas
+print(frase.upper())            # maiúsculas
+print(frase.replace("a", "@"))  # substituição
+print(frase.split())            # ['Ciência', 'de', 'Dados', 'na', 'UFRN']
+print("-".join(["a", "b", "c"]))  # 'a-b-c'
+print(frase.count("a"))         # ocorrências
+print("Dados" in frase)         # True
+```
+
+`split` e `join` são a dupla mais usada em limpeza de texto: quebrar em pedaços, transformar, reunir.
+
+## Strings são sequências
+
+Aceitam indexação e slicing exatamente como listas:
+
+```python
+palavra = "Python"
+print(palavra[0])      # 'P'
+print(palavra[-2:])    # 'on'
+print(palavra[::-1])   # 'nohtyP'  (invertida)
+```
+
+## Métodos de inspeção
+
+```python
+"123".isdigit()        # True
+"abc".isalpha()        # True
+"Olá mundo".startswith("Olá")   # True
+"dados.csv".endswith(".csv")    # True
+```
+
+## Um exemplo de limpeza típica
+
+```python
+bruto = "  ANA;bruno ; Carla  "
+nomes = [n.strip().title() for n in bruto.split(";")]
+print(nomes)    # ['Ana', 'Bruno', 'Carla']
+```
+
+Esse padrão — `split`, `strip`, transformação, list comprehension — é o dia a dia do pré-processamento de dados textuais.

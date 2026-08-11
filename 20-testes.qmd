@@ -1,0 +1,67 @@
+# Testes e asserções
+
+Código que vira ferramenta (capítulo anterior) precisa ser **confiável**. Testes automatizados verificam o comportamento e protegem contra regressões — essencial quando um pipeline de dados evolui.
+
+## `assert`
+
+A instrução `assert` interrompe o programa se a condição for falsa:
+
+```python
+def media(valores: list[float]) -> float:
+    assert len(valores) > 0, "lista vazia"
+    return sum(valores) / len(valores)
+
+assert media([4, 8, 6]) == 6.0
+```
+
+Use `assert` para invariantes internas e verificações rápidas em notebooks — não para validar entrada de usuário (para isso, `raise ValueError`, Capítulo 12).
+
+## Testes com `pytest`
+
+O `pytest` (`pip install pytest`) descobre e executa funções cujo nome começa com `test_`:
+
+```python
+# arquivo: test_media.py
+from estatisticas import media
+
+def test_media_simples():
+    assert media([4, 8, 6]) == 6.0
+
+def test_media_um_elemento():
+    assert media([10]) == 10.0
+
+def test_lista_vazia_lanca_erro():
+    import pytest
+    with pytest.raises(AssertionError):
+        media([])
+```
+
+No terminal:
+
+```bash
+pytest              # roda todos os test_*.py
+pytest -v           # saída detalhada
+```
+
+## `doctest` — exemplos que se testam
+
+Exemplos na docstring podem ser verificados automaticamente:
+
+```python
+def dobro(x: int) -> int:
+    """Retorna o dobro de x.
+
+    >>> dobro(4)
+    8
+    """
+    return x * 2
+```
+
+```bash
+python -m doctest modulo.py -v
+```
+
+::: {.callout-note}
+## Quanto testar num nivelamento?
+O hábito mínimo: para cada função importante, um teste do caso comum e um do caso extremo (lista vazia, zero, valor negativo). Os exercícios da Parte VI pedem exatamente isso. Type hints (Capítulo 8) ajudam: a assinatura declara o contrato que o teste verifica.
+:::

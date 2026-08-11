@@ -1,0 +1,64 @@
+# Arquivos, CSV e JSON
+
+Formato bruto de quase todo dataset. O `with` (context manager) garante o fechamento do arquivo mesmo em caso de erro — use-o sempre.
+
+## Arquivos de texto
+
+```python
+# Escrita ("w" sobrescreve; "a" acrescenta)
+with open("notas.txt", "w", encoding="utf-8") as f:
+    f.write("linha 1\n")
+    f.write("linha 2\n")
+
+# Leitura
+with open("notas.txt", encoding="utf-8") as f:
+    conteudo = f.read()          # tudo de uma vez
+
+# Leitura linha a linha (memória constante — é um iterador!)
+with open("notas.txt", encoding="utf-8") as f:
+    for linha in f:
+        print(linha.strip())
+```
+
+Especifique sempre `encoding="utf-8"` — a maior fonte de erros com acentos em português.
+
+## CSV
+
+```python
+import csv
+
+# Leitura como dicionários (usa o cabeçalho como chaves)
+with open("alunos.csv", encoding="utf-8") as f:
+    leitor = csv.DictReader(f)
+    for linha in leitor:
+        print(linha["nome"], linha["nota"])
+
+# Escrita
+with open("saida.csv", "w", newline="", encoding="utf-8") as f:
+    escritor = csv.DictWriter(f, fieldnames=["nome", "nota"])
+    escritor.writeheader()
+    escritor.writerow({"nome": "Ana", "nota": 8.5})
+```
+
+## JSON
+
+```python
+import json
+
+dados = {"curso": "CD", "alunos": ["Ana", "Bruno"]}
+
+texto = json.dumps(dados, ensure_ascii=False, indent=2)   # dict → string
+recuperado = json.loads(texto)                            # string → dict
+
+with open("dados.json", "w", encoding="utf-8") as f:      # dict → arquivo
+    json.dump(dados, f, ensure_ascii=False, indent=2)
+
+with open("dados.json", encoding="utf-8") as f:           # arquivo → dict
+    dados = json.load(f)
+```
+
+A correspondência é direta: objeto JSON ↔ `dict`, array ↔ `list`, `null` ↔ `None`.
+
+::: {.callout-note}
+Na prática de Ciência de Dados, `pandas.read_csv` e `read_json` substituem grande parte deste código — mas entender o formato bruto evita erros de codificação, separador e cabeçalho, e é o que você usará quando o dado não for tabular.
+:::

@@ -1,0 +1,82 @@
+# Árvores (Trees)
+
+Estrutura **hierárquica** de nós: uma **raiz**, cada nó com filhos, sem ciclos. Fundamental em Ciência de Dados e IA — árvores de decisão, índices de banco de dados, parsing, sistemas de arquivos.
+
+## Árvore binária de busca (BST)
+
+Cada nó tem no máximo dois filhos; à esquerda ficam valores **menores**, à direita, **maiores**. Essa invariante permite busca em O(log n) quando a árvore está balanceada.
+
+O nó é a generalização natural do nó da lista ligada — agora com dois encadeamentos:
+
+```python
+from dataclasses import dataclass
+from typing import Optional
+
+@dataclass
+class NoArvore:
+    valor: int
+    esquerda: Optional["NoArvore"] = None
+    direita: Optional["NoArvore"] = None
+
+
+class ArvoreBusca:
+    def __init__(self):
+        self.raiz: Optional[NoArvore] = None
+
+    def inserir(self, valor: int) -> None:
+        self.raiz = self._inserir(self.raiz, valor)
+
+    def _inserir(self, no, valor):
+        if no is None:                          # caso base da recursão
+            return NoArvore(valor)
+        if valor < no.valor:
+            no.esquerda = self._inserir(no.esquerda, valor)
+        else:
+            no.direita = self._inserir(no.direita, valor)
+        return no
+
+    def buscar(self, valor: int) -> bool:       # O(log n) se balanceada
+        no = self.raiz
+        while no:
+            if valor == no.valor:
+                return True
+            no = no.esquerda if valor < no.valor else no.direita
+        return False
+
+    def em_ordem(self, no, resultado=None) -> list:
+        if resultado is None:
+            resultado = []
+        if no:
+            self.em_ordem(no.esquerda, resultado)   # recursão (Capítulo 23)!
+            resultado.append(no.valor)
+            self.em_ordem(no.direita, resultado)
+        return resultado
+
+
+arv = ArvoreBusca()
+for v in [5, 3, 8, 1, 4, 7]:
+    arv.inserir(v)
+print(arv.em_ordem(arv.raiz))    # [1, 3, 4, 5, 7, 8] — sai ordenado!
+print(arv.buscar(4))             # True
+```
+
+## Percursos
+
+- **Em ordem** (esquerda, raiz, direita): produz os valores ordenados numa BST;
+- **Pré-ordem** (raiz, esquerda, direita): útil para copiar/serializar a árvore;
+- **Pós-ordem** (esquerda, direita, raiz): útil para liberar/avaliar de baixo para cima.
+
+A recursão é a ferramenta natural: a definição "visite a subárvore esquerda, o nó, a subárvore direita" **é** o código.
+
+## Custo e balanceamento
+
+| Operação | BST balanceada | BST degenerada |
+|----------|----------------|----------------|
+| Buscar/Inserir | O(log n) | O(n) |
+
+Inserir valores já ordenados degenera a BST numa lista ligada. Estruturas auto-balanceadas (AVL, rubro-negra) resolvem isso — cite-as como leitura complementar; não as implementaremos no nivelamento.
+
+::: {.callout-note}
+## Conexão com IA
+Uma **árvore de decisão** de Machine Learning é exatamente esta estrutura: cada nó interno testa uma condição sobre os dados ("idade < 30?") e as folhas carregam a predição. Quando o Scikit-learn treinar uma para você, a estrutura por baixo será esta.
+:::

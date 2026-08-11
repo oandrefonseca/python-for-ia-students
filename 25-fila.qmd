@@ -1,0 +1,94 @@
+# Estruturas de dados: Fila (Queue)
+
+## Conceito
+
+A fila segue a política **FIFO** (*First In, First Out*): o primeiro elemento inserido é o primeiro a sair — exatamente como uma fila de banco.
+
+```
+  saída ←  | 1 | 2 | 3 | 4 |  ← entrada (enqueue)
+ (dequeue)   frente       trás
+```
+
+**Operações fundamentais:**
+
+| Operação | Descrição |
+|----------|-----------|
+| `enqueue(x)` | Insere `x` no final da fila |
+| `dequeue()` | Remove e retorna o elemento da frente |
+| `front()` | Consulta a frente sem remover |
+| `is_empty()` | Verifica se está vazia |
+
+## Por que não usar lista pura?
+
+`lista.pop(0)` remove da frente, mas custa **O(n)**: todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 22 para ler isso). A solução idiomática é o `collections.deque` (*double-ended queue*), que insere e remove das duas pontas em **O(1)**.
+
+## Implementação com `collections.deque`
+
+```python
+from collections import deque
+
+class Fila:
+    def __init__(self):
+        self._itens: deque = deque()
+
+    def enqueue(self, item) -> None:
+        self._itens.append(item)        # entra no final
+
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError("dequeue em fila vazia")
+        return self._itens.popleft()    # sai pela frente — O(1)
+
+    def front(self):
+        if self.is_empty():
+            raise IndexError("front em fila vazia")
+        return self._itens[0]
+
+    def is_empty(self) -> bool:
+        return not self._itens
+
+    def __len__(self) -> int:
+        return len(self._itens)
+
+    def __repr__(self) -> str:
+        return f"Fila(frente → trás: {list(self._itens)})"
+
+
+f = Fila()
+f.enqueue("Ana")
+f.enqueue("Bruno")
+f.enqueue("Carla")
+print(f)              # Fila(frente → trás: ['Ana', 'Bruno', 'Carla'])
+print(f.dequeue())    # Ana  (primeira a entrar, primeira a sair)
+print(f.front())      # Bruno
+```
+
+## Aplicações típicas
+
+- **Filas de atendimento** e sistemas de senhas;
+- **Buffers** de impressão, streaming e mensageria;
+- **Escalonamento de processos** em sistemas operacionais;
+- **Busca em largura (BFS)** em grafos (Capítulo 28) — dual do DFS;
+- **Pipelines de dados**, processando registros na ordem de chegada.
+
+## Exemplo aplicado: simulação de atendimento
+
+```python
+atendimento = Fila()
+for senha in ["A01", "A02", "P01", "A03"]:
+    atendimento.enqueue(senha)
+
+while not atendimento.is_empty():
+    print(f"Chamando senha {atendimento.dequeue()} "
+          f"({len(atendimento)} restante(s) na fila)")
+```
+
+## Síntese: pilha × fila
+
+| Critério | Pilha | Fila |
+|----------|-------|------|
+| Política | LIFO | FIFO |
+| Inserção | `push` — no topo | `enqueue` — no final |
+| Remoção | `pop` — do topo | `dequeue` — da frente |
+| Implementação | `list` (append/pop) | `collections.deque` |
+| Grafos | DFS (profundidade) | BFS (largura) |

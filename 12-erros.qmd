@@ -1,0 +1,45 @@
+# Tratamento de erros
+
+Erros em tempo de execução (exceções) podem ser capturados com `try/except`, evitando que o programa encerre abruptamente:
+
+```python
+try:
+    numero = int(input("Digite um número: "))
+    resultado = 100 / numero
+except ValueError:
+    print("Entrada inválida: digite apenas números.")
+except ZeroDivisionError:
+    print("Não é possível dividir por zero.")
+else:
+    print(f"Resultado: {resultado}")   # executa se não houve erro
+finally:
+    print("Fim da operação.")          # executa sempre
+```
+
+Capture exceções **específicas**; um `except:` nu esconde bugs.
+
+## Levantando exceções
+
+```python
+def sacar(saldo: float, valor: float) -> float:
+    if valor > saldo:
+        raise ValueError("saldo insuficiente")
+    return saldo - valor
+```
+
+## Exceções personalizadas
+
+```python
+class SaldoInsuficiente(Exception):
+    pass
+
+raise SaldoInsuficiente("saldo insuficiente para o saque")
+```
+
+## Exceções como controle de fluxo
+
+Em Python, exceções não sinalizam apenas erros: também encerram protocolos. O exemplo mais importante é `StopIteration`, que indica o fim de um iterador — mecanismo que sustenta o `for` e os generators (Capítulo 15).
+
+## Exceções frequentes em código de dados
+
+`ValueError`, `TypeError`, `KeyError`, `IndexError`, `ZeroDivisionError`, `FileNotFoundError`, `AttributeError`.

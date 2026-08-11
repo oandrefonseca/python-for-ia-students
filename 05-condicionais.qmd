@@ -1,0 +1,45 @@
+# Estruturas condicionais
+
+A estrutura `if / elif / else` direciona o fluxo do programa. Observe a indentação: ela define o que pertence a cada bloco.
+
+```python
+media = float(input("Informe a média final: "))
+
+if media >= 7:
+    print("Aprovado")
+elif media >= 4:
+    print("Recuperação")
+else:
+    print("Reprovado")
+```
+
+## Operador ternário
+
+```python
+idade = 20
+categoria = "adulto" if idade >= 18 else "menor"
+```
+
+## Valores "truthy" e "falsy"
+
+Em contexto booleano, `0`, `0.0`, `""`, `[]`, `{}`, `set()` e `None` são avaliados como `False`; todo o resto é `True`:
+
+```python
+lista = []
+if not lista:
+    print("A lista está vazia")
+```
+
+## match/case (Python 3.10+)
+
+O equivalente moderno do `switch`, com casamento de padrões:
+
+```python
+match comando:
+    case "iniciar":
+        print("iniciando...")
+    case "parar" | "pausar":
+        print("interrompendo...")
+    case _:
+        print("comando desconhecido")
+```

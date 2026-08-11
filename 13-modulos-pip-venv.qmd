@@ -1,0 +1,67 @@
+# Módulos, pacotes e ambientes (pip e venv)
+
+Um **módulo** é um arquivo `.py` com código reutilizável; um **pacote/biblioteca** é um conjunto de módulos. Este capítulo cobre as duas metades do mesmo assunto: como **obter** bibliotecas externas (pip, venv) e como **importá-las e usá-las**.
+
+## Importando módulos
+
+```python
+import math
+print(math.sqrt(16))      # 4.0
+print(math.pi)            # 3.141592...
+
+from random import randint, choice
+print(randint(1, 6))      # simula um dado
+print(choice(["cara", "coroa"]))
+
+import statistics as st
+print(st.mean([4, 8, 6]))     # média
+print(st.median([4, 8, 6]))   # mediana
+```
+
+Evite `from modulo import *`: polui o espaço de nomes e esconde a origem das funções.
+
+## Seus próprios módulos
+
+Qualquer arquivo `.py` é importável. Se `utilidades.py` define `def normalizar(x): ...`, outro arquivo na mesma pasta pode fazer `from utilidades import normalizar`.
+
+## Instalando pacotes com pip
+
+O `pip` é o gerenciador de pacotes do Python, que instala bibliotecas do PyPI (Python Package Index):
+
+```bash
+pip install pandas              # instala
+pip install pandas==2.2.0       # versão específica
+pip install -U pandas           # atualiza
+pip list                        # o que está instalado
+pip freeze > requirements.txt   # congela as versões do projeto
+pip install -r requirements.txt # reproduz o ambiente em outra máquina
+```
+
+No Colab/Jupyter, prefixe com `!`: `!pip install pandas`.
+
+## Ambientes virtuais (venv)
+
+Projetos diferentes exigem versões diferentes das mesmas bibliotecas. O **ambiente virtual** isola as dependências de cada projeto:
+
+```bash
+python -m venv .venv            # cria o ambiente na pasta .venv
+
+# Ativação:
+source .venv/bin/activate       # Linux/macOS
+.venv\Scripts\activate          # Windows
+
+pip install pandas              # instala SÓ neste ambiente
+deactivate                      # sai do ambiente
+```
+
+::: {.callout-important}
+## Reprodutibilidade
+O par `venv` + `requirements.txt` é o mínimo de reprodutibilidade em Ciência de Dados: qualquer colega (ou você, daqui a seis meses) recria o ambiente exato com dois comandos. O Anaconda/`conda` resolve o mesmo problema com outra ferramenta.
+:::
+
+## Bibliotecas que usaremos na disciplina
+
+- `numpy` — computação numérica com arrays;
+- `pandas` — tabelas e análise de dados;
+- `matplotlib` — visualização;
+- `scikit-learn` — aprendizado de máquina.

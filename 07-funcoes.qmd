@@ -1,0 +1,80 @@
+# Funções
+
+Funções encapsulam lógica reutilizável. São definidas com `def` e devolvem valores com `return`:
+
+```python
+def calcular_media(nota1, nota2, nota3):
+    """Retorna a média aritmética de três notas."""
+    return (nota1 + nota2 + nota3) / 3
+
+media = calcular_media(8, 7, 9)
+print(media)   # 8.0
+```
+
+A string logo abaixo do `def` é a **docstring** — documentação acessível via `help(calcular_media)`.
+
+## Parâmetros com valor padrão e argumentos nomeados
+
+```python
+def saudacao(nome, mensagem="Bem-vindo ao curso"):
+    return f"{mensagem}, {nome}!"
+
+print(saudacao("Ana"))
+print(saudacao("Bruno", mensagem="Boa noite"))
+```
+
+::: {.callout-warning}
+Nunca use um objeto **mutável** como valor padrão (`def f(itens=[])`): o mesmo objeto é compartilhado entre todas as chamadas. Use `None` e crie dentro da função.
+:::
+
+## Retorno múltiplo e escopo
+
+```python
+def estatisticas(valores):
+    return min(valores), max(valores), sum(valores) / len(valores)
+
+menor, maior, media = estatisticas([4, 8, 6, 10])
+```
+
+Variáveis criadas dentro de uma função existem apenas nela (escopo local). Evite depender de variáveis globais: prefira parâmetros e `return`.
+
+## `*args` e `**kwargs` — argumentos variádicos
+
+Recurso onipresente em bibliotecas de dados e ML:
+
+```python
+def resumo(*args, **kwargs):
+    print("posicionais:", args)      # tupla
+    print("nomeados:", kwargs)       # dict
+
+resumo(1, 2, 3, cor="azul", tamanho=10)
+
+# Desempacotamento na chamada
+numeros = [4, 8, 15]
+print(max(*numeros))                 # espalha a lista como argumentos
+```
+
+## Funções são objetos de primeira classe
+
+Podem ser passadas como argumento e retornadas — base dos decorators (Capítulo 16):
+
+```python
+def aplicar(func, valor):
+    return func(valor)
+
+aplicar(lambda x: x ** 2, 5)         # 25
+```
+
+## Funções anônimas (`lambda`)
+
+Muito usadas como argumento de `sorted`, `map`, `filter` e métodos do Pandas:
+
+```python
+quadrado = lambda x: x ** 2
+print(quadrado(5))   # 25
+
+nomes = ["ana", "BRUNO", "Carla"]
+print(sorted(nomes, key=lambda s: s.lower()))
+list(map(lambda x: x * 2, [1, 2, 3]))       # [2, 4, 6]
+list(filter(lambda x: x % 2 == 0, range(10)))
+```
