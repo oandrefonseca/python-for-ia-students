@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d48ed9de51e4db89a51ee292ab6623e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d1ce83cbcf7f21d8208077a0fee83aa1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -407,23 +407,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Desafio integrador — Fundamentos de IA e Ciência de Dados</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -466,7 +449,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Uma lista ligada é uma sequência de <strong>nós</strong>, cada um contendo um valor e uma referência ao próximo. Diferente da lista do Python (um array dinâmico), os elementos não ficam contíguos na memória.</p>
 <section id="o-nó-duas-formas-de-escrevê-lo" class="level2" data-number="30.1">
 <h2 data-number="30.1" class="anchored" data-anchor-id="o-nó-duas-formas-de-escrevê-lo"><span class="header-section-number">30.1</span> O nó — duas formas de escrevê-lo</h2>
-<p>Forma clássica e forma com <code>@dataclass</code> (Capítulo 17); escolha seu estilo:</p>
+<p>Forma clássica e forma com <code>@dataclass</code> (Capítulo 19); escolha seu estilo:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clássica</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> No:</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, valor):</span>
@@ -562,7 +545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="por-que-estudar-se-o-python-já-tem-list" class="level2" data-number="30.4">
 <h2 data-number="30.4" class="anchored" data-anchor-id="por-que-estudar-se-o-python-já-tem-list"><span class="header-section-number">30.4</span> Por que estudar, se o Python já tem <code>list</code>?</h2>
-<p>Porque o conceito de <strong>nós encadeados por referência</strong> é a base das estruturas seguintes: uma árvore é um nó com dois “próximos” (Capítulo 27), um grafo generaliza para vários vizinhos (Capítulo 28), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.</p>
+<p>Porque o conceito de <strong>nós encadeados por referência</strong> é a base das estruturas seguintes: uma árvore é um nó com dois “próximos” (Capítulo 31), um grafo generaliza para vários vizinhos (Capítulo 32), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.</p>
 <p>Variantes que você encontrará na literatura: <strong>duplamente ligada</strong> (referência também ao anterior — é como o <code>deque</code> funciona) e <strong>circular</strong> (o último aponta para o primeiro).</p>
 
 

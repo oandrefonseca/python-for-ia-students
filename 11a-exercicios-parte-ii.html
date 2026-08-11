@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d48ed9de51e4db89a51ee292ab6623e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d1ce83cbcf7f21d8208077a0fee83aa1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -372,23 +372,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Desafio integrador — Fundamentos de IA e Ciência de Dados</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -399,13 +382,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#exercícios-parte-ii" id="toc-exercícios-parte-ii" class="nav-link active" data-scroll-target="#exercícios-parte-ii"><span class="header-section-number">14</span> Exercícios — Parte II</a>
-  <ul class="collapse">
-  <li><a href="#listas-e-operações" id="toc-listas-e-operações" class="nav-link" data-scroll-target="#listas-e-operações"><span class="header-section-number">14.1</span> 1. Listas e operações</a></li>
-  <li><a href="#dicionários" id="toc-dicionários" class="nav-link" data-scroll-target="#dicionários"><span class="header-section-number">14.2</span> 2. Dicionários</a></li>
-  <li><a href="#comprehensions" id="toc-comprehensions" class="nav-link" data-scroll-target="#comprehensions"><span class="header-section-number">14.3</span> 3. Comprehensions</a></li>
-  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings"><span class="header-section-number">14.4</span> 4. Strings</a></li>
-  </ul></li>
+  <li><a href="#listas-e-operações" id="toc-listas-e-operações" class="nav-link active" data-scroll-target="#listas-e-operações"><span class="header-section-number">13.1</span> Listas e operações</a></li>
+  <li><a href="#dicionários" id="toc-dicionários" class="nav-link" data-scroll-target="#dicionários"><span class="header-section-number">13.2</span> Dicionários</a></li>
+  <li><a href="#comprehensions" id="toc-comprehensions" class="nav-link" data-scroll-target="#comprehensions"><span class="header-section-number">13.3</span> Comprehensions</a></li>
+  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings"><span class="header-section-number">13.4</span> Strings</a></li>
   </ul>
 </nav>
     </div>
@@ -431,27 +411,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercícios-parte-ii" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Exercícios — Parte II</h1>
 <p>Exercícios sobre coleções e manipulação de texto.</p>
-<section id="listas-e-operações" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="listas-e-operações"><span class="header-section-number">14.1</span> 1. Listas e operações</h2>
-<p>Implemente uma lista de compras: adicione, remova e atualize itens. Ao final, mostre o total de itens e a lista ordenada.</p>
+<section id="listas-e-operações" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="listas-e-operações"><span class="header-section-number">13.1</span> Listas e operações</h2>
+<p><strong>Cenário.</strong> Você está fazendo compras no mercado e quer controlar a lista pelo celular: adicionar itens que lembrar no caminho, remover os que já foram para o carrinho e corrigir a quantidade de algo digitado errado.</p>
+<p><strong>Tarefa:</strong> Implemente uma lista de compras (uma <code>list</code> de itens) que permita adicionar, remover e atualizar itens. Ao final, mostre o total de itens e a lista ordenada.</p>
 </section>
-<section id="dicionários" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="dicionários"><span class="header-section-number">14.2</span> 2. Dicionários</h2>
-<p>Escreva uma função que conte a frequência de vogais em uma string e retorne um <code>dict</code> com o resultado.</p>
+<section id="dicionários" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="dicionários"><span class="header-section-number">13.2</span> Dicionários</h2>
+<p><strong>Cenário.</strong> Um professor de linguística quer saber, rapidamente, quais vogais aparecem com mais frequência em um texto, para comparar a sonoridade de diferentes trechos.</p>
+<p><strong>Tarefa:</strong> Escreva uma função que conte a frequência de cada vogal em uma string e retorne um <code>dict</code> com o resultado (vogal → quantidade de ocorrências).</p>
 </section>
-<section id="comprehensions" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="comprehensions"><span class="header-section-number">14.3</span> 3. Comprehensions</h2>
-<p>Gere uma lista com os quadrados dos números pares de 1 a 20 usando list comprehension.</p>
+<section id="comprehensions" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="comprehensions"><span class="header-section-number">13.3</span> Comprehensions</h2>
+<p><strong>Cenário.</strong> Um professor de matemática quer uma lista rápida dos quadrados dos números pares até 20 para ilustrar um exercício na lousa, sem escrever um laço <code>for</code> de várias linhas.</p>
+<p><strong>Tarefa:</strong> Gere uma lista com os quadrados dos números pares de 1 a 20, usando uma list comprehension.</p>
 </section>
-<section id="strings" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="strings"><span class="header-section-number">14.4</span> 4. Strings</h2>
-<p>Leia uma frase, remova pontuação e mostre as palavras em maiúsculas separadas por vírgula.</p>
+<section id="strings" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="strings"><span class="header-section-number">13.4</span> Strings</h2>
+<p><strong>Cenário.</strong> Um formulário de cadastro recebeu a frase de apresentação de um usuário cheia de pontuação e espaçamento inconsistente. Antes de armazenar, o time de dados quer normalizar o texto para um formato padrão.</p>
+<p><strong>Tarefa:</strong> Leia uma frase, remova a pontuação básica e mostre as palavras em maiúsculas, separadas por vírgula.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

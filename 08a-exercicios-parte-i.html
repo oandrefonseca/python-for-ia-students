@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d48ed9de51e4db89a51ee292ab6623e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d1ce83cbcf7f21d8208077a0fee83aa1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -372,23 +372,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Desafio integrador — Fundamentos de IA e Ciência de Dados</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -399,13 +382,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#exercícios-parte-i" id="toc-exercícios-parte-i" class="nav-link active" data-scroll-target="#exercícios-parte-i"><span class="header-section-number">10</span> Exercícios — Parte I</a>
-  <ul class="collapse">
-  <li><a href="#entrada-e-tipos" id="toc-entrada-e-tipos" class="nav-link" data-scroll-target="#entrada-e-tipos"><span class="header-section-number">10.1</span> 1. Entrada e tipos</a></li>
-  <li><a href="#função-e-condicional" id="toc-função-e-condicional" class="nav-link" data-scroll-target="#função-e-condicional"><span class="header-section-number">10.2</span> 2. Função e condicional</a></li>
-  <li><a href="#repetição" id="toc-repetição" class="nav-link" data-scroll-target="#repetição"><span class="header-section-number">10.3</span> 3. Repetição</a></li>
-  <li><a href="#type-hints-e-formatação" id="toc-type-hints-e-formatação" class="nav-link" data-scroll-target="#type-hints-e-formatação"><span class="header-section-number">10.4</span> 4. Type hints e formatação</a></li>
-  </ul></li>
+  <li><a href="#entrada-e-tipos" id="toc-entrada-e-tipos" class="nav-link active" data-scroll-target="#entrada-e-tipos"><span class="header-section-number">9.1</span> Entrada e tipos</a></li>
+  <li><a href="#função-e-condicional" id="toc-função-e-condicional" class="nav-link" data-scroll-target="#função-e-condicional"><span class="header-section-number">9.2</span> Função e condicional</a></li>
+  <li><a href="#repetição" id="toc-repetição" class="nav-link" data-scroll-target="#repetição"><span class="header-section-number">9.3</span> Repetição</a></li>
+  <li><a href="#type-hints-e-formatação" id="toc-type-hints-e-formatação" class="nav-link" data-scroll-target="#type-hints-e-formatação"><span class="header-section-number">9.4</span> Type hints e formatação</a></li>
   </ul>
 </nav>
     </div>
@@ -431,27 +411,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercícios-parte-i" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Exercícios — Parte I</h1>
 <p>Exercícios para consolidar fundamentos do Python (variáveis, funções, condicionais, repetição e type hints).</p>
-<section id="entrada-e-tipos" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="entrada-e-tipos"><span class="header-section-number">10.1</span> 1. Entrada e tipos</h2>
-<p>Escreva um programa que leia nome, idade e nota final de um aluno. Imprima uma mensagem formatada com os valores (use <code>int</code>/<code>float</code> quando necessário).</p>
+<section id="entrada-e-tipos" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="entrada-e-tipos"><span class="header-section-number">9.1</span> Entrada e tipos</h2>
+<p><strong>Cenário.</strong> Uma escola quer digitalizar as fichas de matrícula. Antes de montar qualquer sistema, é preciso garantir que os dados básicos de um aluno — nome, idade e nota final — possam ser lidos do teclado e exibidos de volta corretamente, cada um no tipo certo.</p>
+<p><strong>Tarefa:</strong> Escreva um programa que leia nome, idade e nota final de um aluno (com <code>input()</code>), convertendo cada valor para o tipo apropriado (<code>int</code> para idade, <code>float</code> para nota). Imprima uma mensagem formatada reunindo os três dados.</p>
 </section>
-<section id="função-e-condicional" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="função-e-condicional"><span class="header-section-number">10.2</span> 2. Função e condicional</h2>
-<p>Implemente <code>calcular_media(n1: float, n2: float, n3: float) -&gt; float</code> e use-a para decidir: Aprovado (&gt;=7), Recuperação (&gt;=4) ou Reprovado.</p>
+<section id="função-e-condicional" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="função-e-condicional"><span class="header-section-number">9.2</span> Função e condicional</h2>
+<p><strong>Cenário.</strong> Um professor calcula a média de três notas e decide a situação de cada aluno manualmente, um por um. Com uma turma de 40 alunos, isso é lento e sujeito a erro — ele quer uma função que faça esse cálculo de forma confiável e reutilizável.</p>
+<p><strong>Tarefa:</strong> Implemente <code>calcular_media(n1: float, n2: float, n3: float) -&gt; float</code> e use-a para decidir a situação do aluno: <strong>Aprovado</strong> (média ≥ 7), <strong>Recuperação</strong> (média ≥ 4) ou <strong>Reprovado</strong> (caso contrário).</p>
 </section>
-<section id="repetição" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="repetição"><span class="header-section-number">10.3</span> 3. Repetição</h2>
-<p>Crie um laço que leia números até o usuário digitar <code>0</code>. Ao final, imprima soma, média, maior e menor número lidos (ignorar o zero).</p>
+<section id="repetição" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="repetição"><span class="header-section-number">9.3</span> Repetição</h2>
+<p><strong>Cenário.</strong> Durante uma prova, o professor vai anotando as notas da turma conforme os alunos entregam — sem saber de antemão quantos vão entregar. Combinou-se que digitar <code>0</code> sinaliza o fim da coleta.</p>
+<p><strong>Tarefa:</strong> Crie um laço que leia números até o usuário digitar <code>0</code>. Ao final, imprima a soma, a média, o maior e o menor número lidos (ignorando o <code>0</code> do sinalizador de parada).</p>
 </section>
-<section id="type-hints-e-formatação" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="type-hints-e-formatação"><span class="header-section-number">10.4</span> 4. Type hints e formatação</h2>
-<p>Implemente <code>celsius_para_fahrenheit(c: float) -&gt; float</code>. Leia uma temperatura e exiba o resultado com duas casas decimais.</p>
+<section id="type-hints-e-formatação" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="type-hints-e-formatação"><span class="header-section-number">9.4</span> Type hints e formatação</h2>
+<p><strong>Cenário.</strong> Um sensor de temperatura importado dos EUA só relata valores em Celsius, mas o relatório final do laboratório precisa estar em Fahrenheit, a unidade usada pelo cliente.</p>
+<p><strong>Tarefa:</strong> Implemente <code>celsius_para_fahrenheit(c: float) -&gt; float</code>. Leia uma temperatura em Celsius e exiba o resultado convertido, formatado com duas casas decimais.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

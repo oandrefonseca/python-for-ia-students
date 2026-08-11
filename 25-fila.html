@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d48ed9de51e4db89a51ee292ab6623e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d1ce83cbcf7f21d8208077a0fee83aa1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -407,23 +407,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Desafio integrador — Fundamentos de IA e Ciência de Dados</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -500,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="por-que-não-usar-lista-pura" class="level2" data-number="29.2">
 <h2 data-number="29.2" class="anchored" data-anchor-id="por-que-não-usar-lista-pura"><span class="header-section-number">29.2</span> Por que não usar lista pura?</h2>
-<p><code>lista.pop(0)</code> remove da frente, mas custa <strong>O(n)</strong>: todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 22 para ler isso). A solução idiomática é o <code>collections.deque</code> (<em>double-ended queue</em>), que insere e remove das duas pontas em <strong>O(1)</strong>.</p>
+<p><code>lista.pop(0)</code> remove da frente, mas custa <strong>O(n)</strong>: todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 25 para ler isso). A solução idiomática é o <code>collections.deque</code> (<em>double-ended queue</em>), que insere e remove das duas pontas em <strong>O(1)</strong>.</p>
 </section>
 <section id="implementação-com-collections.deque" class="level2" data-number="29.3">
 <h2 data-number="29.3" class="anchored" data-anchor-id="implementação-com-collections.deque"><span class="header-section-number">29.3</span> Implementação com <code>collections.deque</code></h2>
@@ -547,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Filas de atendimento</strong> e sistemas de senhas;</li>
 <li><strong>Buffers</strong> de impressão, streaming e mensageria;</li>
 <li><strong>Escalonamento de processos</strong> em sistemas operacionais;</li>
-<li><strong>Busca em largura (BFS)</strong> em grafos (Capítulo 28) — dual do DFS;</li>
+<li><strong>Busca em largura (BFS)</strong> em grafos (Capítulo 32) — dual do DFS;</li>
 <li><strong>Pipelines de dados</strong>, processando registros na ordem de chegada.</li>
 </ul>
 </section>

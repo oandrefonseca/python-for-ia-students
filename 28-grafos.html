@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d48ed9de51e4db89a51ee292ab6623e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d1ce83cbcf7f21d8208077a0fee83aa1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -407,23 +407,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Desafio integrador — Fundamentos de IA e Ciência de Dados</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -465,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Um grafo é um conjunto de <strong>vértices</strong> conectados por <strong>arestas</strong>. Modela redes sociais, mapas, dependências entre tarefas, recomendação — e é a base de muitos algoritmos de IA. Podem ser direcionados ou não, com ou sem pesos nas arestas.</p>
 <section id="representação-por-lista-de-adjacência" class="level2" data-number="32.1">
 <h2 data-number="32.1" class="anchored" data-anchor-id="representação-por-lista-de-adjacência"><span class="header-section-number">32.1</span> Representação por lista de adjacência</h2>
-<p>A forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o <code>defaultdict</code> do Capítulo 18:</p>
+<p>A forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o <code>defaultdict</code> do Capítulo 20:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> defaultdict, deque</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Grafo:</span>
@@ -477,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.adjacencia[v].append(u)     <span class="co"># não-direcionado; remova p/ direcionado</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bfs(<span class="va">self</span>, inicio) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Busca em largura — usa FILA (Capítulo 25)."""</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Busca em largura — usa FILA (Capítulo 29)."""</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        visitados <span class="op">=</span> {inicio}</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        fila <span class="op">=</span> deque([inicio])</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        ordem <span class="op">=</span> []</span>
@@ -491,7 +474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> ordem</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> dfs(<span class="va">self</span>, inicio, visitados<span class="op">=</span><span class="va">None</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Busca em profundidade — usa PILHA via recursão (Capítulos 23-24)."""</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Busca em profundidade — usa PILHA via recursão (Capítulos 26 e 28)."""</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> visitados <span class="kw">is</span> <span class="va">None</span>:</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            visitados <span class="op">=</span> <span class="bu">set</span>()</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        visitados.add(inicio)</span>
@@ -542,11 +525,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>O <code>set</code> de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do <code>set</code> (Capítulo 22) mantém o custo linear.</p>
+<p>O <code>set</code> de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do <code>set</code> (Capítulo 25) mantém o custo linear.</p>
 </section>
 <section id="o-fechamento-do-livro" class="level2" data-number="32.3">
 <h2 data-number="32.3" class="anchored" data-anchor-id="o-fechamento-do-livro"><span class="header-section-number">32.3</span> O fechamento do livro</h2>
-<p>Repare como tudo se conectou: <strong>BFS usa a fila</strong> do Capítulo 25, <strong>DFS usa pilha/recursão</strong> dos Capítulos 23–24, a <strong>lista de adjacência</strong> usa o <code>defaultdict</code> do Capítulo 18, o nó com referências generaliza a <strong>lista ligada</strong> do Capítulo 26, e os custos O(V + E) se leem com o vocabulário do Capítulo 22.</p>
+<p>Repare como tudo se conectou: <strong>BFS usa a fila</strong> do Capítulo 29, <strong>DFS usa pilha/recursão</strong> dos Capítulos 26 e 28, a <strong>lista de adjacência</strong> usa o <code>defaultdict</code> do Capítulo 20, o nó com referências generaliza a <strong>lista ligada</strong> do Capítulo 30, e os custos O(V + E) se leem com o vocabulário do Capítulo 25.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
