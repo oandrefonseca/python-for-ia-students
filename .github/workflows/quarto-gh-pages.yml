@@ -6,6 +6,10 @@ on:
       - main
       - master
 
+# Ensure the action can push to the gh-pages branch
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +17,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Quarto CLI
-        uses: quarto-dev/quarto-cli-action@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gdebi-core
+
+      - name: Install Quarto CLI
+        run: |
+          # Try to download the latest Linux .deb from the official releases
+          wget -qO quarto.deb https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb || true
+          if [ -s quarto.deb ]; then
+            sudo apt-get install -y ./quarto.deb || (sudo dpkg -i quarto.deb && sudo apt-get install -f -y)
+          else
+            echo "Failed to download quarto .deb. Exiting." >&2
+            exit 1
+          fi
 
       - name: Render Quarto site
         run: quarto render
