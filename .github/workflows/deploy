@@ -1,0 +1,50 @@
+name: Build and deploy Quarto site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+# Ensure the action can push to the gh-pages branch
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl
+
+      - name: Install Quarto CLI
+        run: |
+          set -euo pipefail
+          echo "Downloading Quarto CLI..."
+          # Use the stable 'latest' redirect hosted on quarto.org (resolves to release asset)
+          curl -L --retry 5 --retry-delay 5 --output quarto.deb \
+            https://quarto.org/download/latest/quarto-linux-amd64.deb
+          if [ ! -s quarto.deb ]; then
+            echo "Failed to download quarto .deb. Exiting." >&2
+            exit 1
+          fi
+          sudo dpkg -i quarto.deb || sudo apt-get install -f -y
+
+      - name: Render Quarto site
+        run: quarto render
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _book
+          publish_branch: gh-pages
