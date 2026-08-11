@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - master
+  pull_request:
+    branches:
+      - main
+      - master
 
 # Ensure the action can push to the gh-pages branch
 permissions:
@@ -26,8 +30,9 @@ jobs:
         run: |
           set -euo pipefail
           echo "Downloading Quarto CLI..."
+          # Use the stable 'latest' redirect hosted on quarto.org (resolves to release asset)
           curl -L --retry 5 --retry-delay 5 --output quarto.deb \
-            https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb
+            https://quarto.org/download/latest/quarto-linux-amd64.deb
           if [ ! -s quarto.deb ]; then
             echo "Failed to download quarto .deb. Exiting." >&2
             exit 1
