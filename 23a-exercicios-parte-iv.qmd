@@ -1,0 +1,19 @@
+---
+title: "Exercícios — Parte IV"
+---
+
+# Exercícios — Parte IV
+
+Exercícios sobre complexidade e recursão.
+
+## 1. Big-O (conceitual)
+Explique, com exemplos curtos, como a execução muda se a entrada dobra para algoritmos `O(n)`, `O(n^2)` e `O(log n)`.
+
+## 2. Recursão básica
+Implemente o fatorial recursivo `fatorial(n: int) -> int` e trate `n < 0` com erro apropriado.
+
+## 3. Torres de Hanoi
+Resolva as Torres de Hanoi para `n` discos imprimindo a sequência de movimentos.
+
+## 4. Recursão e soma
+Implemente função recursiva que some todos os números em uma lista (pode conter sublistas aninhadas).

@@ -1,47 +1,89 @@
-# Exercícios integradores
+# Desafio integrador — Fundamentos de IA e Ciência de Dados
 
-Os exercícios estão organizados por bloco, em dificuldade crescente. Recomendação de entrega: scripts `.py` com `argparse` quando houver entrada (Capítulo 19) e ao menos um teste `pytest` por função central (Capítulo 20).
+Este arquivo agora propõe um desafio único que integra os conceitos fundamentais do curso com uma aplicação prática voltada a IA e Ciência de Dados.
 
-## Bloco A — Fundamentos e coleções (Partes I e II)
+O objetivo é construir uma ferramenta em Python que leia um conjunto de dados simples, execute pré-processamento, aplique uma regra de pontuação e gere métricas úteis para análise. O foco está em:
 
-1. Leia três notas, calcule a média com uma função **anotada com type hints** e informe a situação: Aprovado (≥ 7), Recuperação (≥ 4) ou Reprovado.
-2. Escreva um programa que imprima a tabuada de um número informado, usando `for` e f-strings.
-3. Implemente `eh_primo(n: int) -> bool` e use-a para listar os primos entre 2 e 100 com uma list comprehension.
-4. Leia números até que o usuário digite 0 (`while`) e exiba soma, média, maior e menor.
-5. Dada a lista `[3, 7, 1, 9, 4, 7, 3, 8]`, remova as duplicatas, ordene e exiba os três maiores valores.
-6. Conte a frequência de cada palavra de uma frase usando `dict` — depois refaça em uma linha com `Counter`.
-7. Verifique se uma palavra é palíndromo, ignorando maiúsculas e espaços, usando slicing.
-8. Dados `turma_a` e `turma_b` como conjuntos, exiba: quem cursa as duas, quem cursa apenas a A e o total de alunos distintos.
+- leitura e validação de dados (`input`, `try/except`);
+- funções com type hints;
+- coleções, strings e comprehensions;
+- classes e dataclasses;
+- arquivos CSV e JSON;
+- CLI com `argparse`;
+- testes com `pytest`;
+- análise de resultados simples importante em Ciência de Dados.
 
-## Bloco B — Recursos intermediários (Parte III)
+## Desafio: classificador de relevância para dados tabulares
 
-9. Escreva um decorator `@repetir(n)` que execute a função decorada `n` vezes.
-10. Implemente um generator infinito de Fibonacci; consuma os 20 primeiros termos sem materializar lista.
-11. Modele um `Produto` como `@dataclass` (nome, preço, estoque) com um método `valor_total()`; crie uma lista de produtos e ordene por preço.
-12. Leia um CSV de alunos e notas, agrupe por faixa de nota com `defaultdict` e exporte o resultado em JSON.
-13. Transforme o exercício 12 em uma ferramenta de linha de comando com `argparse` (`--entrada`, `--saida`, `--corte`).
-14. Escreva três testes `pytest` para a função `eh_primo` do Bloco A, incluindo casos extremos (0, 1, 2, negativo).
+Imagine que você está construindo um protótipo simples para classificar registros de dados com base em um conjunto de características. Esse protótipo é uma etapa inicial de um fluxo de trabalho de Ciência de Dados, onde se prepara e avalia dados antes de modelos mais complexos.
 
-## Bloco C — Complexidade e recursão (Parte IV)
+### Tarefa principal
 
-15. Classifique a complexidade Big-O de cinco trechos de código fornecidos pelo professor e justifique.
-16. Implemente busca binária recursiva e iterativa; compare o número de comparações com a busca linear numa lista de 1 milhão de elementos.
-17. Cronometre `fib` ingênuo × memoizado (`lru_cache`) para `n = 35`, usando o decorator `@cronometrar` do Capítulo 16.
+Implemente um pacote `desafio_ia` com as seguintes partes:
 
-## Bloco D — Estruturas de dados (Parte V)
+1. `DatasetRow` como `@dataclass`
+   - campos: `id: int`, `texto: str`, `valor: float`, `categoria: str`.
+   - método `def features(self) -> dict[str, float]` que extrai características numéricas simples do texto e do valor.
 
-18. Use a classe `Pilha` para inverter uma string (empilhe cada caractere e desempilhe tudo).
-19. Estenda `balanceada` para reportar a **posição** do primeiro erro na expressão.
-20. Implemente um histórico de navegação com duas pilhas (`voltar` e `avancar`) e as operações `visitar(url)`, `voltar()` e `avancar()`.
-21. Simule uma fila de impressão: cada documento tem nome e páginas; processe exibindo o tempo total (1 s por página).
-22. Implemente uma fila usando **duas pilhas** e analise a complexidade amortizada. Depois, uma pilha usando **duas filas**.
-23. Adicione à `ListaLigada` os métodos `remover(valor)`, `inverter()` e `__len__`.
-24. Na `ArvoreBusca`, implemente `altura()` e `contar_folhas()` (ambas recursivas).
-25. **Desafio final:** dado um grafo, detecte se há ciclo; em seguida, implemente Dijkstra para o caminho mais curto com pesos. Empacote como CLI com testes.
+2. Função `parse_csv(path: str) -> list[DatasetRow]`
+   - leia um CSV com colunas `id,texto,valor,categoria`.
+   - trate erros de arquivo inexistente e linhas malformadas.
+   - use `int()` e `float()` com validação.
 
-## Referências para estudo complementar
+3. Função `preprocess_text(text: str) -> dict[str, int]`
+   - normalize o texto para minúsculas;
+   - remova pontuação básica;
+   - conte palavras usando `Counter` ou dicionários;
+   - retorne pelo menos duas características: número de palavras e número de palavras distintas.
 
-- Documentação oficial do Python (docs.python.org/pt-br) — tutorial em português;
-- PEP 8 — guia de estilo de código;
-- Downey, A. — *Pense em Python* (disponível gratuitamente online);
-- Módulos `collections`, `itertools` e `functools` da biblioteca padrão.
+4. Função `score_row(row: DatasetRow, peso_texto: float, peso_valor: float) -> float`
+   - calcule uma pontuação de relevância a partir das características extraídas;
+   - por exemplo, `score = peso_texto * len_palavras + peso_valor * valor`.
+
+5. Função `classify(row: DatasetRow, threshold: float) -> str`
+   - retorne `"relevante"` se a pontuação for maior ou igual ao limite, caso contrário `"irrelevante"`.
+
+6. Função `evaluate(predictions: list[str], truth: list[str]) -> dict[str, float]`
+   - calcule `accuracy`, `precision` e `recall` para a classe `relevante`.
+   - use apenas operações com listas, contadores e condicionais.
+
+7. CLI (`main.py`)
+   - argumentos: `--input`, `--threshold`, `--peso-texto`, `--peso-valor`, `--saida`.
+   - leia o CSV, gere classificações e salve um relatório JSON com métricas e amostras de resultados.
+
+### Requisitos extras
+
+- Adicione tratamento de exceção para valores ausentes e formato incorreto.
+- Use uma list comprehension para filtrar apenas as linhas classificadas como `relevante`.
+- Implemente ao menos um generator para processar as linhas do CSV sem carregar tudo na memória de uma vez.
+- Inclua testes `pytest` para:
+  - parser de CSV válido e inválido;
+  - função `preprocess_text`;
+  - função `evaluate`.
+
+### Exemplo de uso
+
+```
+python main.py --input dados.csv --threshold 10.0 --peso-texto 1.5 --peso-valor 0.8 --saida relatorio.json
+```
+
+### Explicação didática
+
+Este desafio reúne os fundamentos do material porque exige:
+
+- manipulação de entrada e saída (`input`, arquivos, CSV/JSON);
+- funções bem tipadas e tratamento de erros;
+- uso de coleções, strings e comprehensions;
+- modelagem com classes e `dataclass`;
+- CLI e modularização de código;
+- avaliação básica de desempenho, conceito central em Ciência de Dados.
+
+### Entregáveis
+
+- código-fonte do pacote e do CLI;
+- relatório JSON com as métricas;
+- testes `pytest` cobrindo as funções centrais.
+
+---
+
+> Bônus: adicione uma função `top_words(text: str, n: int) -> list[tuple[str, int]]` que retorna as `n` palavras mais frequentes e inclua isso no relatório final.

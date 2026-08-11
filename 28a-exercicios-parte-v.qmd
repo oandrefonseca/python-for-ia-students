@@ -1,0 +1,19 @@
+---
+title: "Exercícios — Parte V"
+---
+
+# Exercícios — Parte V
+
+Exercícios sobre estruturas de dados: pilha, fila, listas ligadas, árvores e grafos.
+
+## 1. Pilha
+Implemente uma classe `Pilha` com `push`, `pop`, `top` e `is_empty`. Use-a para inverter uma string.
+
+## 2. Fila
+Implemente uma fila usando `collections.deque` e simule uma fila de impressão onde cada documento tem `nome` e `paginas`.
+
+## 3. Lista ligada
+Implemente uma lista ligada simples com métodos `inserir_inicio`, `inserir_fim`, `remover(valor)` e `__len__`.
+
+## 4. Grafos (conceitual + prático)
+Descreva como grafos modelam rotas; em seguida, represente um grafo como dicionário de adjacência e implemente busca em largura (BFS).

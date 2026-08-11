@@ -21,11 +21,13 @@ book:
         - 06-repeticao.qmd
         - 07-funcoes.qmd
         - 08-type-hints.qmd
+        - 08a-exercicios-parte-i.qmd
     - part: "Parte II — Coleções e texto"
       chapters:
         - 09-colecoes.qmd
         - 10-strings.qmd
         - 11-comprehensions.qmd
+        - 11a-exercicios-parte-ii.qmd
     - part: "Parte III — Recursos intermediários da linguagem"
       chapters:
         - 12-erros.qmd
@@ -38,10 +40,12 @@ book:
         - 19-cli.qmd
         - 20-testes.qmd
         - 21-arquivos-csv-json.qmd
+        - 21a-exercicios-parte-iii.qmd
     - part: "Parte IV — Complexidade e algoritmos"
       chapters:
         - 22-big-o.qmd
         - 23-recursao.qmd
+        - 23a-exercicios-parte-iv.qmd
     - part: "Parte V — Estruturas de dados"
       chapters:
         - 24-pilha.qmd
@@ -49,6 +53,7 @@ book:
         - 26-listas-ligadas.qmd
         - 27-arvores.qmd
         - 28-grafos.qmd
+        - 28a-exercicios-parte-v.qmd
     - part: "Parte VI — Prática"
       chapters:
         - 29-exercicios.qmd

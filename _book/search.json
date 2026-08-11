@@ -1516,67 +1516,353 @@
   {
     "objectID": "29-exercicios.html",
     "href": "29-exercicios.html",
-    "title": "29  Exercícios integradores",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
     "section": "",
-    "text": "29.1 Bloco A — Fundamentos e coleções (Partes I e II)\nOs exercícios estão organizados por bloco, em dificuldade crescente. Recomendação de entrega: scripts .py com argparse quando houver entrada (Capítulo 19) e ao menos um teste pytest por função central (Capítulo 20).",
+    "text": "34.1 Desafio: classificador de relevância para dados tabulares\nEste arquivo agora propõe um desafio único que integra os conceitos fundamentais do curso com uma aplicação prática voltada a IA e Ciência de Dados.\nO objetivo é construir uma ferramenta em Python que leia um conjunto de dados simples, execute pré-processamento, aplique uma regra de pontuação e gere métricas úteis para análise. O foco está em:\nImagine que você está construindo um protótipo simples para classificar registros de dados com base em um conjunto de características. Esse protótipo é uma etapa inicial de um fluxo de trabalho de Ciência de Dados, onde se prepara e avalia dados antes de modelos mais complexos.",
     "crumbs": [
       "Parte VI — Prática",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercícios integradores</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
     ]
   },
   {
     "objectID": "29-exercicios.html#bloco-a-fundamentos-e-coleções-partes-i-e-ii",
     "href": "29-exercicios.html#bloco-a-fundamentos-e-coleções-partes-i-e-ii",
-    "title": "29  Exercícios integradores",
+    "title": "34  Exercícios integradores",
     "section": "",
     "text": "Leia três notas, calcule a média com uma função anotada com type hints e informe a situação: Aprovado (≥ 7), Recuperação (≥ 4) ou Reprovado.\nEscreva um programa que imprima a tabuada de um número informado, usando for e f-strings.\nImplemente eh_primo(n: int) -&gt; bool e use-a para listar os primos entre 2 e 100 com uma list comprehension.\nLeia números até que o usuário digite 0 (while) e exiba soma, média, maior e menor.\nDada a lista [3, 7, 1, 9, 4, 7, 3, 8], remova as duplicatas, ordene e exiba os três maiores valores.\nConte a frequência de cada palavra de uma frase usando dict — depois refaça em uma linha com Counter.\nVerifique se uma palavra é palíndromo, ignorando maiúsculas e espaços, usando slicing.\nDados turma_a e turma_b como conjuntos, exiba: quem cursa as duas, quem cursa apenas a A e o total de alunos distintos.",
     "crumbs": [
       "Parte VI — Prática",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercícios integradores</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercícios integradores</span>"
     ]
   },
   {
     "objectID": "29-exercicios.html#bloco-b-recursos-intermediários-parte-iii",
     "href": "29-exercicios.html#bloco-b-recursos-intermediários-parte-iii",
-    "title": "29  Exercícios integradores",
-    "section": "29.2 Bloco B — Recursos intermediários (Parte III)",
-    "text": "29.2 Bloco B — Recursos intermediários (Parte III)\n\nEscreva um decorator @repetir(n) que execute a função decorada n vezes.\nImplemente um generator infinito de Fibonacci; consuma os 20 primeiros termos sem materializar lista.\nModele um Produto como @dataclass (nome, preço, estoque) com um método valor_total(); crie uma lista de produtos e ordene por preço.\nLeia um CSV de alunos e notas, agrupe por faixa de nota com defaultdict e exporte o resultado em JSON.\nTransforme o exercício 12 em uma ferramenta de linha de comando com argparse (--entrada, --saida, --corte).\nEscreva três testes pytest para a função eh_primo do Bloco A, incluindo casos extremos (0, 1, 2, negativo).",
+    "title": "34  Exercícios integradores",
+    "section": "34.2 Bloco B — Recursos intermediários (Parte III)",
+    "text": "34.2 Bloco B — Recursos intermediários (Parte III)\n\nEscreva um decorator @repetir(n) que execute a função decorada n vezes.\nImplemente um generator infinito de Fibonacci; consuma os 20 primeiros termos sem materializar lista.\nModele um Produto como @dataclass (nome, preço, estoque) com um método valor_total(); crie uma lista de produtos e ordene por preço.\nLeia um CSV de alunos e notas, agrupe por faixa de nota com defaultdict e exporte o resultado em JSON.\nTransforme o exercício 12 em uma ferramenta de linha de comando com argparse (--entrada, --saida, --corte).\nEscreva três testes pytest para a função eh_primo do Bloco A, incluindo casos extremos (0, 1, 2, negativo).",
     "crumbs": [
       "Parte VI — Prática",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercícios integradores</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercícios integradores</span>"
     ]
   },
   {
     "objectID": "29-exercicios.html#bloco-c-complexidade-e-recursão-parte-iv",
     "href": "29-exercicios.html#bloco-c-complexidade-e-recursão-parte-iv",
-    "title": "29  Exercícios integradores",
-    "section": "29.3 Bloco C — Complexidade e recursão (Parte IV)",
-    "text": "29.3 Bloco C — Complexidade e recursão (Parte IV)\n\nClassifique a complexidade Big-O de cinco trechos de código fornecidos pelo professor e justifique.\nImplemente busca binária recursiva e iterativa; compare o número de comparações com a busca linear numa lista de 1 milhão de elementos.\nCronometre fib ingênuo × memoizado (lru_cache) para n = 35, usando o decorator @cronometrar do Capítulo 16.",
+    "title": "34  Exercícios integradores",
+    "section": "34.3 Bloco C — Complexidade e recursão (Parte IV)",
+    "text": "34.3 Bloco C — Complexidade e recursão (Parte IV)\n\nClassifique a complexidade Big-O de cinco trechos de código fornecidos pelo professor e justifique.\nImplemente busca binária recursiva e iterativa; compare o número de comparações com a busca linear numa lista de 1 milhão de elementos.\nCronometre fib ingênuo × memoizado (lru_cache) para n = 35, usando o decorator @cronometrar do Capítulo 16.",
     "crumbs": [
       "Parte VI — Prática",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercícios integradores</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercícios integradores</span>"
     ]
   },
   {
     "objectID": "29-exercicios.html#bloco-d-estruturas-de-dados-parte-v",
     "href": "29-exercicios.html#bloco-d-estruturas-de-dados-parte-v",
-    "title": "29  Exercícios integradores",
-    "section": "29.4 Bloco D — Estruturas de dados (Parte V)",
-    "text": "29.4 Bloco D — Estruturas de dados (Parte V)\n\nUse a classe Pilha para inverter uma string (empilhe cada caractere e desempilhe tudo).\nEstenda balanceada para reportar a posição do primeiro erro na expressão.\nImplemente um histórico de navegação com duas pilhas (voltar e avancar) e as operações visitar(url), voltar() e avancar().\nSimule uma fila de impressão: cada documento tem nome e páginas; processe exibindo o tempo total (1 s por página).\nImplemente uma fila usando duas pilhas e analise a complexidade amortizada. Depois, uma pilha usando duas filas.\nAdicione à ListaLigada os métodos remover(valor), inverter() e __len__.\nNa ArvoreBusca, implemente altura() e contar_folhas() (ambas recursivas).\nDesafio final: dado um grafo, detecte se há ciclo; em seguida, implemente Dijkstra para o caminho mais curto com pesos. Empacote como CLI com testes.",
+    "title": "34  Exercícios integradores",
+    "section": "34.4 Bloco D — Estruturas de dados (Parte V)",
+    "text": "34.4 Bloco D — Estruturas de dados (Parte V)\n\nUse a classe Pilha para inverter uma string (empilhe cada caractere e desempilhe tudo).\nEstenda balanceada para reportar a posição do primeiro erro na expressão.\nImplemente um histórico de navegação com duas pilhas (voltar e avancar) e as operações visitar(url), voltar() e avancar().\nSimule uma fila de impressão: cada documento tem nome e páginas; processe exibindo o tempo total (1 s por página).\nImplemente uma fila usando duas pilhas e analise a complexidade amortizada. Depois, uma pilha usando duas filas.\nAdicione à ListaLigada os métodos remover(valor), inverter() e __len__.\nNa ArvoreBusca, implemente altura() e contar_folhas() (ambas recursivas).\nDesafio final: dado um grafo, detecte se há ciclo; em seguida, implemente Dijkstra para o caminho mais curto com pesos. Empacote como CLI com testes.",
     "crumbs": [
       "Parte VI — Prática",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercícios integradores</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercícios integradores</span>"
     ]
   },
   {
     "objectID": "29-exercicios.html#referências-para-estudo-complementar",
     "href": "29-exercicios.html#referências-para-estudo-complementar",
-    "title": "29  Exercícios integradores",
-    "section": "29.5 Referências para estudo complementar",
-    "text": "29.5 Referências para estudo complementar\n\nDocumentação oficial do Python (docs.python.org/pt-br) — tutorial em português;\nPEP 8 — guia de estilo de código;\nDowney, A. — Pense em Python (disponível gratuitamente online);\nMódulos collections, itertools e functools da biblioteca padrão.",
+    "title": "34  Exercícios integradores",
+    "section": "34.5 Referências para estudo complementar",
+    "text": "34.5 Referências para estudo complementar\n\nDocumentação oficial do Python (docs.python.org/pt-br) — tutorial em português;\nPEP 8 — guia de estilo de código;\nDowney, A. — Pense em Python (disponível gratuitamente online);\nMódulos collections, itertools e functools da biblioteca padrão.",
     "crumbs": [
       "Parte VI — Prática",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercícios integradores</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Exercícios integradores</span>"
+    ]
+  },
+  {
+    "objectID": "08a-exercicios-parte-i.html",
+    "href": "08a-exercicios-parte-i.html",
+    "title": "9  Exercícios — Parte I",
+    "section": "",
+    "text": "10 Exercícios — Parte I\nExercícios para consolidar fundamentos do Python (variáveis, funções, condicionais, repetição e type hints).",
+    "crumbs": [
+      "Parte I — Fundamentos da linguagem",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
+    ]
+  },
+  {
+    "objectID": "08a-exercicios-parte-i.html#entrada-e-tipos",
+    "href": "08a-exercicios-parte-i.html#entrada-e-tipos",
+    "title": "9  Exercícios — Parte I",
+    "section": "10.1 1. Entrada e tipos",
+    "text": "10.1 1. Entrada e tipos\nEscreva um programa que leia nome, idade e nota final de um aluno. Imprima uma mensagem formatada com os valores (use int/float quando necessário).",
+    "crumbs": [
+      "Parte I — Fundamentos da linguagem",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
+    ]
+  },
+  {
+    "objectID": "08a-exercicios-parte-i.html#função-e-condicional",
+    "href": "08a-exercicios-parte-i.html#função-e-condicional",
+    "title": "9  Exercícios — Parte I",
+    "section": "10.2 2. Função e condicional",
+    "text": "10.2 2. Função e condicional\nImplemente calcular_media(n1: float, n2: float, n3: float) -&gt; float e use-a para decidir: Aprovado (&gt;=7), Recuperação (&gt;=4) ou Reprovado.",
+    "crumbs": [
+      "Parte I — Fundamentos da linguagem",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
+    ]
+  },
+  {
+    "objectID": "08a-exercicios-parte-i.html#repetição",
+    "href": "08a-exercicios-parte-i.html#repetição",
+    "title": "9  Exercícios — Parte I",
+    "section": "10.3 3. Repetição",
+    "text": "10.3 3. Repetição\nCrie um laço que leia números até o usuário digitar 0. Ao final, imprima soma, média, maior e menor número lidos (ignorar o zero).",
+    "crumbs": [
+      "Parte I — Fundamentos da linguagem",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
+    ]
+  },
+  {
+    "objectID": "08a-exercicios-parte-i.html#type-hints-e-formatação",
+    "href": "08a-exercicios-parte-i.html#type-hints-e-formatação",
+    "title": "9  Exercícios — Parte I",
+    "section": "10.4 4. Type hints e formatação",
+    "text": "10.4 4. Type hints e formatação\nImplemente celsius_para_fahrenheit(c: float) -&gt; float. Leia uma temperatura e exiba o resultado com duas casas decimais.",
+    "crumbs": [
+      "Parte I — Fundamentos da linguagem",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
+    ]
+  },
+  {
+    "objectID": "11a-exercicios-parte-ii.html",
+    "href": "11a-exercicios-parte-ii.html",
+    "title": "13  Exercícios — Parte II",
+    "section": "",
+    "text": "14 Exercícios — Parte II\nExercícios sobre coleções e manipulação de texto.",
+    "crumbs": [
+      "Parte II — Coleções e texto",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
+    ]
+  },
+  {
+    "objectID": "11a-exercicios-parte-ii.html#listas-e-operações",
+    "href": "11a-exercicios-parte-ii.html#listas-e-operações",
+    "title": "13  Exercícios — Parte II",
+    "section": "14.1 1. Listas e operações",
+    "text": "14.1 1. Listas e operações\nImplemente uma lista de compras: adicione, remova e atualize itens. Ao final, mostre o total de itens e a lista ordenada.",
+    "crumbs": [
+      "Parte II — Coleções e texto",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
+    ]
+  },
+  {
+    "objectID": "11a-exercicios-parte-ii.html#dicionários",
+    "href": "11a-exercicios-parte-ii.html#dicionários",
+    "title": "13  Exercícios — Parte II",
+    "section": "14.2 2. Dicionários",
+    "text": "14.2 2. Dicionários\nEscreva uma função que conte a frequência de vogais em uma string e retorne um dict com o resultado.",
+    "crumbs": [
+      "Parte II — Coleções e texto",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
+    ]
+  },
+  {
+    "objectID": "11a-exercicios-parte-ii.html#comprehensions",
+    "href": "11a-exercicios-parte-ii.html#comprehensions",
+    "title": "13  Exercícios — Parte II",
+    "section": "14.3 3. Comprehensions",
+    "text": "14.3 3. Comprehensions\nGere uma lista com os quadrados dos números pares de 1 a 20 usando list comprehension.",
+    "crumbs": [
+      "Parte II — Coleções e texto",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
+    ]
+  },
+  {
+    "objectID": "11a-exercicios-parte-ii.html#strings",
+    "href": "11a-exercicios-parte-ii.html#strings",
+    "title": "13  Exercícios — Parte II",
+    "section": "14.4 4. Strings",
+    "text": "14.4 4. Strings\nLeia uma frase, remova pontuação e mostre as palavras em maiúsculas separadas por vírgula.",
+    "crumbs": [
+      "Parte II — Coleções e texto",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
+    ]
+  },
+  {
+    "objectID": "21a-exercicios-parte-iii.html",
+    "href": "21a-exercicios-parte-iii.html",
+    "title": "24  Exercícios — Parte III",
+    "section": "",
+    "text": "25 Exercícios — Parte III\nExercícios sobre recursos intermediários: módulos, OOP, generators, decorators, dataclasses, CLI e testes.",
+    "crumbs": [
+      "Parte III — Recursos intermediários da linguagem",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
+    ]
+  },
+  {
+    "objectID": "21a-exercicios-parte-iii.html#classes-e-dataclasses",
+    "href": "21a-exercicios-parte-iii.html#classes-e-dataclasses",
+    "title": "24  Exercícios — Parte III",
+    "section": "25.1 1. Classes e dataclasses",
+    "text": "25.1 1. Classes e dataclasses\nModele um Produto com @dataclass (nome, preço, estoque) e implemente valor_total() que retorna preço * estoque.",
+    "crumbs": [
+      "Parte III — Recursos intermediários da linguagem",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
+    ]
+  },
+  {
+    "objectID": "21a-exercicios-parte-iii.html#generators",
+    "href": "21a-exercicios-parte-iii.html#generators",
+    "title": "24  Exercícios — Parte III",
+    "section": "25.2 2. Generators",
+    "text": "25.2 2. Generators\nImplemente um generator que produza pares (n, n*n) para n de 1 a 10 e consuma com next().",
+    "crumbs": [
+      "Parte III — Recursos intermediários da linguagem",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
+    ]
+  },
+  {
+    "objectID": "21a-exercicios-parte-iii.html#módulos-e-testes",
+    "href": "21a-exercicios-parte-iii.html#módulos-e-testes",
+    "title": "24  Exercícios — Parte III",
+    "section": "25.3 3. Módulos e testes",
+    "text": "25.3 3. Módulos e testes\nCrie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste pytest cobrindo entrada válida e inválida.",
+    "crumbs": [
+      "Parte III — Recursos intermediários da linguagem",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
+    ]
+  },
+  {
+    "objectID": "21a-exercicios-parte-iii.html#cli",
+    "href": "21a-exercicios-parte-iii.html#cli",
+    "title": "24  Exercícios — Parte III",
+    "section": "25.4 4. CLI",
+    "text": "25.4 4. CLI\nImplemente um script CLI que receba --arquivo e imprima o número de linhas do arquivo, tratando erros de arquivo ausente.",
+    "crumbs": [
+      "Parte III — Recursos intermediários da linguagem",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
+    ]
+  },
+  {
+    "objectID": "23a-exercicios-parte-iv.html",
+    "href": "23a-exercicios-parte-iv.html",
+    "title": "27  Exercícios — Parte IV",
+    "section": "",
+    "text": "28 Exercícios — Parte IV\nExercícios sobre complexidade e recursão.",
+    "crumbs": [
+      "Parte IV — Complexidade e algoritmos",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
+    ]
+  },
+  {
+    "objectID": "23a-exercicios-parte-iv.html#big-o-conceitual",
+    "href": "23a-exercicios-parte-iv.html#big-o-conceitual",
+    "title": "27  Exercícios — Parte IV",
+    "section": "28.1 1. Big-O (conceitual)",
+    "text": "28.1 1. Big-O (conceitual)\nExplique, com exemplos curtos, como a execução muda se a entrada dobra para algoritmos O(n), O(n^2) e O(log n).",
+    "crumbs": [
+      "Parte IV — Complexidade e algoritmos",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
+    ]
+  },
+  {
+    "objectID": "23a-exercicios-parte-iv.html#recursão-básica",
+    "href": "23a-exercicios-parte-iv.html#recursão-básica",
+    "title": "27  Exercícios — Parte IV",
+    "section": "28.2 2. Recursão básica",
+    "text": "28.2 2. Recursão básica\nImplemente o fatorial recursivo fatorial(n: int) -&gt; int e trate n &lt; 0 com erro apropriado.",
+    "crumbs": [
+      "Parte IV — Complexidade e algoritmos",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
+    ]
+  },
+  {
+    "objectID": "23a-exercicios-parte-iv.html#torres-de-hanoi",
+    "href": "23a-exercicios-parte-iv.html#torres-de-hanoi",
+    "title": "27  Exercícios — Parte IV",
+    "section": "28.3 3. Torres de Hanoi",
+    "text": "28.3 3. Torres de Hanoi\nResolva as Torres de Hanoi para n discos imprimindo a sequência de movimentos.",
+    "crumbs": [
+      "Parte IV — Complexidade e algoritmos",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
+    ]
+  },
+  {
+    "objectID": "23a-exercicios-parte-iv.html#recursão-e-soma",
+    "href": "23a-exercicios-parte-iv.html#recursão-e-soma",
+    "title": "27  Exercícios — Parte IV",
+    "section": "28.4 4. Recursão e soma",
+    "text": "28.4 4. Recursão e soma\nImplemente função recursiva que some todos os números em uma lista (pode conter sublistas aninhadas).",
+    "crumbs": [
+      "Parte IV — Complexidade e algoritmos",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
+    ]
+  },
+  {
+    "objectID": "28a-exercicios-parte-v.html",
+    "href": "28a-exercicios-parte-v.html",
+    "title": "33  Exercícios — Parte V",
+    "section": "",
+    "text": "34 Exercícios — Parte V\nExercícios sobre estruturas de dados: pilha, fila, listas ligadas, árvores e grafos.",
+    "crumbs": [
+      "Parte V — Estruturas de dados",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
+    ]
+  },
+  {
+    "objectID": "28a-exercicios-parte-v.html#pilha",
+    "href": "28a-exercicios-parte-v.html#pilha",
+    "title": "33  Exercícios — Parte V",
+    "section": "34.1 1. Pilha",
+    "text": "34.1 1. Pilha\nImplemente uma classe Pilha com push, pop, top e is_empty. Use-a para inverter uma string.",
+    "crumbs": [
+      "Parte V — Estruturas de dados",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
+    ]
+  },
+  {
+    "objectID": "28a-exercicios-parte-v.html#fila",
+    "href": "28a-exercicios-parte-v.html#fila",
+    "title": "33  Exercícios — Parte V",
+    "section": "34.2 2. Fila",
+    "text": "34.2 2. Fila\nImplemente uma fila usando collections.deque e simule uma fila de impressão onde cada documento tem nome e paginas.",
+    "crumbs": [
+      "Parte V — Estruturas de dados",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
+    ]
+  },
+  {
+    "objectID": "28a-exercicios-parte-v.html#lista-ligada",
+    "href": "28a-exercicios-parte-v.html#lista-ligada",
+    "title": "33  Exercícios — Parte V",
+    "section": "34.3 3. Lista ligada",
+    "text": "34.3 3. Lista ligada\nImplemente uma lista ligada simples com métodos inserir_inicio, inserir_fim, remover(valor) e __len__.",
+    "crumbs": [
+      "Parte V — Estruturas de dados",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
+    ]
+  },
+  {
+    "objectID": "28a-exercicios-parte-v.html#grafos-conceitual-prático",
+    "href": "28a-exercicios-parte-v.html#grafos-conceitual-prático",
+    "title": "33  Exercícios — Parte V",
+    "section": "34.4 4. Grafos (conceitual + prático)",
+    "text": "34.4 4. Grafos (conceitual + prático)\nDescreva como grafos modelam rotas; em seguida, represente um grafo como dicionário de adjacência e implemente busca em largura (BFS).",
+    "crumbs": [
+      "Parte V — Estruturas de dados",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#desafio-classificador-de-relevância-para-dados-tabulares",
+    "href": "29-exercicios.html#desafio-classificador-de-relevância-para-dados-tabulares",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "",
+    "text": "34.1.1 Tarefa principal\nImplemente um pacote desafio_ia com as seguintes partes:\n\nDatasetRow como @dataclass\n\ncampos: id: int, texto: str, valor: float, categoria: str.\nmétodo def features(self) -&gt; dict[str, float] que extrai características numéricas simples do texto e do valor.\n\nFunção parse_csv(path: str) -&gt; list[DatasetRow]\n\nleia um CSV com colunas id,texto,valor,categoria.\ntrate erros de arquivo inexistente e linhas malformadas.\nuse int() e float() com validação.\n\nFunção preprocess_text(text: str) -&gt; dict[str, int]\n\nnormalize o texto para minúsculas;\nremova pontuação básica;\nconte palavras usando Counter ou dicionários;\nretorne pelo menos duas características: número de palavras e número de palavras distintas.\n\nFunção score_row(row: DatasetRow, peso_texto: float, peso_valor: float) -&gt; float\n\ncalcule uma pontuação de relevância a partir das características extraídas;\npor exemplo, score = peso_texto * len_palavras + peso_valor * valor.\n\nFunção classify(row: DatasetRow, threshold: float) -&gt; str\n\nretorne \"relevante\" se a pontuação for maior ou igual ao limite, caso contrário \"irrelevante\".\n\nFunção evaluate(predictions: list[str], truth: list[str]) -&gt; dict[str, float]\n\ncalcule accuracy, precision e recall para a classe relevante.\nuse apenas operações com listas, contadores e condicionais.\n\nCLI (main.py)\n\nargumentos: --input, --threshold, --peso-texto, --peso-valor, --saida.\nleia o CSV, gere classificações e salve um relatório JSON com métricas e amostras de resultados.\n\n\n\n\n34.1.2 Requisitos extras\n\nAdicione tratamento de exceção para valores ausentes e formato incorreto.\nUse uma list comprehension para filtrar apenas as linhas classificadas como relevante.\nImplemente ao menos um generator para processar as linhas do CSV sem carregar tudo na memória de uma vez.\nInclua testes pytest para:\n\nparser de CSV válido e inválido;\nfunção preprocess_text;\nfunção evaluate.\n\n\n\n\n34.1.3 Exemplo de uso\npython main.py --input dados.csv --threshold 10.0 --peso-texto 1.5 --peso-valor 0.8 --saida relatorio.json\n\n\n34.1.4 Explicação didática\nEste desafio reúne os fundamentos do material porque exige:\n\nmanipulação de entrada e saída (input, arquivos, CSV/JSON);\nfunções bem tipadas e tratamento de erros;\nuso de coleções, strings e comprehensions;\nmodelagem com classes e dataclass;\nCLI e modularização de código;\navaliação básica de desempenho, conceito central em Ciência de Dados.\n\n\n\n34.1.5 Entregáveis\n\ncódigo-fonte do pacote e do CLI;\nrelatório JSON com as métricas;\ntestes pytest cobrindo as funções centrais.\n\n\n\nBônus: adicione uma função top_words(text: str, n: int) -&gt; list[tuple[str, int]] que retorna as n palavras mais frequentes e inclua isso no relatório final.",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
     ]
   }
 ]

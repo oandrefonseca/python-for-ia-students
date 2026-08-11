@@ -1,0 +1,19 @@
+---
+title: "Exercícios — Parte III"
+---
+
+# Exercícios — Parte III
+
+Exercícios sobre recursos intermediários: módulos, OOP, generators, decorators, dataclasses, CLI e testes.
+
+## 1. Classes e dataclasses
+Modele um `Produto` com `@dataclass` (nome, preço, estoque) e implemente `valor_total()` que retorna `preço * estoque`.
+
+## 2. Generators
+Implemente um generator que produza pares `(n, n*n)` para `n` de 1 a 10 e consuma com `next()`.
+
+## 3. Módulos e testes
+Crie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste `pytest` cobrindo entrada válida e inválida.
+
+## 4. CLI
+Implemente um script CLI que receba `--arquivo` e imprima o número de linhas do arquivo, tratando erros de arquivo ausente.

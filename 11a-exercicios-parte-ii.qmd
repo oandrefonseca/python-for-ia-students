@@ -1,0 +1,19 @@
+---
+title: "Exercícios — Parte II"
+---
+
+# Exercícios — Parte II
+
+Exercícios sobre coleções e manipulação de texto.
+
+## 1. Listas e operações
+Implemente uma lista de compras: adicione, remova e atualize itens. Ao final, mostre o total de itens e a lista ordenada.
+
+## 2. Dicionários
+Escreva uma função que conte a frequência de vogais em uma string e retorne um `dict` com o resultado.
+
+## 3. Comprehensions
+Gere uma lista com os quadrados dos números pares de 1 a 20 usando list comprehension.
+
+## 4. Strings
+Leia uma frase, remova pontuação e mostre as palavras em maiúsculas separadas por vírgula.

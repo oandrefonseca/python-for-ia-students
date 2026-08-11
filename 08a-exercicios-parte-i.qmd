@@ -1,0 +1,19 @@
+---
+title: "Exercícios — Parte I"
+---
+
+# Exercícios — Parte I
+
+Exercícios para consolidar fundamentos do Python (variáveis, funções, condicionais, repetição e type hints).
+
+## 1. Entrada e tipos
+Escreva um programa que leia nome, idade e nota final de um aluno. Imprima uma mensagem formatada com os valores (use `int`/`float` quando necessário).
+
+## 2. Função e condicional
+Implemente `calcular_media(n1: float, n2: float, n3: float) -> float` e use-a para decidir: Aprovado (>=7), Recuperação (>=4) ou Reprovado.
+
+## 3. Repetição
+Crie um laço que leia números até o usuário digitar `0`. Ao final, imprima soma, média, maior e menor número lidos (ignorar o zero).
+
+## 4. Type hints e formatação
+Implemente `celsius_para_fahrenheit(c: float) -> float`. Leia uma temperatura e exiba o resultado com duas casas decimais.
