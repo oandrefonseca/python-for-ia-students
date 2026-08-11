@@ -2,18 +2,28 @@
 title: "Exercícios — Parte II"
 ---
 
-# Exercícios — Parte II
-
 Exercícios sobre coleções e manipulação de texto.
 
-## 1. Listas e operações
-Implemente uma lista de compras: adicione, remova e atualize itens. Ao final, mostre o total de itens e a lista ordenada.
+## Listas e operações
 
-## 2. Dicionários
-Escreva uma função que conte a frequência de vogais em uma string e retorne um `dict` com o resultado.
+**Cenário.** Você está fazendo compras no mercado e quer controlar a lista pelo celular: adicionar itens que lembrar no caminho, remover os que já foram para o carrinho e corrigir a quantidade de algo digitado errado.
 
-## 3. Comprehensions
-Gere uma lista com os quadrados dos números pares de 1 a 20 usando list comprehension.
+**Tarefa:** Implemente uma lista de compras (uma `list` de itens) que permita adicionar, remover e atualizar itens. Ao final, mostre o total de itens e a lista ordenada.
 
-## 4. Strings
-Leia uma frase, remova pontuação e mostre as palavras em maiúsculas separadas por vírgula.
+## Dicionários
+
+**Cenário.** Um professor de linguística quer saber, rapidamente, quais vogais aparecem com mais frequência em um texto, para comparar a sonoridade de diferentes trechos.
+
+**Tarefa:** Escreva uma função que conte a frequência de cada vogal em uma string e retorne um `dict` com o resultado (vogal → quantidade de ocorrências).
+
+## Comprehensions
+
+**Cenário.** Um professor de matemática quer uma lista rápida dos quadrados dos números pares até 20 para ilustrar um exercício na lousa, sem escrever um laço `for` de várias linhas.
+
+**Tarefa:** Gere uma lista com os quadrados dos números pares de 1 a 20, usando uma list comprehension.
+
+## Strings
+
+**Cenário.** Um formulário de cadastro recebeu a frase de apresentação de um usuário cheia de pontuação e espaçamento inconsistente. Antes de armazenar, o time de dados quer normalizar o texto para um formato padrão.
+
+**Tarefa:** Leia uma frase, remova a pontuação básica e mostre as palavras em maiúsculas, separadas por vírgula.

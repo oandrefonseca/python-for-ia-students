@@ -14,7 +14,7 @@
     "href": "index.html#como-o-livro-está-organizado",
     "title": "Nivelamento em Python",
     "section": "Como o livro está organizado",
-    "text": "Como o livro está organizado\n\nParte I — Fundamentos da linguagem: a base do Python, de variáveis a funções e anotações de tipo.\nParte II — Coleções e texto: como armazenar e manipular dados com as coleções nativas, strings e comprehensions.\nParte III — Recursos intermediários: o que torna o código pythônico e profissional — exceções, pip/venv, OOP, generators, decorators, dataclasses, biblioteca padrão, CLI, testes e arquivos.\nParte IV — Complexidade e algoritmos: o ferramental para raciocinar sobre eficiência (Big-O) e recursão.\nParte V — Estruturas de dados: pilha, fila, listas ligadas, árvores e grafos, com implementações completas.\nParte VI — Prática: exercícios integradores organizados por bloco.\n\nA ordem foi pensada para que cada capítulo use apenas o que veio antes: Big-O e recursão precedem as estruturas de dados porque são usados nelas; decorators precedem dataclasses; type hints precedem dataclasses e testes.",
+    "text": "Como o livro está organizado\n\nParte I — Fundamentos da linguagem: a base do Python, de variáveis a funções e anotações de tipo.\nParte II — Coleções e texto: como armazenar e manipular dados com as coleções nativas, strings e comprehensions.\nParte III — Recursos intermediários: o que torna o código pythônico e profissional — exceções, pip/venv, OOP, generators, decorators, dataclasses, biblioteca padrão, CLI, testes e arquivos.\nParte IV — Complexidade e algoritmos: o ferramental para raciocinar sobre eficiência (Big-O) e recursão.\nParte V — Estruturas de dados: pilha, fila, listas ligadas, árvores e grafos, com implementações completas.\n\nCada parte termina com um capítulo de exercícios que consolida o conteúdo do bloco.\nA ordem foi pensada para que cada capítulo use apenas o que veio antes: Big-O e recursão precedem as estruturas de dados porque são usados nelas; decorators precedem dataclasses; type hints precedem dataclasses e testes.",
     "crumbs": [
       "Prefácio"
     ]
@@ -44,7 +44,7 @@
     "href": "01-introducao.html",
     "title": "1  Introdução à linguagem Python",
     "section": "",
-    "text": "1.1 Características importantes\nPython é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica, criada por Guido van Rossum e lançada em 1991. Ela se tornou a linguagem padrão em Ciência de Dados e Inteligência Artificial por três motivos principais: a sintaxe é legível e próxima do pseudocódigo, o ecossistema de bibliotecas científicas é vasto (NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow) e a comunidade é enorme, o que facilita encontrar soluções e documentação.",
+    "text": "1.1 Características importantes\nPython é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica, criada por Guido van Rossum e lançada em 1991. Ela se tornou a linguagem padrão em Ciência de Dados e Inteligência Artificial por três motivos principais: a sintaxe é legível e próxima do pseudocódigo; o ecossistema de bibliotecas científicas é vasto (NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow); e a comunidade é enorme, o que facilita encontrar soluções e documentação.",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução à linguagem Python</span>"
@@ -66,7 +66,7 @@
     "href": "01-introducao.html#o-que-muda-para-quem-vem-de-c-java-ou-javascript",
     "title": "1  Introdução à linguagem Python",
     "section": "1.2 O que muda para quem vem de C, Java ou JavaScript",
-    "text": "1.2 O que muda para quem vem de C, Java ou JavaScript\n\nNão há ++, -- nem switch clássico (há match/case desde o Python 3.10).\nValores “falsy”: 0, 0.0, \"\", [], {}, set() e None avaliam como False em contexto booleano; o resto é True. Isso permite if lista: em vez de if len(lista) &gt; 0:.\nIdiomas que surpreendem:\n\na, b = b, a                       # troca sem variável temporária\nx = 5 if condicao else 10         # operador ternário\nif 0 &lt;= nota &lt;= 10:               # comparação encadeada\n    ...",
+    "text": "1.2 O que muda para quem vem de C, Java ou JavaScript\n\nNão há ++, -- nem switch clássico (há match/case desde o Python 3.10).\nValores “falsy”: 0, 0.0, \"\", [], {}, set() e None avaliam como False em contexto booleano; o resto é True. Isso permite if lista: em vez de if len(lista) &gt; 0:.\nExpressões idiomáticas que surpreendem:\n\na, b = b, a                       # troca sem variável temporária\nx = 5 if condicao else 10         # operador ternário\nif 0 &lt;= nota &lt;= 10:               # comparação encadeada\n    ...",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução à linguagem Python</span>"
@@ -374,7 +374,7 @@
     "href": "07-funcoes.html#funções-são-objetos-de-primeira-classe",
     "title": "7  Funções",
     "section": "7.4 Funções são objetos de primeira classe",
-    "text": "7.4 Funções são objetos de primeira classe\nPodem ser passadas como argumento e retornadas — base dos decorators (Capítulo 16):\ndef aplicar(func, valor):\n    return func(valor)\n\naplicar(lambda x: x ** 2, 5)         # 25",
+    "text": "7.4 Funções são objetos de primeira classe\nFunções podem ser passadas como argumento e retornadas — base dos decorators (Capítulo 18):\ndef aplicar(func, valor):\n    return func(valor)\n\naplicar(lambda x: x ** 2, 5)         # 25",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Funções</span>"
@@ -440,7 +440,7 @@
     "href": "08-type-hints.html#por-que-isso-importa-neste-livro",
     "title": "8  Type hints (anotações de tipo)",
     "section": "8.4 Por que isso importa neste livro",
-    "text": "8.4 Por que isso importa neste livro\n\nDataclasses (Capítulo 17) exigem anotações de tipo em seus campos.\nTestes (Capítulo 20) ficam mais fáceis de escrever quando as assinaturas declaram o contrato.\nBibliotecas do ecossistema de dados (Pandas, Pydantic, FastAPI) usam type hints extensivamente — você vai lê-los o tempo todo.\n\n\n\n\n\n\n\nNota\n\n\n\nAs anotações não impedem passar o tipo errado: calcular_imc(\"70\", \"1.7\") só falha na execução. Quem verifica estaticamente é o mypy (pip install mypy e mypy script.py) ou a própria IDE.",
+    "text": "8.4 Por que isso importa neste livro\n\nDataclasses (Capítulo 19) exigem anotações de tipo em seus campos.\nTestes (Capítulo 22) ficam mais fáceis de escrever quando as assinaturas declaram o contrato.\nBibliotecas do ecossistema de dados (Pandas, Pydantic, FastAPI) usam type hints extensivamente — você vai lê-los o tempo todo.\n\n\n\n\n\n\n\nNota\n\n\n\nAs anotações não impedem passar o tipo errado: calcular_imc(\"70\", \"1.7\") só falha na execução. Quem verifica estaticamente é o mypy (pip install mypy e mypy script.py) ou a própria IDE.",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Type hints (anotações de tipo)</span>"
@@ -449,67 +449,67 @@
   {
     "objectID": "09-colecoes.html",
     "href": "09-colecoes.html",
-    "title": "9  Coleções nativas: listas, tuplas, dicionários e conjuntos",
+    "title": "10  Coleções nativas: listas, tuplas, dicionários e conjuntos",
     "section": "",
-    "text": "9.1 Listas (list) — mutáveis e ordenadas\nA lista é a coleção mais versátil do Python: aceita tipos mistos, cresce dinamicamente e mantém a ordem de inserção.",
+    "text": "10.1 Listas (list) — mutáveis e ordenadas\nA lista é a coleção mais versátil do Python: aceita tipos mistos, cresce dinamicamente e mantém a ordem de inserção.",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
     ]
   },
   {
     "objectID": "09-colecoes.html#listas-list-mutáveis-e-ordenadas",
     "href": "09-colecoes.html#listas-list-mutáveis-e-ordenadas",
-    "title": "9  Coleções nativas: listas, tuplas, dicionários e conjuntos",
+    "title": "10  Coleções nativas: listas, tuplas, dicionários e conjuntos",
     "section": "",
-    "text": "frutas = [\"maçã\", \"banana\", \"uva\"]\n\nfrutas.append(\"manga\")        # adiciona ao final\nfrutas.insert(1, \"pera\")      # insere na posição 1\nfrutas.remove(\"uva\")          # remove pela primeira ocorrência do valor\nultimo = frutas.pop()         # remove e retorna o último elemento\nprint(len(frutas))            # tamanho\nprint(\"banana\" in frutas)     # pertencimento → True\nfrutas.sort()                 # ordena no lugar\nordenada = sorted(frutas)     # retorna nova lista ordenada\n\n9.1.1 Indexação e fatiamento (slicing)\nFundamentais aqui e, depois, em NumPy e Pandas:\nnumeros = [10, 20, 30, 40, 50]\n\nprint(numeros[0])      # 10  (primeiro)\nprint(numeros[-1])     # 50  (último)\nprint(numeros[1:4])    # [20, 30, 40]  (índices 1 a 3)\nprint(numeros[:3])     # [10, 20, 30]\nprint(numeros[::2])    # [10, 30, 50]  (de 2 em 2)\nprint(numeros[::-1])   # [50, 40, 30, 20, 10]  (invertida)\n\n\n\n\n\n\nReferência ≠ cópia\n\n\n\nListas são passadas por referência: b = a não cria cópia, apenas outra referência ao mesmo objeto. Use b = a.copy() ou b = a[:]. Para estruturas aninhadas, copy.deepcopy(a).",
+    "text": "frutas = [\"maçã\", \"banana\", \"uva\"]\n\nfrutas.append(\"manga\")        # adiciona ao final\nfrutas.insert(1, \"pera\")      # insere na posição 1\nfrutas.remove(\"uva\")          # remove pela primeira ocorrência do valor\nultimo = frutas.pop()         # remove e retorna o último elemento\nprint(len(frutas))            # tamanho\nprint(\"banana\" in frutas)     # pertencimento → True\nfrutas.sort()                 # ordena no lugar\nordenada = sorted(frutas)     # retorna nova lista ordenada\n\n10.1.1 Indexação e fatiamento (slicing)\nFundamentais aqui e, depois, em NumPy e Pandas:\nnumeros = [10, 20, 30, 40, 50]\n\nprint(numeros[0])      # 10  (primeiro)\nprint(numeros[-1])     # 50  (último)\nprint(numeros[1:4])    # [20, 30, 40]  (índices 1 a 3)\nprint(numeros[:3])     # [10, 20, 30]\nprint(numeros[::2])    # [10, 30, 50]  (de 2 em 2)\nprint(numeros[::-1])   # [50, 40, 30, 20, 10]  (invertida)\n\n\n\n\n\n\nReferência ≠ cópia\n\n\n\nListas são passadas por referência: b = a não cria cópia, apenas outra referência ao mesmo objeto. Use b = a.copy() ou b = a[:]. Para estruturas aninhadas, copy.deepcopy(a).",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
     ]
   },
   {
     "objectID": "09-colecoes.html#tuplas-tuple-imutáveis-e-ordenadas",
     "href": "09-colecoes.html#tuplas-tuple-imutáveis-e-ordenadas",
-    "title": "9  Coleções nativas: listas, tuplas, dicionários e conjuntos",
-    "section": "9.2 Tuplas (tuple) — imutáveis e ordenadas",
-    "text": "9.2 Tuplas (tuple) — imutáveis e ordenadas\ncoordenada = (5.2, -35.8)\nx, y = coordenada          # desempacotamento\n# coordenada[0] = 10       # ERRO: tupla não pode ser alterada\nUse tuplas para dados que não devem mudar (coordenadas, registros fixos) e como chaves de dicionário.",
+    "title": "10  Coleções nativas: listas, tuplas, dicionários e conjuntos",
+    "section": "10.2 Tuplas (tuple) — imutáveis e ordenadas",
+    "text": "10.2 Tuplas (tuple) — imutáveis e ordenadas\ncoordenada = (5.2, -35.8)\nx, y = coordenada          # desempacotamento\n# coordenada[0] = 10       # ERRO: tupla não pode ser alterada\nUse tuplas para dados que não devem mudar (coordenadas, registros fixos) e como chaves de dicionário.",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
     ]
   },
   {
     "objectID": "09-colecoes.html#dicionários-dict-pares-chave-valor",
     "href": "09-colecoes.html#dicionários-dict-pares-chave-valor",
-    "title": "9  Coleções nativas: listas, tuplas, dicionários e conjuntos",
-    "section": "9.3 Dicionários (dict) — pares chave-valor",
-    "text": "9.3 Dicionários (dict) — pares chave-valor\nEstrutura essencial em Ciência de Dados: é a base de JSONs, de registros e do próprio Pandas. Busca por chave em O(1).\naluno = {\n    \"nome\": \"Carla\",\n    \"curso\": \"Ciência de Dados\",\n    \"notas\": [8.0, 9.5, 7.0],\n}\n\nprint(aluno[\"nome\"])                 # acesso direto (KeyError se não existir)\nprint(aluno.get(\"idade\", \"N/D\"))     # acesso seguro com valor padrão\naluno[\"idade\"] = 21                  # inserção/atualização\n\nfor chave, valor in aluno.items():\n    print(chave, \"→\", valor)\n\nprint(list(aluno.keys()))\nprint(list(aluno.values()))",
+    "title": "10  Coleções nativas: listas, tuplas, dicionários e conjuntos",
+    "section": "10.3 Dicionários (dict) — pares chave-valor",
+    "text": "10.3 Dicionários (dict) — pares chave-valor\nEstrutura essencial em Ciência de Dados: é a base de JSONs, de registros e do próprio Pandas. Busca por chave em O(1).\naluno = {\n    \"nome\": \"Carla\",\n    \"curso\": \"Ciência de Dados\",\n    \"notas\": [8.0, 9.5, 7.0],\n}\n\nprint(aluno[\"nome\"])                 # acesso direto (KeyError se não existir)\nprint(aluno.get(\"idade\", \"N/D\"))     # acesso seguro com valor padrão\naluno[\"idade\"] = 21                  # inserção/atualização\n\nfor chave, valor in aluno.items():\n    print(chave, \"→\", valor)\n\nprint(list(aluno.keys()))\nprint(list(aluno.values()))",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
     ]
   },
   {
     "objectID": "09-colecoes.html#conjuntos-set-elementos-únicos-sem-ordem",
     "href": "09-colecoes.html#conjuntos-set-elementos-únicos-sem-ordem",
-    "title": "9  Coleções nativas: listas, tuplas, dicionários e conjuntos",
-    "section": "9.4 Conjuntos (set) — elementos únicos, sem ordem",
-    "text": "9.4 Conjuntos (set) — elementos únicos, sem ordem\nPertencimento em O(1) e operações de conjunto — úteis em pré-processamento de dados:\na = {1, 2, 3, 4}\nb = {3, 4, 5, 6}\n\nprint(a | b)   # união: {1, 2, 3, 4, 5, 6}\nprint(a & b)   # interseção: {3, 4}\nprint(a - b)   # diferença: {1, 2}\n\nrepetidos = [1, 1, 2, 3, 3, 3]\nunicos = set(repetidos)     # {1, 2, 3} — remove duplicatas em uma linha",
+    "title": "10  Coleções nativas: listas, tuplas, dicionários e conjuntos",
+    "section": "10.4 Conjuntos (set) — elementos únicos, sem ordem",
+    "text": "10.4 Conjuntos (set) — elementos únicos, sem ordem\nPertencimento em O(1) e operações de conjunto — úteis em pré-processamento de dados:\na = {1, 2, 3, 4}\nb = {3, 4, 5, 6}\n\nprint(a | b)   # união: {1, 2, 3, 4, 5, 6}\nprint(a & b)   # interseção: {3, 4}\nprint(a - b)   # diferença: {1, 2}\n\nrepetidos = [1, 1, 2, 3, 3, 3]\nunicos = set(repetidos)     # {1, 2, 3} — remove duplicatas em uma linha",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
     ]
   },
   {
     "objectID": "09-colecoes.html#quadro-comparativo",
     "href": "09-colecoes.html#quadro-comparativo",
-    "title": "9  Coleções nativas: listas, tuplas, dicionários e conjuntos",
-    "section": "9.5 Quadro comparativo",
-    "text": "9.5 Quadro comparativo\n\n\n\n\n\n\n\n\n\n\n\n\nEstrutura\nSintaxe\nMutável?\nOrdenada?\nDuplicatas?\nBusca por valor\nUso típico\n\n\n\n\nLista\n[1, 2]\nSim\nSim\nSim\nO(n)\nSequências gerais\n\n\nTupla\n(1, 2)\nNão\nSim\nSim\nO(n)\nRegistros fixos\n\n\nDicionário\n{\"a\": 1}\nSim\nSim (inserção)\nChaves não\nO(1)\nMapeamentos\n\n\nConjunto\n{1, 2}\nSim\nNão\nNão\nO(1)\nUnicidade\n\n\n\nOs custos O(1) e O(n) serão formalizados no Capítulo sobre Big-O.",
+    "title": "10  Coleções nativas: listas, tuplas, dicionários e conjuntos",
+    "section": "10.5 Quadro comparativo",
+    "text": "10.5 Quadro comparativo\n\n\n\n\n\n\n\n\n\n\n\n\nEstrutura\nSintaxe\nMutável?\nOrdenada?\nDuplicatas?\nBusca por valor\nUso típico\n\n\n\n\nLista\n[1, 2]\nSim\nSim\nSim\nO(n)\nSequências gerais\n\n\nTupla\n(1, 2)\nNão\nSim\nSim\nO(n)\nRegistros fixos\n\n\nDicionário\n{\"a\": 1}\nSim\nSim (inserção)\nChaves não\nO(1)\nMapeamentos\n\n\nConjunto\n{1, 2}\nSim\nNão\nNão\nO(1)\nUnicidade\n\n\n\nOs custos O(1) e O(n) serão formalizados no capítulo de Big-O (Capítulo 25).",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Coleções nativas: listas, tuplas, dicionários e conjuntos</span>"
     ]
   },
   {
@@ -559,100 +559,100 @@
   {
     "objectID": "11-comprehensions.html",
     "href": "11-comprehensions.html",
-    "title": "11  Compreensões (comprehensions)",
+    "title": "12  Compreensões (comprehensions)",
     "section": "",
-    "text": "11.1 List comprehension\nSintaxe compacta e idiomática para construir coleções — onipresente em código de Ciência de Dados.\nCom transformação condicional (if/else antes do for):\nAninhada (matrizes):",
+    "text": "12.1 List comprehension\nSintaxe compacta e idiomática para construir coleções — onipresente em código de Ciência de Dados.\nCom transformação condicional (if/else antes do for):\nAninhada (matrizes):",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
     ]
   },
   {
     "objectID": "11-comprehensions.html#list-comprehension",
     "href": "11-comprehensions.html#list-comprehension",
-    "title": "11  Compreensões (comprehensions)",
+    "title": "12  Compreensões (comprehensions)",
     "section": "",
     "text": "quadrados = [x ** 2 for x in range(10)]\npares = [x for x in range(20) if x % 2 == 0]\n\n# Equivalente \"tradicional\" do primeiro exemplo:\nquadrados = []\nfor x in range(10):\n    quadrados.append(x ** 2)\n\nrotulos = [\"par\" if x % 2 == 0 else \"ímpar\" for x in range(5)]\n\nmatriz = [[i * j for j in range(3)] for i in range(3)]",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
     ]
   },
   {
     "objectID": "11-comprehensions.html#dict-e-set-comprehension",
     "href": "11-comprehensions.html#dict-e-set-comprehension",
-    "title": "11  Compreensões (comprehensions)",
-    "section": "11.2 Dict e set comprehension",
-    "text": "11.2 Dict e set comprehension\nnotas = {\"Ana\": 8, \"Bruno\": 5, \"Carla\": 9}\n\naprovados = {nome: nota for nome, nota in notas.items() if nota &gt;= 7}\niniciais = {nome[0] for nome in notas}",
+    "title": "12  Compreensões (comprehensions)",
+    "section": "12.2 Dict e set comprehension",
+    "text": "12.2 Dict e set comprehension\nnotas = {\"Ana\": 8, \"Bruno\": 5, \"Carla\": 9}\n\naprovados = {nome: nota for nome, nota in notas.items() if nota &gt;= 7}\niniciais = {nome[0] for nome in notas}",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
     ]
   },
   {
     "objectID": "11-comprehensions.html#quando-usar-e-quando-não",
     "href": "11-comprehensions.html#quando-usar-e-quando-não",
-    "title": "11  Compreensões (comprehensions)",
-    "section": "11.3 Quando usar (e quando não)",
-    "text": "11.3 Quando usar (e quando não)\nPrefira comprehensions quando o objetivo é construir uma coleção a partir de outra — é mais legível e geralmente mais rápido que for + append. Para lógica complexa (vários ifs, efeitos colaterais, mais de duas dimensões), o laço explícito continua preferível: legibilidade vence concisão.\n\n\n\n\n\n\nDica\n\n\n\nNo Capítulo sobre generators você verá a generator expression — a mesma sintaxe com parênteses, (x ** 2 for x in ...) — que produz os valores sob demanda, sem materializar a lista na memória.",
+    "title": "12  Compreensões (comprehensions)",
+    "section": "12.3 Quando usar (e quando não)",
+    "text": "12.3 Quando usar (e quando não)\nPrefira comprehensions quando o objetivo é construir uma coleção a partir de outra — é mais legível e geralmente mais rápido que for + append. Para lógica complexa (vários ifs, efeitos colaterais, mais de duas dimensões), o laço explícito continua preferível: legibilidade vence concisão.\n\n\n\n\n\n\nDica\n\n\n\nNo capítulo de generators (Capítulo 17) você verá a generator expression — a mesma sintaxe com parênteses, (x ** 2 for x in ...) — que produz os valores sob demanda, sem materializar a lista na memória.",
     "crumbs": [
       "Parte II — Coleções e texto",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Compreensões (comprehensions)</span>"
     ]
   },
   {
     "objectID": "12-erros.html",
     "href": "12-erros.html",
-    "title": "12  Tratamento de erros",
+    "title": "14  Tratamento de erros",
     "section": "",
-    "text": "12.1 Levantando exceções\nErros em tempo de execução (exceções) podem ser capturados com try/except, evitando que o programa encerre abruptamente:\nCapture exceções específicas; um except: nu esconde bugs.",
+    "text": "14.1 Levantando exceções\nErros em tempo de execução (exceções) podem ser capturados com try/except, evitando que o programa encerre abruptamente:\nCapture exceções específicas; um except: nu esconde bugs.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tratamento de erros</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tratamento de erros</span>"
     ]
   },
   {
     "objectID": "12-erros.html#levantando-exceções",
     "href": "12-erros.html#levantando-exceções",
-    "title": "12  Tratamento de erros",
+    "title": "14  Tratamento de erros",
     "section": "",
     "text": "def sacar(saldo: float, valor: float) -&gt; float:\n    if valor &gt; saldo:\n        raise ValueError(\"saldo insuficiente\")\n    return saldo - valor",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tratamento de erros</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tratamento de erros</span>"
     ]
   },
   {
     "objectID": "12-erros.html#exceções-personalizadas",
     "href": "12-erros.html#exceções-personalizadas",
-    "title": "12  Tratamento de erros",
-    "section": "12.2 Exceções personalizadas",
-    "text": "12.2 Exceções personalizadas\nclass SaldoInsuficiente(Exception):\n    pass\n\nraise SaldoInsuficiente(\"saldo insuficiente para o saque\")",
+    "title": "14  Tratamento de erros",
+    "section": "14.2 Exceções personalizadas",
+    "text": "14.2 Exceções personalizadas\nclass SaldoInsuficiente(Exception):\n    pass\n\nraise SaldoInsuficiente(\"saldo insuficiente para o saque\")",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tratamento de erros</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tratamento de erros</span>"
     ]
   },
   {
     "objectID": "12-erros.html#exceções-como-controle-de-fluxo",
     "href": "12-erros.html#exceções-como-controle-de-fluxo",
-    "title": "12  Tratamento de erros",
-    "section": "12.3 Exceções como controle de fluxo",
-    "text": "12.3 Exceções como controle de fluxo\nEm Python, exceções não sinalizam apenas erros: também encerram protocolos. O exemplo mais importante é StopIteration, que indica o fim de um iterador — mecanismo que sustenta o for e os generators (Capítulo 15).",
+    "title": "14  Tratamento de erros",
+    "section": "14.3 Exceções como controle de fluxo",
+    "text": "14.3 Exceções como controle de fluxo\nEm Python, exceções não sinalizam apenas erros: também encerram protocolos. O exemplo mais importante é StopIteration, que indica o fim de um iterador — mecanismo que sustenta o for e os generators (Capítulo 17).",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tratamento de erros</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tratamento de erros</span>"
     ]
   },
   {
     "objectID": "12-erros.html#exceções-frequentes-em-código-de-dados",
     "href": "12-erros.html#exceções-frequentes-em-código-de-dados",
-    "title": "12  Tratamento de erros",
-    "section": "12.4 Exceções frequentes em código de dados",
-    "text": "12.4 Exceções frequentes em código de dados\nValueError, TypeError, KeyError, IndexError, ZeroDivisionError, FileNotFoundError, AttributeError.",
+    "title": "14  Tratamento de erros",
+    "section": "14.4 Exceções frequentes em código de dados",
+    "text": "14.4 Exceções frequentes em código de dados\nValueError, TypeError, KeyError, IndexError, ZeroDivisionError, FileNotFoundError, AttributeError.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tratamento de erros</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tratamento de erros</span>"
     ]
   },
   {
@@ -724,34 +724,34 @@
   {
     "objectID": "14-oop.html",
     "href": "14-oop.html",
-    "title": "14  Noções de orientação a objetos",
+    "title": "16  Noções de orientação a objetos",
     "section": "",
-    "text": "14.1 Métodos especiais (dunder)\nUma classe é um molde que define atributos (dados) e métodos (comportamentos); um objeto é uma instância desse molde. Este capítulo é a base para as estruturas de dados da Parte V, que implementaremos como classes.\nPontos essenciais:\nMétodos com nomes entre underscores duplos integram a classe à linguagem:\nOutros que você reencontrará: __len__ (habilita len(obj)), __getitem__ (habilita obj[i]), __iter__ (Capítulo 15).",
+    "text": "16.1 Métodos especiais (dunder)\nUma classe é um molde que define atributos (dados) e métodos (comportamentos); um objeto é uma instância desse molde. Este capítulo é a base para as estruturas de dados da Parte V, que implementaremos como classes.\nPontos essenciais:\nMétodos com nomes entre underscores duplos integram a classe à linguagem:\nOutros que você reencontrará: __len__ (habilita len(obj)), __getitem__ (habilita obj[i]), __iter__ (Capítulo 17).",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Noções de orientação a objetos</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Noções de orientação a objetos</span>"
     ]
   },
   {
     "objectID": "14-oop.html#métodos-especiais-dunder",
     "href": "14-oop.html#métodos-especiais-dunder",
-    "title": "14  Noções de orientação a objetos",
+    "title": "16  Noções de orientação a objetos",
     "section": "",
     "text": "class ContaBancaria:\n    def __init__(self, titular: str, saldo: float = 0):\n        self.titular = titular\n        self.saldo = saldo\n\n    def __repr__(self) -&gt; str:              # representação legível\n        return f\"Conta({self.titular}, R${self.saldo:.2f})\"\n\n    def __eq__(self, outra) -&gt; bool:        # comportamento do ==\n        return self.titular == outra.titular\n\nc = ContaBancaria(\"Ana\", 100)\nprint(c)          # Conta(Ana, R$100.00)",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Noções de orientação a objetos</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Noções de orientação a objetos</span>"
     ]
   },
   {
     "objectID": "14-oop.html#herança-e-encapsulamento",
     "href": "14-oop.html#herança-e-encapsulamento",
-    "title": "14  Noções de orientação a objetos",
-    "section": "14.2 Herança e encapsulamento",
-    "text": "14.2 Herança e encapsulamento\nclass ContaPoupanca(ContaBancaria):         # herda de ContaBancaria\n    def render(self, taxa: float) -&gt; None:\n        self.saldo *= (1 + taxa)\nO encapsulamento em Python é por convenção: o prefixo _atributo sinaliza “uso interno”.\n\n\n\n\n\n\nAonde isso vai dar\n\n\n\nEscrever __init__, __repr__ e __eq__ à mão para classes que só guardam dados é repetitivo. No Capítulo 17 (Dataclasses) você verá a forma moderna de gerar tudo isso com uma linha — mas antes precisamos de decorators (Capítulo 16), o mecanismo que a sustenta.",
+    "title": "16  Noções de orientação a objetos",
+    "section": "16.2 Herança e encapsulamento",
+    "text": "16.2 Herança e encapsulamento\nclass ContaPoupanca(ContaBancaria):         # herda de ContaBancaria\n    def render(self, taxa: float) -&gt; None:\n        self.saldo *= (1 + taxa)\nO encapsulamento em Python é por convenção: o prefixo _atributo sinaliza “uso interno”.\n\n\n\n\n\n\nAonde isso vai dar\n\n\n\nEscrever __init__, __repr__ e __eq__ à mão para classes que só guardam dados é repetitivo. No Capítulo 19 (Dataclasses) você verá a forma moderna de gerar tudo isso com uma linha — mas antes precisamos de decorators (Capítulo 18), o mecanismo que a sustenta.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Noções de orientação a objetos</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Noções de orientação a objetos</span>"
     ]
   },
   {
@@ -856,122 +856,122 @@
   {
     "objectID": "17-dataclasses.html",
     "href": "17-dataclasses.html",
-    "title": "17  Dataclasses",
+    "title": "19  Dataclasses",
     "section": "",
-    "text": "17.1 Antes e depois\nEscrever classes que só guardam dados exige __init__, __repr__ e __eq__ repetitivos (Capítulo 14). O decorator @dataclass (Capítulo 16) gera tudo isso automaticamente a partir das anotações de tipo (Capítulo 8) — este capítulo une os três.",
+    "text": "19.1 Antes e depois\nEscrever classes que só guardam dados exige __init__, __repr__ e __eq__ repetitivos (Capítulo 16). O decorator @dataclass (Capítulo 18) gera tudo isso automaticamente a partir das anotações de tipo (Capítulo 8) — este capítulo une os três.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Dataclasses</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Dataclasses</span>"
     ]
   },
   {
     "objectID": "17-dataclasses.html#antes-e-depois",
     "href": "17-dataclasses.html#antes-e-depois",
-    "title": "17  Dataclasses",
+    "title": "19  Dataclasses",
     "section": "",
     "text": "# Forma clássica\nclass PontoClassico:\n    def __init__(self, x: float, y: float):\n        self.x = x\n        self.y = y\n\n    def __repr__(self):\n        return f\"Ponto(x={self.x}, y={self.y})\"\n\n    def __eq__(self, outro):\n        return (self.x, self.y) == (outro.x, outro.y)\n\n\n# Forma moderna\nfrom dataclasses import dataclass\n\n@dataclass\nclass Ponto:\n    x: float\n    y: float\n\np1 = Ponto(1.0, 2.0)\np2 = Ponto(1.0, 2.0)\nprint(p1)          # Ponto(x=1.0, y=2.0)  — __repr__ automático\nprint(p1 == p2)    # True                 — __eq__ automático",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Dataclasses</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Dataclasses</span>"
     ]
   },
   {
     "objectID": "17-dataclasses.html#valores-padrão-e-campos-mutáveis",
     "href": "17-dataclasses.html#valores-padrão-e-campos-mutáveis",
-    "title": "17  Dataclasses",
-    "section": "17.2 Valores padrão e campos mutáveis",
-    "text": "17.2 Valores padrão e campos mutáveis\nfrom dataclasses import dataclass, field\n\n@dataclass\nclass Aluno:\n    nome: str\n    curso: str = \"Ciência de Dados\"\n    notas: list[float] = field(default_factory=list)   # NUNCA use notas: list = []\n\n    def media(self) -&gt; float:\n        return sum(self.notas) / len(self.notas) if self.notas else 0.0\nO field(default_factory=list) cria uma lista nova por instância — a mesma armadilha do valor padrão mutável vista em Funções.",
+    "title": "19  Dataclasses",
+    "section": "19.2 Valores padrão e campos mutáveis",
+    "text": "19.2 Valores padrão e campos mutáveis\nfrom dataclasses import dataclass, field\n\n@dataclass\nclass Aluno:\n    nome: str\n    curso: str = \"Ciência de Dados\"\n    notas: list[float] = field(default_factory=list)   # NUNCA use notas: list = []\n\n    def media(self) -&gt; float:\n        return sum(self.notas) / len(self.notas) if self.notas else 0.0\nO field(default_factory=list) cria uma lista nova por instância — a mesma armadilha do valor padrão mutável vista em Funções.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Dataclasses</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Dataclasses</span>"
     ]
   },
   {
     "objectID": "17-dataclasses.html#opções-úteis",
     "href": "17-dataclasses.html#opções-úteis",
-    "title": "17  Dataclasses",
-    "section": "17.3 Opções úteis",
-    "text": "17.3 Opções úteis\n@dataclass(frozen=True)      # instâncias imutáveis (podem ser chave de dict)\nclass Coordenada:\n    lat: float\n    lon: float\n\n@dataclass(order=True)       # gera &lt;, &lt;=, &gt;, &gt;= (comparação campo a campo)\nclass Versao:\n    maior: int\n    menor: int",
+    "title": "19  Dataclasses",
+    "section": "19.3 Opções úteis",
+    "text": "19.3 Opções úteis\n@dataclass(frozen=True)      # instâncias imutáveis (podem ser chave de dict)\nclass Coordenada:\n    lat: float\n    lon: float\n\n@dataclass(order=True)       # gera &lt;, &lt;=, &gt;, &gt;= (comparação campo a campo)\nclass Versao:\n    maior: int\n    menor: int",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Dataclasses</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Dataclasses</span>"
     ]
   },
   {
     "objectID": "17-dataclasses.html#conexão-com-as-estruturas-de-dados",
     "href": "17-dataclasses.html#conexão-com-as-estruturas-de-dados",
-    "title": "17  Dataclasses",
-    "section": "17.4 Conexão com as estruturas de dados",
-    "text": "17.4 Conexão com as estruturas de dados\nDataclasses são ideais para representar nós de listas ligadas, árvores e grafos (Parte V):\nfrom dataclasses import dataclass\nfrom typing import Optional\n\n@dataclass\nclass No:\n    valor: int\n    proximo: Optional[\"No\"] = None\nNos capítulos da Parte V mostraremos as duas formas — clássica e com dataclass — para você escolher seu estilo.",
+    "title": "19  Dataclasses",
+    "section": "19.4 Conexão com as estruturas de dados",
+    "text": "19.4 Conexão com as estruturas de dados\nDataclasses são ideais para representar nós de listas ligadas, árvores e grafos (Parte V):\nfrom dataclasses import dataclass\nfrom typing import Optional\n\n@dataclass\nclass No:\n    valor: int\n    proximo: Optional[\"No\"] = None\nNos capítulos da Parte V mostraremos as duas formas — clássica e com dataclass — para você escolher seu estilo.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Dataclasses</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Dataclasses</span>"
     ]
   },
   {
     "objectID": "18-biblioteca-padrao.html",
     "href": "18-biblioteca-padrao.html",
-    "title": "18  Biblioteca padrão essencial",
+    "title": "20  Biblioteca padrão essencial",
     "section": "",
-    "text": "18.1 collections\nMódulos que evitam reinventar a roda no dia a dia de dados. “Baterias inclusas” é um lema do Python: muita coisa já vem pronta, sem pip install.\nO deque será a base da Fila (Capítulo 25) e o defaultdict, da lista de adjacência de Grafos (Capítulo 28).",
+    "text": "20.1 collections\nMódulos que evitam reinventar a roda no dia a dia de dados. “Baterias inclusas” é um lema do Python: muita coisa já vem pronta, sem pip install.\nO deque será a base da Fila (Capítulo 29) e o defaultdict, da lista de adjacência de Grafos (Capítulo 32).",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
     ]
   },
   {
     "objectID": "18-biblioteca-padrao.html#collections",
     "href": "18-biblioteca-padrao.html#collections",
-    "title": "18  Biblioteca padrão essencial",
+    "title": "20  Biblioteca padrão essencial",
     "section": "",
     "text": "from collections import Counter, defaultdict, deque\n\n# Counter: contagem em uma linha\nCounter(\"banana\")                    # Counter({'a': 3, 'n': 2, 'b': 1})\nCounter(palavras).most_common(3)     # os 3 mais frequentes\n\n# defaultdict: dicionário com valor padrão (evita KeyError)\ngrupos = defaultdict(list)\nfor nome, turma in registros:\n    grupos[turma].append(nome)\n\n# deque: fila de duas pontas, O(1) nas extremidades\nfila = deque([1, 2, 3])\nfila.appendleft(0)\nfila.popleft()",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
     ]
   },
   {
     "objectID": "18-biblioteca-padrao.html#itertools",
     "href": "18-biblioteca-padrao.html#itertools",
-    "title": "18  Biblioteca padrão essencial",
-    "section": "18.2 itertools",
-    "text": "18.2 itertools\nfrom itertools import product, combinations, permutations, chain\n\nlist(combinations([1, 2, 3], 2))     # [(1,2), (1,3), (2,3)]\nlist(permutations(\"ab\"))             # [('a','b'), ('b','a')]\nlist(product([0, 1], repeat=2))      # produto cartesiano\nlist(chain([1, 2], [3, 4]))          # concatena iteráveis\nTodas as funções de itertools retornam iteradores (Capítulo 15) — memória constante mesmo para combinações enormes.",
+    "title": "20  Biblioteca padrão essencial",
+    "section": "20.2 itertools",
+    "text": "20.2 itertools\nfrom itertools import product, combinations, permutations, chain\n\nlist(combinations([1, 2, 3], 2))     # [(1,2), (1,3), (2,3)]\nlist(permutations(\"ab\"))             # [('a','b'), ('b','a')]\nlist(product([0, 1], repeat=2))      # produto cartesiano\nlist(chain([1, 2], [3, 4]))          # concatena iteráveis\nTodas as funções de itertools retornam iteradores (Capítulo 17) — memória constante mesmo para combinações enormes.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
     ]
   },
   {
     "objectID": "18-biblioteca-padrao.html#datetime",
     "href": "18-biblioteca-padrao.html#datetime",
-    "title": "18  Biblioteca padrão essencial",
-    "section": "18.3 datetime",
-    "text": "18.3 datetime\nfrom datetime import datetime, timedelta\n\nagora = datetime.now()\nontem = agora - timedelta(days=1)\nagora.strftime(\"%d/%m/%Y %H:%M\")               # formatar\ndatetime.strptime(\"11/08/2026\", \"%d/%m/%Y\")    # interpretar",
+    "title": "20  Biblioteca padrão essencial",
+    "section": "20.3 datetime",
+    "text": "20.3 datetime\nfrom datetime import datetime, timedelta\n\nagora = datetime.now()\nontem = agora - timedelta(days=1)\nagora.strftime(\"%d/%m/%Y %H:%M\")               # formatar\ndatetime.strptime(\"11/08/2026\", \"%d/%m/%Y\")    # interpretar",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
     ]
   },
   {
     "objectID": "18-biblioteca-padrao.html#pathlib",
     "href": "18-biblioteca-padrao.html#pathlib",
-    "title": "18  Biblioteca padrão essencial",
-    "section": "18.4 pathlib",
-    "text": "18.4 pathlib\nfrom pathlib import Path\n\np = Path(\"dados\") / \"arquivo.csv\"    # caminhos multiplataforma com /\np.exists(); p.suffix; p.stem\nlist(Path(\".\").glob(\"*.csv\"))        # todos os CSVs da pasta",
+    "title": "20  Biblioteca padrão essencial",
+    "section": "20.4 pathlib",
+    "text": "20.4 pathlib\nfrom pathlib import Path\n\np = Path(\"dados\") / \"arquivo.csv\"    # caminhos multiplataforma com /\np.exists(); p.suffix; p.stem\nlist(Path(\".\").glob(\"*.csv\"))        # todos os CSVs da pasta",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
     ]
   },
   {
     "objectID": "18-biblioteca-padrao.html#functools",
     "href": "18-biblioteca-padrao.html#functools",
-    "title": "18  Biblioteca padrão essencial",
-    "section": "18.5 functools",
-    "text": "18.5 functools\nfrom functools import lru_cache, reduce\n\n@lru_cache(maxsize=None)             # memoização (visto em Decorators)\ndef fib(n): ...\n\nreduce(lambda acc, x: acc + x, [1, 2, 3, 4])   # 10\nOutros que valem conhecer: math, random, statistics, os, json e csv (próximos capítulos), re (expressões regulares).",
+    "title": "20  Biblioteca padrão essencial",
+    "section": "20.5 functools",
+    "text": "20.5 functools\nfrom functools import lru_cache, reduce\n\n@lru_cache(maxsize=None)             # memoização (visto em Decorators)\ndef fib(n): ...\n\nreduce(lambda acc, x: acc + x, [1, 2, 3, 4])   # 10\nOutros que valem conhecer: math, random, statistics, os, json e csv (próximos capítulos), re (expressões regulares).",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Biblioteca padrão essencial</span>"
     ]
   },
   {
@@ -1032,45 +1032,45 @@
   {
     "objectID": "20-testes.html",
     "href": "20-testes.html",
-    "title": "20  Testes e asserções",
+    "title": "22  Testes e asserções",
     "section": "",
-    "text": "20.1 assert\nCódigo que vira ferramenta (capítulo anterior) precisa ser confiável. Testes automatizados verificam o comportamento e protegem contra regressões — essencial quando um pipeline de dados evolui.\nA instrução assert interrompe o programa se a condição for falsa:\nUse assert para invariantes internas e verificações rápidas em notebooks — não para validar entrada de usuário (para isso, raise ValueError, Capítulo 12).",
+    "text": "22.1 assert\nCódigo que vira ferramenta (capítulo anterior) precisa ser confiável. Testes automatizados verificam o comportamento e protegem contra regressões — essencial quando um pipeline de dados evolui.\nA instrução assert interrompe o programa se a condição for falsa:\nUse assert para invariantes internas e verificações rápidas em notebooks — não para validar entrada de usuário (para isso, raise ValueError, Capítulo 14).",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Testes e asserções</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Testes e asserções</span>"
     ]
   },
   {
     "objectID": "20-testes.html#assert",
     "href": "20-testes.html#assert",
-    "title": "20  Testes e asserções",
+    "title": "22  Testes e asserções",
     "section": "",
     "text": "def media(valores: list[float]) -&gt; float:\n    assert len(valores) &gt; 0, \"lista vazia\"\n    return sum(valores) / len(valores)\n\nassert media([4, 8, 6]) == 6.0",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Testes e asserções</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Testes e asserções</span>"
     ]
   },
   {
     "objectID": "20-testes.html#testes-com-pytest",
     "href": "20-testes.html#testes-com-pytest",
-    "title": "20  Testes e asserções",
-    "section": "20.2 Testes com pytest",
-    "text": "20.2 Testes com pytest\nO pytest (pip install pytest) descobre e executa funções cujo nome começa com test_:\n# arquivo: test_media.py\nfrom estatisticas import media\n\ndef test_media_simples():\n    assert media([4, 8, 6]) == 6.0\n\ndef test_media_um_elemento():\n    assert media([10]) == 10.0\n\ndef test_lista_vazia_lanca_erro():\n    import pytest\n    with pytest.raises(AssertionError):\n        media([])\nNo terminal:\npytest              # roda todos os test_*.py\npytest -v           # saída detalhada",
+    "title": "22  Testes e asserções",
+    "section": "22.2 Testes com pytest",
+    "text": "22.2 Testes com pytest\nO pytest (pip install pytest) descobre e executa funções cujo nome começa com test_:\n# arquivo: test_media.py\nfrom estatisticas import media\n\ndef test_media_simples():\n    assert media([4, 8, 6]) == 6.0\n\ndef test_media_um_elemento():\n    assert media([10]) == 10.0\n\ndef test_lista_vazia_lanca_erro():\n    import pytest\n    with pytest.raises(AssertionError):\n        media([])\nNo terminal:\npytest              # roda todos os test_*.py\npytest -v           # saída detalhada",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Testes e asserções</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Testes e asserções</span>"
     ]
   },
   {
     "objectID": "20-testes.html#doctest-exemplos-que-se-testam",
     "href": "20-testes.html#doctest-exemplos-que-se-testam",
-    "title": "20  Testes e asserções",
-    "section": "20.3 doctest — exemplos que se testam",
-    "text": "20.3 doctest — exemplos que se testam\nExemplos na docstring podem ser verificados automaticamente:\ndef dobro(x: int) -&gt; int:\n    \"\"\"Retorna o dobro de x.\n\n    &gt;&gt;&gt; dobro(4)\n    8\n    \"\"\"\n    return x * 2\npython -m doctest modulo.py -v\n\n\n\n\n\n\nQuanto testar num nivelamento?\n\n\n\nO hábito mínimo: para cada função importante, um teste do caso comum e um do caso extremo (lista vazia, zero, valor negativo). Os exercícios da Parte VI pedem exatamente isso. Type hints (Capítulo 8) ajudam: a assinatura declara o contrato que o teste verifica.",
+    "title": "22  Testes e asserções",
+    "section": "22.3 doctest — exemplos que se testam",
+    "text": "22.3 doctest — exemplos que se testam\nExemplos na docstring podem ser verificados automaticamente:\ndef dobro(x: int) -&gt; int:\n    \"\"\"Retorna o dobro de x.\n\n    &gt;&gt;&gt; dobro(4)\n    8\n    \"\"\"\n    return x * 2\npython -m doctest modulo.py -v\n\n\n\n\n\n\nQuanto testar num nivelamento?\n\n\n\nO hábito mínimo: para cada função importante, um teste do caso comum e um do caso extremo (lista vazia, zero, valor negativo). Os exercícios da Parte VI pedem exatamente isso. Type hints (Capítulo 8) ajudam: a assinatura declara o contrato que o teste verifica.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Testes e asserções</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Testes e asserções</span>"
     ]
   },
   {
@@ -1120,397 +1120,397 @@
   {
     "objectID": "22-big-o.html",
     "href": "22-big-o.html",
-    "title": "22  Complexidade e notação Big-O",
+    "title": "25  Complexidade e notação Big-O",
     "section": "",
-    "text": "22.1 As classes de complexidade\nA notação Big-O descreve como o tempo (ou a memória) de um algoritmo cresce em função do tamanho da entrada n, ignorando constantes e termos menores. É o vocabulário que justifica toda escolha de estrutura de dados na Parte V.",
+    "text": "25.1 As classes de complexidade\nA notação Big-O descreve como o tempo (ou a memória) de um algoritmo cresce em função do tamanho da entrada n, ignorando constantes e termos menores. É o vocabulário que justifica toda escolha de estrutura de dados na Parte V.",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
     ]
   },
   {
     "objectID": "22-big-o.html#as-classes-de-complexidade",
     "href": "22-big-o.html#as-classes-de-complexidade",
-    "title": "22  Complexidade e notação Big-O",
+    "title": "25  Complexidade e notação Big-O",
     "section": "",
     "text": "Notação\nNome\nExemplo\n\n\n\n\nO(1)\nConstante\nAcesso a lista[i], busca em dict/set\n\n\nO(log n)\nLogarítmica\nBusca binária, busca em BST balanceada\n\n\nO(n)\nLinear\nPercorrer uma lista, x in lista\n\n\nO(n log n)\nLinearítmica\nOrdenações eficientes (sorted)\n\n\nO(n²)\nQuadrática\nLaços aninhados, bubble sort\n\n\nO(2ⁿ)\nExponencial\nFibonacci recursivo ingênuo",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
     ]
   },
   {
     "objectID": "22-big-o.html#por-que-isso-importa-na-prática",
     "href": "22-big-o.html#por-que-isso-importa-na-prática",
-    "title": "22  Complexidade e notação Big-O",
-    "section": "22.2 Por que isso importa na prática",
-    "text": "22.2 Por que isso importa na prática\n# Buscar em lista: O(n) — percorre até encontrar\nif item in minha_lista: ...\n\n# Buscar em set/dict: O(1) — acesso direto por hash\nif item in meu_set: ...\nPara milhões de buscas repetidas, trocar list por set pode transformar minutos em milissegundos. Um experimento simples:\nimport time\n\nn = 10_000_000\ncomo_lista = list(range(n))\ncomo_set = set(como_lista)\n\ninicio = time.perf_counter()\n-1 in como_lista                 # pior caso: percorre tudo\nprint(f\"lista: {time.perf_counter() - inicio:.3f}s\")\n\ninicio = time.perf_counter()\n-1 in como_set                   # hash: tempo constante\nprint(f\"set:   {time.perf_counter() - inicio:.6f}s\")",
+    "title": "25  Complexidade e notação Big-O",
+    "section": "25.2 Por que isso importa na prática",
+    "text": "25.2 Por que isso importa na prática\n# Buscar em lista: O(n) — percorre até encontrar\nif item in minha_lista: ...\n\n# Buscar em set/dict: O(1) — acesso direto por hash\nif item in meu_set: ...\nPara milhões de buscas repetidas, trocar list por set pode transformar minutos em milissegundos. Um experimento simples:\nimport time\n\nn = 10_000_000\ncomo_lista = list(range(n))\ncomo_set = set(como_lista)\n\ninicio = time.perf_counter()\n-1 in como_lista                 # pior caso: percorre tudo\nprint(f\"lista: {time.perf_counter() - inicio:.3f}s\")\n\ninicio = time.perf_counter()\n-1 in como_set                   # hash: tempo constante\nprint(f\"set:   {time.perf_counter() - inicio:.6f}s\")",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
     ]
   },
   {
     "objectID": "22-big-o.html#classificando-código",
     "href": "22-big-o.html#classificando-código",
-    "title": "22  Complexidade e notação Big-O",
-    "section": "22.3 Classificando código",
-    "text": "22.3 Classificando código\ndef soma(lista):                 # O(n): uma passada\n    total = 0\n    for x in lista:\n        total += x\n    return total\n\ndef tem_duplicata_ingenuo(lista):    # O(n²): laços aninhados\n    for i in range(len(lista)):\n        for j in range(i + 1, len(lista)):\n            if lista[i] == lista[j]:\n                return True\n    return False\n\ndef tem_duplicata(lista):        # O(n): usa set\n    return len(set(lista)) != len(lista)",
+    "title": "25  Complexidade e notação Big-O",
+    "section": "25.3 Classificando código",
+    "text": "25.3 Classificando código\ndef soma(lista):                 # O(n): uma passada\n    total = 0\n    for x in lista:\n        total += x\n    return total\n\ndef tem_duplicata_ingenuo(lista):    # O(n²): laços aninhados\n    for i in range(len(lista)):\n        for j in range(i + 1, len(lista)):\n            if lista[i] == lista[j]:\n                return True\n    return False\n\ndef tem_duplicata(lista):        # O(n): usa set\n    return len(set(lista)) != len(lista)",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
     ]
   },
   {
     "objectID": "22-big-o.html#complexidade-de-espaço",
     "href": "22-big-o.html#complexidade-de-espaço",
-    "title": "22  Complexidade e notação Big-O",
-    "section": "22.4 Complexidade de espaço",
-    "text": "22.4 Complexidade de espaço\nO mesmo raciocínio vale para memória: a versão com set acima usa espaço O(n) extra, enquanto a ingênua usa O(1). Generators (Capítulo 15) são o exemplo clássico de troca consciente: tempo igual, espaço O(1) em vez de O(n).\n\n\n\n\n\n\nNota\n\n\n\nO objetivo neste nivelamento é saber classificar e comparar — não demonstrações formais. Nas estruturas da Parte V, cada operação virá com seu custo anotado; aqui está o vocabulário para lê-los.",
+    "title": "25  Complexidade e notação Big-O",
+    "section": "25.4 Complexidade de espaço",
+    "text": "25.4 Complexidade de espaço\nO mesmo raciocínio vale para memória: a versão com set acima usa espaço O(n) extra, enquanto a ingênua usa O(1). Generators (Capítulo 17) são o exemplo clássico de troca consciente: tempo igual, espaço O(1) em vez de O(n).\n\n\n\n\n\n\nNota\n\n\n\nO objetivo neste nivelamento é saber classificar e comparar — não demonstrações formais. Nas estruturas da Parte V, cada operação virá com seu custo anotado; aqui está o vocabulário para lê-los.",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Complexidade e notação Big-O</span>"
     ]
   },
   {
     "objectID": "23-recursao.html",
     "href": "23-recursao.html",
-    "title": "23  Recursão",
+    "title": "26  Recursão",
     "section": "",
-    "text": "23.1 Anatomia\nUma função recursiva resolve um problema chamando a si mesma sobre um caso menor, até atingir um caso base. Toda recursão consome a pilha de chamadas — ligação direta com o próximo capítulo.\nSem caso base (ou sem convergir para ele), a recursão não termina e o Python interrompe com RecursionError ao estourar o limite de profundidade (~1000 chamadas; ajustável com sys.setrecursionlimit, com cautela).",
+    "text": "26.1 Anatomia\nUma função recursiva resolve um problema chamando a si mesma sobre um caso menor, até atingir um caso base. Toda recursão consome a pilha de chamadas — ligação direta com o próximo capítulo.\nSem caso base (ou sem convergir para ele), a recursão não termina e o Python interrompe com RecursionError ao estourar o limite de profundidade (~1000 chamadas; ajustável com sys.setrecursionlimit, com cautela).",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Recursão</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Recursão</span>"
     ]
   },
   {
     "objectID": "23-recursao.html#anatomia",
     "href": "23-recursao.html#anatomia",
-    "title": "23  Recursão",
+    "title": "26  Recursão",
     "section": "",
     "text": "def fatorial(n: int) -&gt; int:\n    if n &lt;= 1:                       # caso base: onde a recursão para\n        return 1\n    return n * fatorial(n - 1)       # passo recursivo: problema menor",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Recursão</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Recursão</span>"
     ]
   },
   {
     "objectID": "23-recursao.html#o-custo-da-recursão-ingênua",
     "href": "23-recursao.html#o-custo-da-recursão-ingênua",
-    "title": "23  Recursão",
-    "section": "23.2 O custo da recursão ingênua",
-    "text": "23.2 O custo da recursão ingênua\n# Fibonacci ingênuo: O(2ⁿ) — recalcula os mesmos valores muitas vezes\ndef fib(n: int) -&gt; int:\n    return n if n &lt; 2 else fib(n - 1) + fib(n - 2)\nfib(35) já leva segundos: a árvore de chamadas explode exponencialmente.",
+    "title": "26  Recursão",
+    "section": "26.2 O custo da recursão ingênua",
+    "text": "26.2 O custo da recursão ingênua\n# Fibonacci ingênuo: O(2ⁿ) — recalcula os mesmos valores muitas vezes\ndef fib(n: int) -&gt; int:\n    return n if n &lt; 2 else fib(n - 1) + fib(n - 2)\nfib(35) já leva segundos: a árvore de chamadas explode exponencialmente.",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Recursão</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Recursão</span>"
     ]
   },
   {
     "objectID": "23-recursao.html#memoização-de-o2ⁿ-para-on",
     "href": "23-recursao.html#memoização-de-o2ⁿ-para-on",
-    "title": "23  Recursão",
-    "section": "23.3 Memoização: de O(2ⁿ) para O(n)",
-    "text": "23.3 Memoização: de O(2ⁿ) para O(n)\nGuardar resultados já calculados elimina o retrabalho — e o decorator lru_cache (Capítulo 16) faz isso em uma linha:\nfrom functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fib_rapido(n: int) -&gt; int:\n    return n if n &lt; 2 else fib_rapido(n - 1) + fib_rapido(n - 2)\n\nfib_rapido(500)      # instantâneo",
+    "title": "26  Recursão",
+    "section": "26.3 Memoização: de O(2ⁿ) para O(n)",
+    "text": "26.3 Memoização: de O(2ⁿ) para O(n)\nGuardar resultados já calculados elimina o retrabalho — e o decorator lru_cache (Capítulo 18) faz isso em uma linha:\nfrom functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fib_rapido(n: int) -&gt; int:\n    return n if n &lt; 2 else fib_rapido(n - 1) + fib_rapido(n - 2)\n\nfib_rapido(500)      # instantâneo",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Recursão</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Recursão</span>"
     ]
   },
   {
     "objectID": "23-recursao.html#recursivo-iterativo",
     "href": "23-recursao.html#recursivo-iterativo",
-    "title": "23  Recursão",
-    "section": "23.4 Recursivo × iterativo",
-    "text": "23.4 Recursivo × iterativo\nTodo algoritmo recursivo tem versão iterativa (às vezes usando uma pilha explícita — Capítulo 24). A iterativa evita o limite de profundidade; a recursiva costuma ser mais legível quando o problema é naturalmente recursivo:\ndef fatorial_iterativo(n: int) -&gt; int:\n    resultado = 1\n    for i in range(2, n + 1):\n        resultado *= i\n    return resultado",
+    "title": "26  Recursão",
+    "section": "26.4 Recursivo × iterativo",
+    "text": "26.4 Recursivo × iterativo\nTodo algoritmo recursivo tem versão iterativa (às vezes usando uma pilha explícita — Capítulo 28). A iterativa evita o limite de profundidade; a recursiva costuma ser mais legível quando o problema é naturalmente recursivo:\ndef fatorial_iterativo(n: int) -&gt; int:\n    resultado = 1\n    for i in range(2, n + 1):\n        resultado *= i\n    return resultado",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Recursão</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Recursão</span>"
     ]
   },
   {
     "objectID": "23-recursao.html#onde-a-recursão-brilha",
     "href": "23-recursao.html#onde-a-recursão-brilha",
-    "title": "23  Recursão",
-    "section": "23.5 Onde a recursão brilha",
-    "text": "23.5 Onde a recursão brilha\nEm estruturas naturalmente recursivas: uma árvore é um nó com subárvores; percorrê-la recursivamente é quase transcrever a definição (Capítulo 27). O DFS em grafos (Capítulo 28) segue o mesmo princípio.",
+    "title": "26  Recursão",
+    "section": "26.5 Onde a recursão brilha",
+    "text": "26.5 Onde a recursão brilha\nEm estruturas naturalmente recursivas: uma árvore é um nó com subárvores; percorrê-la recursivamente é quase transcrever a definição (Capítulo 31). O DFS em grafos (Capítulo 32) segue o mesmo princípio.",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Recursão</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Recursão</span>"
     ]
   },
   {
     "objectID": "24-pilha.html",
     "href": "24-pilha.html",
-    "title": "24  Estruturas de dados: Pilha (Stack)",
+    "title": "28  Estruturas de dados: Pilha (Stack)",
     "section": "",
-    "text": "24.1 Conceito\nA pilha segue a política LIFO (Last In, First Out): o último elemento inserido é o primeiro a sair. A analogia clássica é uma pilha de pratos — só se coloca e se retira pelo topo.\nOperações fundamentais (todas em O(1)):",
+    "text": "28.1 Conceito\nA pilha segue a política LIFO (Last In, First Out): o último elemento inserido é o primeiro a sair. A analogia clássica é uma pilha de pratos — só se coloca e se retira pelo topo.\nOperações fundamentais (todas em O(1)):",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
     ]
   },
   {
     "objectID": "24-pilha.html#conceito",
     "href": "24-pilha.html#conceito",
-    "title": "24  Estruturas de dados: Pilha (Stack)",
+    "title": "28  Estruturas de dados: Pilha (Stack)",
     "section": "",
     "text": "push(4)  →  |  4  | ← topo (próximo a sair)\n                    |  3  |\n                    |  2  |\n                    |  1  | ← base\n\n\n\n\nOperação\nDescrição\n\n\n\n\npush(x)\nInsere x no topo\n\n\npop()\nRemove e retorna o elemento do topo\n\n\npeek()\nConsulta o topo sem remover\n\n\nis_empty()\nVerifica se a pilha está vazia",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
     ]
   },
   {
     "objectID": "24-pilha.html#implementação-com-lista",
     "href": "24-pilha.html#implementação-com-lista",
-    "title": "24  Estruturas de dados: Pilha (Stack)",
-    "section": "24.2 Implementação com lista",
-    "text": "24.2 Implementação com lista\nA lista do Python oferece append (push) e pop em O(1) no final, o que a torna ideal para pilhas:\nclass Pilha:\n    def __init__(self):\n        self._itens: list = []\n\n    def push(self, item) -&gt; None:\n        self._itens.append(item)\n\n    def pop(self):\n        if self.is_empty():\n            raise IndexError(\"pop em pilha vazia\")\n        return self._itens.pop()\n\n    def peek(self):\n        if self.is_empty():\n            raise IndexError(\"peek em pilha vazia\")\n        return self._itens[-1]\n\n    def is_empty(self) -&gt; bool:\n        return not self._itens\n\n    def __len__(self) -&gt; int:\n        return len(self._itens)\n\n    def __repr__(self) -&gt; str:\n        return f\"Pilha(base → topo: {self._itens})\"\n\n\np = Pilha()\np.push(1)\np.push(2)\np.push(3)\nprint(p)           # Pilha(base → topo: [1, 2, 3])\nprint(p.pop())     # 3  (último a entrar, primeiro a sair)\nprint(p.peek())    # 2\nprint(len(p))      # 2",
+    "title": "28  Estruturas de dados: Pilha (Stack)",
+    "section": "28.2 Implementação com lista",
+    "text": "28.2 Implementação com lista\nA lista do Python oferece append (push) e pop em O(1) no final, o que a torna ideal para pilhas:\nclass Pilha:\n    def __init__(self):\n        self._itens: list = []\n\n    def push(self, item) -&gt; None:\n        self._itens.append(item)\n\n    def pop(self):\n        if self.is_empty():\n            raise IndexError(\"pop em pilha vazia\")\n        return self._itens.pop()\n\n    def peek(self):\n        if self.is_empty():\n            raise IndexError(\"peek em pilha vazia\")\n        return self._itens[-1]\n\n    def is_empty(self) -&gt; bool:\n        return not self._itens\n\n    def __len__(self) -&gt; int:\n        return len(self._itens)\n\n    def __repr__(self) -&gt; str:\n        return f\"Pilha(base → topo: {self._itens})\"\n\n\np = Pilha()\np.push(1)\np.push(2)\np.push(3)\nprint(p)           # Pilha(base → topo: [1, 2, 3])\nprint(p.pop())     # 3  (último a entrar, primeiro a sair)\nprint(p.peek())    # 2\nprint(len(p))      # 2",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
     ]
   },
   {
     "objectID": "24-pilha.html#aplicações-típicas",
     "href": "24-pilha.html#aplicações-típicas",
-    "title": "24  Estruturas de dados: Pilha (Stack)",
-    "section": "24.3 Aplicações típicas",
-    "text": "24.3 Aplicações típicas\n\nDesfazer/refazer (Ctrl+Z) em editores;\nHistórico de navegação (botão “voltar”);\nPilha de chamadas de funções — é ela que a recursão consome (Capítulo 23);\nValidação de expressões com parênteses balanceados;\nBusca em profundidade (DFS) em grafos (Capítulo 28) — tema que reaparecerá em IA.",
+    "title": "28  Estruturas de dados: Pilha (Stack)",
+    "section": "28.3 Aplicações típicas",
+    "text": "28.3 Aplicações típicas\n\nDesfazer/refazer (Ctrl+Z) em editores;\nHistórico de navegação (botão “voltar”);\nPilha de chamadas de funções — é ela que a recursão consome (Capítulo 26);\nValidação de expressões com parênteses balanceados;\nBusca em profundidade (DFS) em grafos (Capítulo 32) — tema que reaparecerá em IA.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
     ]
   },
   {
     "objectID": "24-pilha.html#exemplo-aplicado-parênteses-balanceados",
     "href": "24-pilha.html#exemplo-aplicado-parênteses-balanceados",
-    "title": "24  Estruturas de dados: Pilha (Stack)",
-    "section": "24.4 Exemplo aplicado: parênteses balanceados",
-    "text": "24.4 Exemplo aplicado: parênteses balanceados\ndef balanceada(expressao: str) -&gt; bool:\n    pares = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    pilha = Pilha()\n    for caractere in expressao:\n        if caractere in \"([{\":\n            pilha.push(caractere)\n        elif caractere in \")]}\":\n            if pilha.is_empty() or pilha.pop() != pares[caractere]:\n                return False\n    return pilha.is_empty()\n\nprint(balanceada(\"(a + b) * [c - d]\"))   # True\nprint(balanceada(\"(a + b]\"))             # False\nprint(balanceada(\"((a + b)\"))            # False",
+    "title": "28  Estruturas de dados: Pilha (Stack)",
+    "section": "28.4 Exemplo aplicado: parênteses balanceados",
+    "text": "28.4 Exemplo aplicado: parênteses balanceados\ndef balanceada(expressao: str) -&gt; bool:\n    pares = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    pilha = Pilha()\n    for caractere in expressao:\n        if caractere in \"([{\":\n            pilha.push(caractere)\n        elif caractere in \")]}\":\n            if pilha.is_empty() or pilha.pop() != pares[caractere]:\n                return False\n    return pilha.is_empty()\n\nprint(balanceada(\"(a + b) * [c - d]\"))   # True\nprint(balanceada(\"(a + b]\"))             # False\nprint(balanceada(\"((a + b)\"))            # False",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Estruturas de dados: Pilha (Stack)</span>"
     ]
   },
   {
     "objectID": "25-fila.html",
     "href": "25-fila.html",
-    "title": "25  Estruturas de dados: Fila (Queue)",
+    "title": "29  Estruturas de dados: Fila (Queue)",
     "section": "",
-    "text": "25.1 Conceito\nA fila segue a política FIFO (First In, First Out): o primeiro elemento inserido é o primeiro a sair — exatamente como uma fila de banco.\nOperações fundamentais:",
+    "text": "29.1 Conceito\nA fila segue a política FIFO (First In, First Out): o primeiro elemento inserido é o primeiro a sair — exatamente como uma fila de banco.\nOperações fundamentais:",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "25-fila.html#conceito",
     "href": "25-fila.html#conceito",
-    "title": "25  Estruturas de dados: Fila (Queue)",
+    "title": "29  Estruturas de dados: Fila (Queue)",
     "section": "",
     "text": "saída ←  | 1 | 2 | 3 | 4 |  ← entrada (enqueue)\n (dequeue)   frente       trás\n\n\n\n\nOperação\nDescrição\n\n\n\n\nenqueue(x)\nInsere x no final da fila\n\n\ndequeue()\nRemove e retorna o elemento da frente\n\n\nfront()\nConsulta a frente sem remover\n\n\nis_empty()\nVerifica se está vazia",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "25-fila.html#por-que-não-usar-lista-pura",
     "href": "25-fila.html#por-que-não-usar-lista-pura",
-    "title": "25  Estruturas de dados: Fila (Queue)",
-    "section": "25.2 Por que não usar lista pura?",
-    "text": "25.2 Por que não usar lista pura?\nlista.pop(0) remove da frente, mas custa O(n): todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 22 para ler isso). A solução idiomática é o collections.deque (double-ended queue), que insere e remove das duas pontas em O(1).",
+    "title": "29  Estruturas de dados: Fila (Queue)",
+    "section": "29.2 Por que não usar lista pura?",
+    "text": "29.2 Por que não usar lista pura?\nlista.pop(0) remove da frente, mas custa O(n): todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 25 para ler isso). A solução idiomática é o collections.deque (double-ended queue), que insere e remove das duas pontas em O(1).",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "25-fila.html#implementação-com-collections.deque",
     "href": "25-fila.html#implementação-com-collections.deque",
-    "title": "25  Estruturas de dados: Fila (Queue)",
-    "section": "25.3 Implementação com collections.deque",
-    "text": "25.3 Implementação com collections.deque\nfrom collections import deque\n\nclass Fila:\n    def __init__(self):\n        self._itens: deque = deque()\n\n    def enqueue(self, item) -&gt; None:\n        self._itens.append(item)        # entra no final\n\n    def dequeue(self):\n        if self.is_empty():\n            raise IndexError(\"dequeue em fila vazia\")\n        return self._itens.popleft()    # sai pela frente — O(1)\n\n    def front(self):\n        if self.is_empty():\n            raise IndexError(\"front em fila vazia\")\n        return self._itens[0]\n\n    def is_empty(self) -&gt; bool:\n        return not self._itens\n\n    def __len__(self) -&gt; int:\n        return len(self._itens)\n\n    def __repr__(self) -&gt; str:\n        return f\"Fila(frente → trás: {list(self._itens)})\"\n\n\nf = Fila()\nf.enqueue(\"Ana\")\nf.enqueue(\"Bruno\")\nf.enqueue(\"Carla\")\nprint(f)              # Fila(frente → trás: ['Ana', 'Bruno', 'Carla'])\nprint(f.dequeue())    # Ana  (primeira a entrar, primeira a sair)\nprint(f.front())      # Bruno",
+    "title": "29  Estruturas de dados: Fila (Queue)",
+    "section": "29.3 Implementação com collections.deque",
+    "text": "29.3 Implementação com collections.deque\nfrom collections import deque\n\nclass Fila:\n    def __init__(self):\n        self._itens: deque = deque()\n\n    def enqueue(self, item) -&gt; None:\n        self._itens.append(item)        # entra no final\n\n    def dequeue(self):\n        if self.is_empty():\n            raise IndexError(\"dequeue em fila vazia\")\n        return self._itens.popleft()    # sai pela frente — O(1)\n\n    def front(self):\n        if self.is_empty():\n            raise IndexError(\"front em fila vazia\")\n        return self._itens[0]\n\n    def is_empty(self) -&gt; bool:\n        return not self._itens\n\n    def __len__(self) -&gt; int:\n        return len(self._itens)\n\n    def __repr__(self) -&gt; str:\n        return f\"Fila(frente → trás: {list(self._itens)})\"\n\n\nf = Fila()\nf.enqueue(\"Ana\")\nf.enqueue(\"Bruno\")\nf.enqueue(\"Carla\")\nprint(f)              # Fila(frente → trás: ['Ana', 'Bruno', 'Carla'])\nprint(f.dequeue())    # Ana  (primeira a entrar, primeira a sair)\nprint(f.front())      # Bruno",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "25-fila.html#aplicações-típicas",
     "href": "25-fila.html#aplicações-típicas",
-    "title": "25  Estruturas de dados: Fila (Queue)",
-    "section": "25.4 Aplicações típicas",
-    "text": "25.4 Aplicações típicas\n\nFilas de atendimento e sistemas de senhas;\nBuffers de impressão, streaming e mensageria;\nEscalonamento de processos em sistemas operacionais;\nBusca em largura (BFS) em grafos (Capítulo 28) — dual do DFS;\nPipelines de dados, processando registros na ordem de chegada.",
+    "title": "29  Estruturas de dados: Fila (Queue)",
+    "section": "29.4 Aplicações típicas",
+    "text": "29.4 Aplicações típicas\n\nFilas de atendimento e sistemas de senhas;\nBuffers de impressão, streaming e mensageria;\nEscalonamento de processos em sistemas operacionais;\nBusca em largura (BFS) em grafos (Capítulo 32) — dual do DFS;\nPipelines de dados, processando registros na ordem de chegada.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "25-fila.html#exemplo-aplicado-simulação-de-atendimento",
     "href": "25-fila.html#exemplo-aplicado-simulação-de-atendimento",
-    "title": "25  Estruturas de dados: Fila (Queue)",
-    "section": "25.5 Exemplo aplicado: simulação de atendimento",
-    "text": "25.5 Exemplo aplicado: simulação de atendimento\natendimento = Fila()\nfor senha in [\"A01\", \"A02\", \"P01\", \"A03\"]:\n    atendimento.enqueue(senha)\n\nwhile not atendimento.is_empty():\n    print(f\"Chamando senha {atendimento.dequeue()} \"\n          f\"({len(atendimento)} restante(s) na fila)\")",
+    "title": "29  Estruturas de dados: Fila (Queue)",
+    "section": "29.5 Exemplo aplicado: simulação de atendimento",
+    "text": "29.5 Exemplo aplicado: simulação de atendimento\natendimento = Fila()\nfor senha in [\"A01\", \"A02\", \"P01\", \"A03\"]:\n    atendimento.enqueue(senha)\n\nwhile not atendimento.is_empty():\n    print(f\"Chamando senha {atendimento.dequeue()} \"\n          f\"({len(atendimento)} restante(s) na fila)\")",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "25-fila.html#síntese-pilha-fila",
     "href": "25-fila.html#síntese-pilha-fila",
-    "title": "25  Estruturas de dados: Fila (Queue)",
-    "section": "25.6 Síntese: pilha × fila",
-    "text": "25.6 Síntese: pilha × fila\n\n\n\nCritério\nPilha\nFila\n\n\n\n\nPolítica\nLIFO\nFIFO\n\n\nInserção\npush — no topo\nenqueue — no final\n\n\nRemoção\npop — do topo\ndequeue — da frente\n\n\nImplementação\nlist (append/pop)\ncollections.deque\n\n\nGrafos\nDFS (profundidade)\nBFS (largura)",
+    "title": "29  Estruturas de dados: Fila (Queue)",
+    "section": "29.6 Síntese: pilha × fila",
+    "text": "29.6 Síntese: pilha × fila\n\n\n\nCritério\nPilha\nFila\n\n\n\n\nPolítica\nLIFO\nFIFO\n\n\nInserção\npush — no topo\nenqueue — no final\n\n\nRemoção\npop — do topo\ndequeue — da frente\n\n\nImplementação\nlist (append/pop)\ncollections.deque\n\n\nGrafos\nDFS (profundidade)\nBFS (largura)",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Estruturas de dados: Fila (Queue)</span>"
     ]
   },
   {
     "objectID": "26-listas-ligadas.html",
     "href": "26-listas-ligadas.html",
-    "title": "26  Listas ligadas (Linked Lists)",
+    "title": "30  Listas ligadas (Linked Lists)",
     "section": "",
-    "text": "26.1 O nó — duas formas de escrevê-lo\nUma lista ligada é uma sequência de nós, cada um contendo um valor e uma referência ao próximo. Diferente da lista do Python (um array dinâmico), os elementos não ficam contíguos na memória.\nForma clássica e forma com @dataclass (Capítulo 17); escolha seu estilo:",
+    "text": "30.1 O nó — duas formas de escrevê-lo\nUma lista ligada é uma sequência de nós, cada um contendo um valor e uma referência ao próximo. Diferente da lista do Python (um array dinâmico), os elementos não ficam contíguos na memória.\nForma clássica e forma com @dataclass (Capítulo 19); escolha seu estilo:",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
     ]
   },
   {
     "objectID": "26-listas-ligadas.html#o-nó-duas-formas-de-escrevê-lo",
     "href": "26-listas-ligadas.html#o-nó-duas-formas-de-escrevê-lo",
-    "title": "26  Listas ligadas (Linked Lists)",
+    "title": "30  Listas ligadas (Linked Lists)",
     "section": "",
     "text": "# Clássica\nclass No:\n    def __init__(self, valor):\n        self.valor = valor\n        self.proximo = None\n\n# Com dataclass\nfrom dataclasses import dataclass\nfrom typing import Optional\n\n@dataclass\nclass No:\n    valor: int\n    proximo: Optional[\"No\"] = None",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
     ]
   },
   {
     "objectID": "26-listas-ligadas.html#a-lista-ligada",
     "href": "26-listas-ligadas.html#a-lista-ligada",
-    "title": "26  Listas ligadas (Linked Lists)",
-    "section": "26.2 A lista ligada",
-    "text": "26.2 A lista ligada\nclass ListaLigada:\n    def __init__(self):\n        self.cabeca: Optional[No] = None\n\n    def inserir_inicio(self, valor) -&gt; None:     # O(1)\n        novo = No(valor)\n        novo.proximo = self.cabeca\n        self.cabeca = novo\n\n    def inserir_fim(self, valor) -&gt; None:        # O(n)\n        novo = No(valor)\n        if not self.cabeca:\n            self.cabeca = novo\n            return\n        atual = self.cabeca\n        while atual.proximo:\n            atual = atual.proximo\n        atual.proximo = novo\n\n    def buscar(self, valor) -&gt; bool:             # O(n)\n        atual = self.cabeca\n        while atual:\n            if atual.valor == valor:\n                return True\n            atual = atual.proximo\n        return False\n\n    def percorrer(self) -&gt; None:\n        atual = self.cabeca\n        while atual:\n            print(atual.valor, end=\" -&gt; \")\n            atual = atual.proximo\n        print(\"None\")\n\n\nlista = ListaLigada()\nlista.inserir_inicio(3)\nlista.inserir_inicio(2)\nlista.inserir_fim(4)\nlista.percorrer()        # 2 -&gt; 3 -&gt; 4 -&gt; None",
+    "title": "30  Listas ligadas (Linked Lists)",
+    "section": "30.2 A lista ligada",
+    "text": "30.2 A lista ligada\nclass ListaLigada:\n    def __init__(self):\n        self.cabeca: Optional[No] = None\n\n    def inserir_inicio(self, valor) -&gt; None:     # O(1)\n        novo = No(valor)\n        novo.proximo = self.cabeca\n        self.cabeca = novo\n\n    def inserir_fim(self, valor) -&gt; None:        # O(n)\n        novo = No(valor)\n        if not self.cabeca:\n            self.cabeca = novo\n            return\n        atual = self.cabeca\n        while atual.proximo:\n            atual = atual.proximo\n        atual.proximo = novo\n\n    def buscar(self, valor) -&gt; bool:             # O(n)\n        atual = self.cabeca\n        while atual:\n            if atual.valor == valor:\n                return True\n            atual = atual.proximo\n        return False\n\n    def percorrer(self) -&gt; None:\n        atual = self.cabeca\n        while atual:\n            print(atual.valor, end=\" -&gt; \")\n            atual = atual.proximo\n        print(\"None\")\n\n\nlista = ListaLigada()\nlista.inserir_inicio(3)\nlista.inserir_inicio(2)\nlista.inserir_fim(4)\nlista.percorrer()        # 2 -&gt; 3 -&gt; 4 -&gt; None",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
     ]
   },
   {
     "objectID": "26-listas-ligadas.html#lista-ligada-lista-do-python",
     "href": "26-listas-ligadas.html#lista-ligada-lista-do-python",
-    "title": "26  Listas ligadas (Linked Lists)",
-    "section": "26.3 Lista ligada × lista do Python",
-    "text": "26.3 Lista ligada × lista do Python\n\n\n\nOperação\nLista ligada\nlist (array dinâmico)\n\n\n\n\nAcesso por índice\nO(n)\nO(1)\n\n\nInserir no início\nO(1)\nO(n)\n\n\nInserir no fim\nO(n)*\nO(1) amortizado\n\n\nBuscar valor\nO(n)\nO(n)\n\n\n\n* O(1) se mantivermos uma referência à cauda.",
+    "title": "30  Listas ligadas (Linked Lists)",
+    "section": "30.3 Lista ligada × lista do Python",
+    "text": "30.3 Lista ligada × lista do Python\n\n\n\nOperação\nLista ligada\nlist (array dinâmico)\n\n\n\n\nAcesso por índice\nO(n)\nO(1)\n\n\nInserir no início\nO(1)\nO(n)\n\n\nInserir no fim\nO(n)*\nO(1) amortizado\n\n\nBuscar valor\nO(n)\nO(n)\n\n\n\n* O(1) se mantivermos uma referência à cauda.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
     ]
   },
   {
     "objectID": "26-listas-ligadas.html#por-que-estudar-se-o-python-já-tem-list",
     "href": "26-listas-ligadas.html#por-que-estudar-se-o-python-já-tem-list",
-    "title": "26  Listas ligadas (Linked Lists)",
-    "section": "26.4 Por que estudar, se o Python já tem list?",
-    "text": "26.4 Por que estudar, se o Python já tem list?\nPorque o conceito de nós encadeados por referência é a base das estruturas seguintes: uma árvore é um nó com dois “próximos” (Capítulo 27), um grafo generaliza para vários vizinhos (Capítulo 28), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.\nVariantes que você encontrará na literatura: duplamente ligada (referência também ao anterior — é como o deque funciona) e circular (o último aponta para o primeiro).",
+    "title": "30  Listas ligadas (Linked Lists)",
+    "section": "30.4 Por que estudar, se o Python já tem list?",
+    "text": "30.4 Por que estudar, se o Python já tem list?\nPorque o conceito de nós encadeados por referência é a base das estruturas seguintes: uma árvore é um nó com dois “próximos” (Capítulo 31), um grafo generaliza para vários vizinhos (Capítulo 32), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.\nVariantes que você encontrará na literatura: duplamente ligada (referência também ao anterior — é como o deque funciona) e circular (o último aponta para o primeiro).",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Listas ligadas (Linked Lists)</span>"
     ]
   },
   {
     "objectID": "27-arvores.html",
     "href": "27-arvores.html",
-    "title": "27  Árvores (Trees)",
+    "title": "31  Árvores (Trees)",
     "section": "",
-    "text": "27.1 Árvore binária de busca (BST)\nEstrutura hierárquica de nós: uma raiz, cada nó com filhos, sem ciclos. Fundamental em Ciência de Dados e IA — árvores de decisão, índices de banco de dados, parsing, sistemas de arquivos.\nCada nó tem no máximo dois filhos; à esquerda ficam valores menores, à direita, maiores. Essa invariante permite busca em O(log n) quando a árvore está balanceada.\nO nó é a generalização natural do nó da lista ligada — agora com dois encadeamentos:",
+    "text": "31.1 Árvore binária de busca (BST)\nEstrutura hierárquica de nós: uma raiz, cada nó com filhos, sem ciclos. Fundamental em Ciência de Dados e IA — árvores de decisão, índices de banco de dados, parsing, sistemas de arquivos.\nCada nó tem no máximo dois filhos; à esquerda ficam valores menores, à direita, maiores. Essa invariante permite busca em O(log n) quando a árvore está balanceada.\nO nó é a generalização natural do nó da lista ligada — agora com dois encadeamentos:",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Árvores (Trees)</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Árvores (Trees)</span>"
     ]
   },
   {
     "objectID": "27-arvores.html#árvore-binária-de-busca-bst",
     "href": "27-arvores.html#árvore-binária-de-busca-bst",
-    "title": "27  Árvores (Trees)",
+    "title": "31  Árvores (Trees)",
     "section": "",
-    "text": "from dataclasses import dataclass\nfrom typing import Optional\n\n@dataclass\nclass NoArvore:\n    valor: int\n    esquerda: Optional[\"NoArvore\"] = None\n    direita: Optional[\"NoArvore\"] = None\n\n\nclass ArvoreBusca:\n    def __init__(self):\n        self.raiz: Optional[NoArvore] = None\n\n    def inserir(self, valor: int) -&gt; None:\n        self.raiz = self._inserir(self.raiz, valor)\n\n    def _inserir(self, no, valor):\n        if no is None:                          # caso base da recursão\n            return NoArvore(valor)\n        if valor &lt; no.valor:\n            no.esquerda = self._inserir(no.esquerda, valor)\n        else:\n            no.direita = self._inserir(no.direita, valor)\n        return no\n\n    def buscar(self, valor: int) -&gt; bool:       # O(log n) se balanceada\n        no = self.raiz\n        while no:\n            if valor == no.valor:\n                return True\n            no = no.esquerda if valor &lt; no.valor else no.direita\n        return False\n\n    def em_ordem(self, no, resultado=None) -&gt; list:\n        if resultado is None:\n            resultado = []\n        if no:\n            self.em_ordem(no.esquerda, resultado)   # recursão (Capítulo 23)!\n            resultado.append(no.valor)\n            self.em_ordem(no.direita, resultado)\n        return resultado\n\n\narv = ArvoreBusca()\nfor v in [5, 3, 8, 1, 4, 7]:\n    arv.inserir(v)\nprint(arv.em_ordem(arv.raiz))    # [1, 3, 4, 5, 7, 8] — sai ordenado!\nprint(arv.buscar(4))             # True",
+    "text": "from dataclasses import dataclass\nfrom typing import Optional\n\n@dataclass\nclass NoArvore:\n    valor: int\n    esquerda: Optional[\"NoArvore\"] = None\n    direita: Optional[\"NoArvore\"] = None\n\n\nclass ArvoreBusca:\n    def __init__(self):\n        self.raiz: Optional[NoArvore] = None\n\n    def inserir(self, valor: int) -&gt; None:\n        self.raiz = self._inserir(self.raiz, valor)\n\n    def _inserir(self, no, valor):\n        if no is None:                          # caso base da recursão\n            return NoArvore(valor)\n        if valor &lt; no.valor:\n            no.esquerda = self._inserir(no.esquerda, valor)\n        else:\n            no.direita = self._inserir(no.direita, valor)\n        return no\n\n    def buscar(self, valor: int) -&gt; bool:       # O(log n) se balanceada\n        no = self.raiz\n        while no:\n            if valor == no.valor:\n                return True\n            no = no.esquerda if valor &lt; no.valor else no.direita\n        return False\n\n    def em_ordem(self, no, resultado=None) -&gt; list:\n        if resultado is None:\n            resultado = []\n        if no:\n            self.em_ordem(no.esquerda, resultado)   # recursão (Capítulo 26)!\n            resultado.append(no.valor)\n            self.em_ordem(no.direita, resultado)\n        return resultado\n\n\narv = ArvoreBusca()\nfor v in [5, 3, 8, 1, 4, 7]:\n    arv.inserir(v)\nprint(arv.em_ordem(arv.raiz))    # [1, 3, 4, 5, 7, 8] — sai ordenado!\nprint(arv.buscar(4))             # True",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Árvores (Trees)</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Árvores (Trees)</span>"
     ]
   },
   {
     "objectID": "27-arvores.html#percursos",
     "href": "27-arvores.html#percursos",
-    "title": "27  Árvores (Trees)",
-    "section": "27.2 Percursos",
-    "text": "27.2 Percursos\n\nEm ordem (esquerda, raiz, direita): produz os valores ordenados numa BST;\nPré-ordem (raiz, esquerda, direita): útil para copiar/serializar a árvore;\nPós-ordem (esquerda, direita, raiz): útil para liberar/avaliar de baixo para cima.\n\nA recursão é a ferramenta natural: a definição “visite a subárvore esquerda, o nó, a subárvore direita” é o código.",
+    "title": "31  Árvores (Trees)",
+    "section": "31.2 Percursos",
+    "text": "31.2 Percursos\n\nEm ordem (esquerda, raiz, direita): produz os valores ordenados numa BST;\nPré-ordem (raiz, esquerda, direita): útil para copiar/serializar a árvore;\nPós-ordem (esquerda, direita, raiz): útil para liberar/avaliar de baixo para cima.\n\nA recursão é a ferramenta natural: a definição “visite a subárvore esquerda, o nó, a subárvore direita” é o código.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Árvores (Trees)</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Árvores (Trees)</span>"
     ]
   },
   {
     "objectID": "27-arvores.html#custo-e-balanceamento",
     "href": "27-arvores.html#custo-e-balanceamento",
-    "title": "27  Árvores (Trees)",
-    "section": "27.3 Custo e balanceamento",
-    "text": "27.3 Custo e balanceamento\n\n\n\nOperação\nBST balanceada\nBST degenerada\n\n\n\n\nBuscar/Inserir\nO(log n)\nO(n)\n\n\n\nInserir valores já ordenados degenera a BST numa lista ligada. Estruturas auto-balanceadas (AVL, rubro-negra) resolvem isso — cite-as como leitura complementar; não as implementaremos no nivelamento.\n\n\n\n\n\n\nConexão com IA\n\n\n\nUma árvore de decisão de Machine Learning é exatamente esta estrutura: cada nó interno testa uma condição sobre os dados (“idade &lt; 30?”) e as folhas carregam a predição. Quando o Scikit-learn treinar uma para você, a estrutura por baixo será esta.",
+    "title": "31  Árvores (Trees)",
+    "section": "31.3 Custo e balanceamento",
+    "text": "31.3 Custo e balanceamento\n\n\n\nOperação\nBST balanceada\nBST degenerada\n\n\n\n\nBuscar/Inserir\nO(log n)\nO(n)\n\n\n\nInserir valores já ordenados degenera a BST numa lista ligada. Estruturas auto-balanceadas (AVL, rubro-negra) resolvem isso — cite-as como leitura complementar; não as implementaremos no nivelamento.\n\n\n\n\n\n\nConexão com IA\n\n\n\nUma árvore de decisão de Machine Learning é exatamente esta estrutura: cada nó interno testa uma condição sobre os dados (“idade &lt; 30?”) e as folhas carregam a predição. Quando o Scikit-learn treinar uma para você, a estrutura por baixo será esta.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Árvores (Trees)</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Árvores (Trees)</span>"
     ]
   },
   {
     "objectID": "28-grafos.html",
     "href": "28-grafos.html",
-    "title": "28  Grafos (Graphs)",
+    "title": "32  Grafos (Graphs)",
     "section": "",
-    "text": "28.1 Representação por lista de adjacência\nUm grafo é um conjunto de vértices conectados por arestas. Modela redes sociais, mapas, dependências entre tarefas, recomendação — e é a base de muitos algoritmos de IA. Podem ser direcionados ou não, com ou sem pesos nas arestas.\nA forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o defaultdict do Capítulo 18:",
+    "text": "32.1 Representação por lista de adjacência\nUm grafo é um conjunto de vértices conectados por arestas. Modela redes sociais, mapas, dependências entre tarefas, recomendação — e é a base de muitos algoritmos de IA. Podem ser direcionados ou não, com ou sem pesos nas arestas.\nA forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o defaultdict do Capítulo 20:",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
     ]
   },
   {
     "objectID": "28-grafos.html#representação-por-lista-de-adjacência",
     "href": "28-grafos.html#representação-por-lista-de-adjacência",
-    "title": "28  Grafos (Graphs)",
+    "title": "32  Grafos (Graphs)",
     "section": "",
-    "text": "from collections import defaultdict, deque\n\nclass Grafo:\n    def __init__(self):\n        self.adjacencia: defaultdict = defaultdict(list)\n\n    def adicionar_aresta(self, u, v) -&gt; None:\n        self.adjacencia[u].append(v)\n        self.adjacencia[v].append(u)     # não-direcionado; remova p/ direcionado\n\n    def bfs(self, inicio) -&gt; list:\n        \"\"\"Busca em largura — usa FILA (Capítulo 25).\"\"\"\n        visitados = {inicio}\n        fila = deque([inicio])\n        ordem = []\n        while fila:\n            no = fila.popleft()\n            ordem.append(no)\n            for vizinho in self.adjacencia[no]:\n                if vizinho not in visitados:\n                    visitados.add(vizinho)\n                    fila.append(vizinho)\n        return ordem\n\n    def dfs(self, inicio, visitados=None) -&gt; list:\n        \"\"\"Busca em profundidade — usa PILHA via recursão (Capítulos 23-24).\"\"\"\n        if visitados is None:\n            visitados = set()\n        visitados.add(inicio)\n        ordem = [inicio]\n        for vizinho in self.adjacencia[inicio]:\n            if vizinho not in visitados:\n                ordem += self.dfs(vizinho, visitados)\n        return ordem\n\n\ng = Grafo()\nfor u, v in [(\"A\", \"B\"), (\"A\", \"C\"), (\"B\", \"D\"), (\"C\", \"D\")]:\n    g.adicionar_aresta(u, v)\n\nprint(g.bfs(\"A\"))    # ['A', 'B', 'C', 'D'] — expande por camadas\nprint(g.dfs(\"A\"))    # ['A', 'B', 'D', 'C'] — vai fundo antes de voltar",
+    "text": "from collections import defaultdict, deque\n\nclass Grafo:\n    def __init__(self):\n        self.adjacencia: defaultdict = defaultdict(list)\n\n    def adicionar_aresta(self, u, v) -&gt; None:\n        self.adjacencia[u].append(v)\n        self.adjacencia[v].append(u)     # não-direcionado; remova p/ direcionado\n\n    def bfs(self, inicio) -&gt; list:\n        \"\"\"Busca em largura — usa FILA (Capítulo 29).\"\"\"\n        visitados = {inicio}\n        fila = deque([inicio])\n        ordem = []\n        while fila:\n            no = fila.popleft()\n            ordem.append(no)\n            for vizinho in self.adjacencia[no]:\n                if vizinho not in visitados:\n                    visitados.add(vizinho)\n                    fila.append(vizinho)\n        return ordem\n\n    def dfs(self, inicio, visitados=None) -&gt; list:\n        \"\"\"Busca em profundidade — usa PILHA via recursão (Capítulos 26 e 28).\"\"\"\n        if visitados is None:\n            visitados = set()\n        visitados.add(inicio)\n        ordem = [inicio]\n        for vizinho in self.adjacencia[inicio]:\n            if vizinho not in visitados:\n                ordem += self.dfs(vizinho, visitados)\n        return ordem\n\n\ng = Grafo()\nfor u, v in [(\"A\", \"B\"), (\"A\", \"C\"), (\"B\", \"D\"), (\"C\", \"D\")]:\n    g.adicionar_aresta(u, v)\n\nprint(g.bfs(\"A\"))    # ['A', 'B', 'C', 'D'] — expande por camadas\nprint(g.dfs(\"A\"))    # ['A', 'B', 'D', 'C'] — vai fundo antes de voltar",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
     ]
   },
   {
     "objectID": "28-grafos.html#bfs-dfs",
     "href": "28-grafos.html#bfs-dfs",
-    "title": "28  Grafos (Graphs)",
-    "section": "28.2 BFS × DFS",
-    "text": "28.2 BFS × DFS\n\n\n\nCritério\nBFS\nDFS\n\n\n\n\nEstrutura auxiliar\nFila (FIFO)\nPilha (recursão)\n\n\nOrdem de expansão\nPor camadas (vizinhos primeiro)\nFundo primeiro\n\n\nEncontra caminho mais curto (sem pesos)?\nSim\nNão garante\n\n\nCusto\nO(V + E)\nO(V + E)\n\n\n\nO set de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do set (Capítulo 22) mantém o custo linear.",
+    "title": "32  Grafos (Graphs)",
+    "section": "32.2 BFS × DFS",
+    "text": "32.2 BFS × DFS\n\n\n\nCritério\nBFS\nDFS\n\n\n\n\nEstrutura auxiliar\nFila (FIFO)\nPilha (recursão)\n\n\nOrdem de expansão\nPor camadas (vizinhos primeiro)\nFundo primeiro\n\n\nEncontra caminho mais curto (sem pesos)?\nSim\nNão garante\n\n\nCusto\nO(V + E)\nO(V + E)\n\n\n\nO set de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do set (Capítulo 25) mantém o custo linear.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
     ]
   },
   {
     "objectID": "28-grafos.html#o-fechamento-do-livro",
     "href": "28-grafos.html#o-fechamento-do-livro",
-    "title": "28  Grafos (Graphs)",
-    "section": "28.3 O fechamento do livro",
-    "text": "28.3 O fechamento do livro\nRepare como tudo se conectou: BFS usa a fila do Capítulo 25, DFS usa pilha/recursão dos Capítulos 23–24, a lista de adjacência usa o defaultdict do Capítulo 18, o nó com referências generaliza a lista ligada do Capítulo 26, e os custos O(V + E) se leem com o vocabulário do Capítulo 22.\n\n\n\n\n\n\nConexão com IA\n\n\n\nBusca em grafos é a base dos algoritmos de caminho (Dijkstra, A*) estudados em IA, de sistemas de recomendação, e as próprias redes neurais são grafos computacionais — vértices que computam, arestas que carregam valores.",
+    "title": "32  Grafos (Graphs)",
+    "section": "32.3 O fechamento do livro",
+    "text": "32.3 O fechamento do livro\nRepare como tudo se conectou: BFS usa a fila do Capítulo 29, DFS usa pilha/recursão dos Capítulos 26 e 28, a lista de adjacência usa o defaultdict do Capítulo 20, o nó com referências generaliza a lista ligada do Capítulo 30, e os custos O(V + E) se leem com o vocabulário do Capítulo 25.\n\n\n\n\n\n\nConexão com IA\n\n\n\nBusca em grafos é a base dos algoritmos de caminho (Dijkstra, A*) estudados em IA, de sistemas de recomendação, e as próprias redes neurais são grafos computacionais — vértices que computam, arestas que carregam valores.",
     "crumbs": [
       "Parte V — Estruturas de dados",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Grafos (Graphs)</span>"
     ]
   },
   {
@@ -1518,7 +1518,7 @@
     "href": "29-exercicios.html",
     "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
     "section": "",
-    "text": "34.1 Desafio: classificador de relevância para dados tabulares\nEste arquivo agora propõe um desafio único que integra os conceitos fundamentais do curso com uma aplicação prática voltada a IA e Ciência de Dados.\nO objetivo é construir uma ferramenta em Python que leia um conjunto de dados simples, execute pré-processamento, aplique uma regra de pontuação e gere métricas úteis para análise. O foco está em:\nImagine que você está construindo um protótipo simples para classificar registros de dados com base em um conjunto de características. Esse protótipo é uma etapa inicial de um fluxo de trabalho de Ciência de Dados, onde se prepara e avalia dados antes de modelos mais complexos.",
+    "text": "34.1 O problema\nEste capítulo fecha o livro com um desafio único que amarra tudo o que você aprendeu — dos fundamentos (Partes I–IV) às estruturas de dados (Parte V) — em um único script com CLI. Nada de pacote com vários módulos: cabe em um arquivo chamado planejador.py.\nO desafio é guiado por etapas. Cada etapa explica o que construir e por quê, e traz uma caixa de dica recolhível — tente resolver sozinho primeiro e abra a dica só se travar.\nPipelines de dados, builds de software e treinos de modelos em várias etapas têm algo em comum: são compostos por tarefas que dependem umas das outras. Você não pode treinar um modelo antes de limpar os dados, nem limpar os dados antes de coletá-los.\nAntes de executar essas tarefas, um planejador precisa responder três perguntas:\nVocê vai construir planejador.py: um script que lê as tarefas de um CSV, monta o grafo de dependências entre elas e responde a essas perguntas por linha de comando.",
     "crumbs": [
       "Parte VI — Prática",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
@@ -1584,7 +1584,7 @@
     "href": "08a-exercicios-parte-i.html",
     "title": "9  Exercícios — Parte I",
     "section": "",
-    "text": "10 Exercícios — Parte I\nExercícios para consolidar fundamentos do Python (variáveis, funções, condicionais, repetição e type hints).",
+    "text": "9.1 Entrada e tipos\nExercícios para consolidar fundamentos do Python (variáveis, funções, condicionais, repetição e type hints).\nCenário. Uma escola quer digitalizar as fichas de matrícula. Antes de montar qualquer sistema, é preciso garantir que os dados básicos de um aluno — nome, idade e nota final — possam ser lidos do teclado e exibidos de volta corretamente, cada um no tipo certo.\nTarefa: Escreva um programa que leia nome, idade e nota final de um aluno (com input()), convertendo cada valor para o tipo apropriado (int para idade, float para nota). Imprima uma mensagem formatada reunindo os três dados.",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
@@ -1605,8 +1605,8 @@
     "objectID": "08a-exercicios-parte-i.html#função-e-condicional",
     "href": "08a-exercicios-parte-i.html#função-e-condicional",
     "title": "9  Exercícios — Parte I",
-    "section": "10.2 2. Função e condicional",
-    "text": "10.2 2. Função e condicional\nImplemente calcular_media(n1: float, n2: float, n3: float) -&gt; float e use-a para decidir: Aprovado (&gt;=7), Recuperação (&gt;=4) ou Reprovado.",
+    "section": "9.2 Função e condicional",
+    "text": "9.2 Função e condicional\nCenário. Um professor calcula a média de três notas e decide a situação de cada aluno manualmente, um por um. Com uma turma de 40 alunos, isso é lento e sujeito a erro — ele quer uma função que faça esse cálculo de forma confiável e reutilizável.\nTarefa: Implemente calcular_media(n1: float, n2: float, n3: float) -&gt; float e use-a para decidir a situação do aluno: Aprovado (média ≥ 7), Recuperação (média ≥ 4) ou Reprovado (caso contrário).",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
@@ -1616,8 +1616,8 @@
     "objectID": "08a-exercicios-parte-i.html#repetição",
     "href": "08a-exercicios-parte-i.html#repetição",
     "title": "9  Exercícios — Parte I",
-    "section": "10.3 3. Repetição",
-    "text": "10.3 3. Repetição\nCrie um laço que leia números até o usuário digitar 0. Ao final, imprima soma, média, maior e menor número lidos (ignorar o zero).",
+    "section": "9.3 Repetição",
+    "text": "9.3 Repetição\nCenário. Durante uma prova, o professor vai anotando as notas da turma conforme os alunos entregam — sem saber de antemão quantos vão entregar. Combinou-se que digitar 0 sinaliza o fim da coleta.\nTarefa: Crie um laço que leia números até o usuário digitar 0. Ao final, imprima a soma, a média, o maior e o menor número lidos (ignorando o 0 do sinalizador de parada).",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
@@ -1627,8 +1627,8 @@
     "objectID": "08a-exercicios-parte-i.html#type-hints-e-formatação",
     "href": "08a-exercicios-parte-i.html#type-hints-e-formatação",
     "title": "9  Exercícios — Parte I",
-    "section": "10.4 4. Type hints e formatação",
-    "text": "10.4 4. Type hints e formatação\nImplemente celsius_para_fahrenheit(c: float) -&gt; float. Leia uma temperatura e exiba o resultado com duas casas decimais.",
+    "section": "9.4 Type hints e formatação",
+    "text": "9.4 Type hints e formatação\nCenário. Um sensor de temperatura importado dos EUA só relata valores em Celsius, mas o relatório final do laboratório precisa estar em Fahrenheit, a unidade usada pelo cliente.\nTarefa: Implemente celsius_para_fahrenheit(c: float) -&gt; float. Leia uma temperatura em Celsius e exiba o resultado convertido, formatado com duas casas decimais.",
     "crumbs": [
       "Parte I — Fundamentos da linguagem",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios — Parte I</span>"
@@ -1639,7 +1639,7 @@
     "href": "11a-exercicios-parte-ii.html",
     "title": "13  Exercícios — Parte II",
     "section": "",
-    "text": "14 Exercícios — Parte II\nExercícios sobre coleções e manipulação de texto.",
+    "text": "13.1 Listas e operações\nExercícios sobre coleções e manipulação de texto.\nCenário. Você está fazendo compras no mercado e quer controlar a lista pelo celular: adicionar itens que lembrar no caminho, remover os que já foram para o carrinho e corrigir a quantidade de algo digitado errado.\nTarefa: Implemente uma lista de compras (uma list de itens) que permita adicionar, remover e atualizar itens. Ao final, mostre o total de itens e a lista ordenada.",
     "crumbs": [
       "Parte II — Coleções e texto",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
@@ -1660,8 +1660,8 @@
     "objectID": "11a-exercicios-parte-ii.html#dicionários",
     "href": "11a-exercicios-parte-ii.html#dicionários",
     "title": "13  Exercícios — Parte II",
-    "section": "14.2 2. Dicionários",
-    "text": "14.2 2. Dicionários\nEscreva uma função que conte a frequência de vogais em uma string e retorne um dict com o resultado.",
+    "section": "13.2 Dicionários",
+    "text": "13.2 Dicionários\nCenário. Um professor de linguística quer saber, rapidamente, quais vogais aparecem com mais frequência em um texto, para comparar a sonoridade de diferentes trechos.\nTarefa: Escreva uma função que conte a frequência de cada vogal em uma string e retorne um dict com o resultado (vogal → quantidade de ocorrências).",
     "crumbs": [
       "Parte II — Coleções e texto",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
@@ -1671,8 +1671,8 @@
     "objectID": "11a-exercicios-parte-ii.html#comprehensions",
     "href": "11a-exercicios-parte-ii.html#comprehensions",
     "title": "13  Exercícios — Parte II",
-    "section": "14.3 3. Comprehensions",
-    "text": "14.3 3. Comprehensions\nGere uma lista com os quadrados dos números pares de 1 a 20 usando list comprehension.",
+    "section": "13.3 Comprehensions",
+    "text": "13.3 Comprehensions\nCenário. Um professor de matemática quer uma lista rápida dos quadrados dos números pares até 20 para ilustrar um exercício na lousa, sem escrever um laço for de várias linhas.\nTarefa: Gere uma lista com os quadrados dos números pares de 1 a 20, usando uma list comprehension.",
     "crumbs": [
       "Parte II — Coleções e texto",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
@@ -1682,8 +1682,8 @@
     "objectID": "11a-exercicios-parte-ii.html#strings",
     "href": "11a-exercicios-parte-ii.html#strings",
     "title": "13  Exercícios — Parte II",
-    "section": "14.4 4. Strings",
-    "text": "14.4 4. Strings\nLeia uma frase, remova pontuação e mostre as palavras em maiúsculas separadas por vírgula.",
+    "section": "13.4 Strings",
+    "text": "13.4 Strings\nCenário. Um formulário de cadastro recebeu a frase de apresentação de um usuário cheia de pontuação e espaçamento inconsistente. Antes de armazenar, o time de dados quer normalizar o texto para um formato padrão.\nTarefa: Leia uma frase, remova a pontuação básica e mostre as palavras em maiúsculas, separadas por vírgula.",
     "crumbs": [
       "Parte II — Coleções e texto",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Exercícios — Parte II</span>"
@@ -1694,7 +1694,7 @@
     "href": "21a-exercicios-parte-iii.html",
     "title": "24  Exercícios — Parte III",
     "section": "",
-    "text": "25 Exercícios — Parte III\nExercícios sobre recursos intermediários: módulos, OOP, generators, decorators, dataclasses, CLI e testes.",
+    "text": "24.1 Classes e dataclasses\nExercícios sobre recursos intermediários: módulos, OOP, generators, decorators, dataclasses, CLI e testes.\nCenário. Uma loja quer controlar o valor total do seu estoque: para cada produto, é preciso saber o preço, quantas unidades existem e quanto isso representa em reais.\nTarefa: Modele um Produto com @dataclass (nome, preco, estoque) e implemente o método valor_total(), que retorna preco * estoque.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
@@ -1715,8 +1715,8 @@
     "objectID": "21a-exercicios-parte-iii.html#generators",
     "href": "21a-exercicios-parte-iii.html#generators",
     "title": "24  Exercícios — Parte III",
-    "section": "25.2 2. Generators",
-    "text": "25.2 2. Generators\nImplemente um generator que produza pares (n, n*n) para n de 1 a 10 e consuma com next().",
+    "section": "24.2 Generators",
+    "text": "24.2 Generators\nCenário. Um painel precisa plotar pares número/quadrado sob demanda, sem montar a lista inteira de antemão — cada ponto é consumido um de cada vez, conforme o gráfico é desenhado.\nTarefa: Implemente um generator que produza pares (n, n*n) para n de 1 a 10, e consuma os valores chamando next() manualmente.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
@@ -1726,8 +1726,8 @@
     "objectID": "21a-exercicios-parte-iii.html#módulos-e-testes",
     "href": "21a-exercicios-parte-iii.html#módulos-e-testes",
     "title": "24  Exercícios — Parte III",
-    "section": "25.3 3. Módulos e testes",
-    "text": "25.3 3. Módulos e testes\nCrie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste pytest cobrindo entrada válida e inválida.",
+    "section": "24.3 Módulos e testes",
+    "text": "24.3 Módulos e testes\nCenário. Uma aplicação carrega configurações de um arquivo JSON escrito por outra pessoa da equipe. Antes de confiar nesses dados, é preciso validar que o arquivo existe e está no formato esperado — e garantir, com testes, que essa validação continua funcionando conforme o projeto evolui.\nTarefa: Crie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste pytest cobrindo uma entrada válida e uma entrada inválida.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
@@ -1737,8 +1737,8 @@
     "objectID": "21a-exercicios-parte-iii.html#cli",
     "href": "21a-exercicios-parte-iii.html#cli",
     "title": "24  Exercícios — Parte III",
-    "section": "25.4 4. CLI",
-    "text": "25.4 4. CLI\nImplemente um script CLI que receba --arquivo e imprima o número de linhas do arquivo, tratando erros de arquivo ausente.",
+    "section": "24.4 CLI",
+    "text": "24.4 CLI\nCenário. Antes de processar um arquivo de log gigante, um analista quer uma forma rápida de conferir, pelo terminal, quantas linhas ele tem — sem abrir o arquivo em um editor de texto.\nTarefa: Implemente um script CLI que receba --arquivo e imprima o número de linhas do arquivo, tratando o erro de arquivo ausente com uma mensagem clara.",
     "crumbs": [
       "Parte III — Recursos intermediários da linguagem",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Exercícios — Parte III</span>"
@@ -1749,7 +1749,7 @@
     "href": "23a-exercicios-parte-iv.html",
     "title": "27  Exercícios — Parte IV",
     "section": "",
-    "text": "28 Exercícios — Parte IV\nExercícios sobre complexidade e recursão.",
+    "text": "27.1 Big-O (conceitual)\nExercícios sobre complexidade e recursão.\nCenário. Um algoritmo roda em um segundo quando testado com mil registros. Em produção, a base tem um milhão. Antes de descobrir o problema no pior momento possível, é melhor saber prever como o tempo de execução vai se comportar.\nTarefa: Explique, com exemplos curtos, como o tempo de execução muda quando o tamanho da entrada dobra, para algoritmos O(n), O(n²) e O(log n).",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
@@ -1770,8 +1770,8 @@
     "objectID": "23a-exercicios-parte-iv.html#recursão-básica",
     "href": "23a-exercicios-parte-iv.html#recursão-básica",
     "title": "27  Exercícios — Parte IV",
-    "section": "28.2 2. Recursão básica",
-    "text": "28.2 2. Recursão básica\nImplemente o fatorial recursivo fatorial(n: int) -&gt; int e trate n &lt; 0 com erro apropriado.",
+    "section": "27.2 Recursão básica",
+    "text": "27.2 Recursão básica\nCenário. Um sistema de loteria precisa calcular de quantas formas diferentes n números podem ser sorteados em sequência — um cálculo que depende diretamente do fatorial de n.\nTarefa: Implemente o fatorial recursivo fatorial(n: int) -&gt; int, tratando n &lt; 0 com um erro apropriado (fatorial não é definido para números negativos).",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
@@ -1781,8 +1781,8 @@
     "objectID": "23a-exercicios-parte-iv.html#torres-de-hanoi",
     "href": "23a-exercicios-parte-iv.html#torres-de-hanoi",
     "title": "27  Exercícios — Parte IV",
-    "section": "28.3 3. Torres de Hanoi",
-    "text": "28.3 3. Torres de Hanoi\nResolva as Torres de Hanoi para n discos imprimindo a sequência de movimentos.",
+    "section": "27.3 Torres de Hanoi",
+    "text": "27.3 Torres de Hanoi\nCenário. Um quebra-cabeça clássico: três pinos e discos de tamanhos diferentes, empilhados por tamanho no primeiro pino. A missão é mover a pilha inteira para o último pino, um disco de cada vez, nunca colocando um disco maior sobre um menor.\nTarefa: Resolva as Torres de Hanoi para n discos, imprimindo a sequência de movimentos necessária.",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
@@ -1792,8 +1792,8 @@
     "objectID": "23a-exercicios-parte-iv.html#recursão-e-soma",
     "href": "23a-exercicios-parte-iv.html#recursão-e-soma",
     "title": "27  Exercícios — Parte IV",
-    "section": "28.4 4. Recursão e soma",
-    "text": "28.4 4. Recursão e soma\nImplemente função recursiva que some todos os números em uma lista (pode conter sublistas aninhadas).",
+    "section": "27.4 Recursão e soma",
+    "text": "27.4 Recursão e soma\nCenário. Um relatório de vendas chega em um formato aninhado: cada região é uma lista que pode conter tanto números de vendas quanto sublistas de sub-regiões. Somar tudo exige descer por essa estrutura sem saber, de antemão, quantos níveis de aninhamento existem.\nTarefa: Implemente uma função recursiva que some todos os números em uma lista, mesmo quando ela contém sublistas aninhadas em qualquer profundidade.",
     "crumbs": [
       "Parte IV — Complexidade e algoritmos",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Exercícios — Parte IV</span>"
@@ -1804,7 +1804,7 @@
     "href": "28a-exercicios-parte-v.html",
     "title": "33  Exercícios — Parte V",
     "section": "",
-    "text": "34 Exercícios — Parte V\nExercícios sobre estruturas de dados: pilha, fila, listas ligadas, árvores e grafos.",
+    "text": "33.1 Pilha\nExercícios sobre estruturas de dados: pilha, fila, listas ligadas, árvores e grafos.\nCenário. Um editor de texto simples precisa de uma função “desfazer”: a última ação feita é sempre a primeira a ser desfeita. Antes de implementar o editor inteiro, vale testar a estrutura de dados por trás dele com algo simples: inverter uma string, caractere por caractere.\nTarefa: Implemente uma classe Pilha com push, pop, top e is_empty. Use-a para inverter uma string.",
     "crumbs": [
       "Parte V — Estruturas de dados",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
@@ -1825,8 +1825,8 @@
     "objectID": "28a-exercicios-parte-v.html#fila",
     "href": "28a-exercicios-parte-v.html#fila",
     "title": "33  Exercícios — Parte V",
-    "section": "34.2 2. Fila",
-    "text": "34.2 2. Fila\nImplemente uma fila usando collections.deque e simule uma fila de impressão onde cada documento tem nome e paginas.",
+    "section": "33.2 Fila",
+    "text": "33.2 Fila\nCenário. Uma impressora compartilhada do laboratório recebe vários documentos ao longo do dia e imprime na ordem de chegada: o primeiro documento enviado é o primeiro a sair, mesmo que outros cheguem enquanto ele ainda está sendo processado.\nTarefa: Implemente uma fila usando collections.deque e simule uma fila de impressão, em que cada documento tem nome e paginas.",
     "crumbs": [
       "Parte V — Estruturas de dados",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
@@ -1836,8 +1836,8 @@
     "objectID": "28a-exercicios-parte-v.html#lista-ligada",
     "href": "28a-exercicios-parte-v.html#lista-ligada",
     "title": "33  Exercícios — Parte V",
-    "section": "34.3 3. Lista ligada",
-    "text": "34.3 3. Lista ligada\nImplemente uma lista ligada simples com métodos inserir_inicio, inserir_fim, remover(valor) e __len__.",
+    "section": "33.3 Lista ligada",
+    "text": "33.3 Lista ligada\nCenário. Um app de streaming mantém o histórico de músicas tocadas: é fácil adicionar uma música no início (a mais recente) ou no fim (a mais antiga), remover uma música específica do meio do histórico e saber, a qualquer momento, quantas músicas já foram tocadas.\nTarefa: Implemente uma lista ligada simples com os métodos inserir_inicio, inserir_fim, remover(valor) e __len__.",
     "crumbs": [
       "Parte V — Estruturas de dados",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
@@ -1847,8 +1847,8 @@
     "objectID": "28a-exercicios-parte-v.html#grafos-conceitual-prático",
     "href": "28a-exercicios-parte-v.html#grafos-conceitual-prático",
     "title": "33  Exercícios — Parte V",
-    "section": "34.4 4. Grafos (conceitual + prático)",
-    "text": "34.4 4. Grafos (conceitual + prático)\nDescreva como grafos modelam rotas; em seguida, represente um grafo como dicionário de adjacência e implemente busca em largura (BFS).",
+    "section": "33.4 Grafos (conceitual + prático)",
+    "text": "33.4 Grafos (conceitual + prático)\nCenário. Um aplicativo de mapas precisa saber, a partir da sua localização atual, quais lugares são alcançáveis e em que ordem eles seriam visitados numa busca camada por camada — a base de qualquer cálculo de rota.\nTarefa: Descreva, em poucas frases, como grafos modelam rotas entre lugares. Em seguida, represente um grafo como dicionário de adjacência e implemente uma busca em largura (BFS).",
     "crumbs": [
       "Parte V — Estruturas de dados",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Exercícios — Parte V</span>"
@@ -1860,6 +1860,83 @@
     "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
     "section": "",
     "text": "34.1.1 Tarefa principal\nImplemente um pacote desafio_ia com as seguintes partes:\n\nDatasetRow como @dataclass\n\ncampos: id: int, texto: str, valor: float, categoria: str.\nmétodo def features(self) -&gt; dict[str, float] que extrai características numéricas simples do texto e do valor.\n\nFunção parse_csv(path: str) -&gt; list[DatasetRow]\n\nleia um CSV com colunas id,texto,valor,categoria.\ntrate erros de arquivo inexistente e linhas malformadas.\nuse int() e float() com validação.\n\nFunção preprocess_text(text: str) -&gt; dict[str, int]\n\nnormalize o texto para minúsculas;\nremova pontuação básica;\nconte palavras usando Counter ou dicionários;\nretorne pelo menos duas características: número de palavras e número de palavras distintas.\n\nFunção score_row(row: DatasetRow, peso_texto: float, peso_valor: float) -&gt; float\n\ncalcule uma pontuação de relevância a partir das características extraídas;\npor exemplo, score = peso_texto * len_palavras + peso_valor * valor.\n\nFunção classify(row: DatasetRow, threshold: float) -&gt; str\n\nretorne \"relevante\" se a pontuação for maior ou igual ao limite, caso contrário \"irrelevante\".\n\nFunção evaluate(predictions: list[str], truth: list[str]) -&gt; dict[str, float]\n\ncalcule accuracy, precision e recall para a classe relevante.\nuse apenas operações com listas, contadores e condicionais.\n\nCLI (main.py)\n\nargumentos: --input, --threshold, --peso-texto, --peso-valor, --saida.\nleia o CSV, gere classificações e salve um relatório JSON com métricas e amostras de resultados.\n\n\n\n\n34.1.2 Requisitos extras\n\nAdicione tratamento de exceção para valores ausentes e formato incorreto.\nUse uma list comprehension para filtrar apenas as linhas classificadas como relevante.\nImplemente ao menos um generator para processar as linhas do CSV sem carregar tudo na memória de uma vez.\nInclua testes pytest para:\n\nparser de CSV válido e inválido;\nfunção preprocess_text;\nfunção evaluate.\n\n\n\n\n34.1.3 Exemplo de uso\npython main.py --input dados.csv --threshold 10.0 --peso-texto 1.5 --peso-valor 0.8 --saida relatorio.json\n\n\n34.1.4 Explicação didática\nEste desafio reúne os fundamentos do material porque exige:\n\nmanipulação de entrada e saída (input, arquivos, CSV/JSON);\nfunções bem tipadas e tratamento de erros;\nuso de coleções, strings e comprehensions;\nmodelagem com classes e dataclass;\nCLI e modularização de código;\navaliação básica de desempenho, conceito central em Ciência de Dados.\n\n\n\n34.1.5 Entregáveis\n\ncódigo-fonte do pacote e do CLI;\nrelatório JSON com as métricas;\ntestes pytest cobrindo as funções centrais.\n\n\n\nBônus: adicione uma função top_words(text: str, n: int) -&gt; list[tuple[str, int]] que retorna as n palavras mais frequentes e inclua isso no relatório final.",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#desafio-planejador-de-tarefas-com-dependências",
+    "href": "29-exercicios.html#desafio-planejador-de-tarefas-com-dependências",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "",
+    "text": "34.1.1 Formato de entrada\nUm CSV com colunas id,nome,duracao,dependencias, em que dependencias é uma lista de ids separados por ; (vazio se não houver):\nid,nome,duracao,dependencias\na,Coletar dados,2,\nb,Limpar dados,3,a\nc,Treinar modelo,5,b\nd,Documentar,1,a;b\n\n\n34.1.2 Tarefa principal\nImplemente em planejador.py:\n\nTarefa como @dataclass\n\ncampos: id: str, nome: str, duracao: float, dependencias: list[str].\n\nler_linhas(caminho: str) -&gt; Iterator[list[str]]\n\ngenerator que abre o arquivo e produz uma linha (já dividida em campos) por vez, sem carregar o CSV inteiro na memória;\ntrate FileNotFoundError com uma mensagem clara.\n\ncarregar_tarefas(caminho: str) -&gt; dict[str, Tarefa]\n\nconsome ler_linhas para montar o dicionário id -&gt; Tarefa;\nvalide duracao com float() e capture erro de formato;\nrejeite ids duplicados;\nuse comprehension para transformar a string de dependências em list[str].\n\nconstruir_grafo(tarefas: dict[str, Tarefa]) -&gt; dict[str, list[str]]\n\ndicionário de adjacência id -&gt; ids que dependem dele (aresta dependência → dependente);\nlevante ValueError se alguma dependência referenciar um id inexistente.\n\ndetectar_ciclo(grafo: dict[str, list[str]]) -&gt; list[str] | None\n\npercorra o grafo em profundidade usando uma pilha explícita (ou recursão, deixando claro que ela usa a pilha de chamadas);\nretorne a lista de ids que formam o ciclo, ou None se não houver.\n\nordenar_topologicamente(grafo: dict[str, list[str]], tarefas: dict[str, Tarefa]) -&gt; list[str]\n\nimplemente o algoritmo de Kahn: comece pelas tarefas sem dependências e use uma fila (collections.deque) para ir liberando as próximas conforme suas dependências são satisfeitas;\nse detectar_ciclo encontrar um ciclo, levante ValueError com os ids envolvidos antes de tentar ordenar.\n\nduracao_ate(tarefa_id: str, tarefas: dict[str, Tarefa], cache: dict[str, float] | None = None) -&gt; float\n\nfunção recursiva: duração acumulada do caminho mais longo até tarefa_id = duracao da própria tarefa + a maior duracao_ate entre suas dependências (0 se não houver dependências);\nmemoize os resultados (dict de cache ou functools.lru_cache) para não recalcular subcaminhos repetidos.\n\ntarefas_prontas(tarefas: dict[str, Tarefa], concluidas: set[str]) -&gt; list[str]\n\nlist comprehension: ids de tarefas cujas dependências estão todas em concluidas e que ainda não estão em concluidas.\n\nCLI (main() em planejador.py)\n\nargumentos: --input (CSV), --acao (ordem, caminho-critico ou prontas), --saida (JSON, opcional);\num decorator @cronometrar que envolve a execução da ação escolhida e imprime o tempo gasto;\nsalve em --saida, quando informado, um relatório JSON com o resultado da ação e a duração total do projeto (max de duracao_ate entre todas as tarefas).\n\n\n\n\n34.1.3 Requisitos extras\n\nTrate com mensagens claras: arquivo ausente, linha malformada, dependência inexistente e ciclo detectado.\ndetectar_ciclo e ordenar_topologicamente devem ter complexidade O(V + E) — comente no código por quê (Capítulo 22).\nNão implemente ordenar_topologicamente sem antes checar ciclos: um grafo cíclico não tem ordenação válida.\n\n\n\n34.1.4 Exemplo de uso\npython planejador.py --input tarefas.csv --acao ordem\npython planejador.py --input tarefas.csv --acao caminho-critico --saida relatorio.json\n\n\n34.1.5 Explicação didática\nO desafio amarra o livro inteiro em um único arquivo:\n\nPartes I–II: leitura de arquivo, try/except, type hints, comprehensions;\nParte III: @dataclass para Tarefa, generator em ler_linhas, decorator @cronometrar, CLI com argparse;\nParte IV: recursão com memoização em duracao_ate, custo O(V + E) comentado;\nParte V: pilha (DFS/detectar_ciclo), fila (Kahn/ordenar_topologicamente) e grafo (dicionário de adjacência) — as três estruturas que fecham o livro, aplicadas ao mesmo problema.\n\n\n\n34.1.6 Entregáveis\n\nplanejador.py — script único, executável via CLI;\num tarefas.csv de exemplo para testar;\nrelatório JSON gerado por --saida.\n\n\n\nBônus: escreva test_planejador.py com pytest cobrindo ao menos três casos: grafo sem ciclo ordena corretamente, grafo com ciclo levanta erro, e duracao_ate calcula o caminho crítico esperado num grafo pequeno conhecido.",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#o-problema",
+    "href": "29-exercicios.html#o-problema",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "",
+    "text": "Em que ordem as tarefas podem ser executadas, respeitando as dependências?\nExiste alguma dependência circular (A depende de B, que depende de A) — o que tornaria o plano impossível de executar?\nQual é a duração total do projeto, somando o caminho mais longo até cada tarefa?\n\n\n\n34.1.1 Formato de entrada\nUm CSV com colunas id,nome,duracao,dependencias, em que dependencias é uma lista de ids separados por ; (vazia se a tarefa não depender de nada):\nid,nome,duracao,dependencias\na,Coletar dados,2,\nb,Limpar dados,3,a\nc,Treinar modelo,5,b\nd,Documentar,1,a;b\nAqui, c só pode começar depois que b termina, e b só depois que a termina — então a ordem válida é a, b, c, d (ou a, b, d, c, já que d só depende de a e b).",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#passo-a-passo",
+    "href": "29-exercicios.html#passo-a-passo",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "34.2 Passo a passo",
+    "text": "34.2 Passo a passo\n\n34.2.1 Passo 1 — Modele uma tarefa\nAntes de processar qualquer coisa, defina a estrutura de dados que representa uma linha do CSV: uma Tarefa com id, nome, duracao e a lista de dependencias.\n\n\n\n\n\n\nDica\n\n\n\n\n\nUse @dataclass (Capítulo 17). Ele gera __init__, __repr__ e __eq__ automaticamente a partir dos campos anotados com type hints — evita escrever um __init__ manual só para atribuir atributos.\n\n\n\n\n\n34.2.2 Passo 2 — Leia o arquivo sem carregar tudo na memória\nEscreva ler_linhas(caminho), que abre o CSV e devolve uma linha por vez (já separada em campos). Se o arquivo não existir, avise com uma mensagem clara em vez de deixar o traceback cru estourar.\n\n\n\n\n\n\nDica\n\n\n\n\n\nIsso é o caso de uso clássico de generator (Capítulo 15): uma função com yield dentro de um for que percorre o arquivo. Use o módulo csv da biblioteca padrão (Capítulo 18) em vez de fazer linha.split(\",\") na mão — ele lida corretamente com aspas e separadores. Para o arquivo ausente, capture FileNotFoundError e relance com uma mensagem melhor (raise FileNotFoundError(...) from erro).\n\n\n\n\n\n34.2.3 Passo 3 — Monte o dicionário de tarefas\nEscreva carregar_tarefas(caminho), que consome ler_linhas e devolve um dict[str, Tarefa] (id → tarefa). Valide duracao como número, rejeite ids duplicados e transforme a string de dependências (\"a;b\") em uma lista ([\"a\", \"b\"]).\n\n\n\n\n\n\nDica\n\n\n\n\n\nduracao_str.split(\";\") já resolve a divisão, mas sobra string vazia quando não há dependências — filtre com uma comprehension: [d.strip() for d in deps_str.split(\";\") if d.strip()]. Para validar o número, envolva float(duracao_str) em try/except ValueError (Capítulo 12) e transforme o erro numa mensagem que diga qual tarefa e qual valor era inválido.\n\n\n\n\n\n34.2.4 Passo 4 — Construa o grafo de dependências\nEscreva construir_grafo(tarefas), que devolve um dicionário de adjacência: cada id aponta para a lista de tarefas que dependem dele. Se uma tarefa referenciar um id que não existe, isso é um erro de dados — avise.\n\n\n\n\n\n\nDica\n\n\n\n\n\nPense na aresta como “dependência → dependente”: se b depende de a, a aresta vai de a para b (Capítulo 28). Comece com {id_: [] for id_ in tarefas} para garantir que toda tarefa tenha uma entrada no grafo, mesmo sem ninguém dependendo dela.\n\n\n\n\n\n34.2.5 Passo 5 — Detecte dependências circulares\nUm grafo com um ciclo (A → B → A) não tem ordem de execução válida. Escreva detectar_ciclo(grafo), que retorna a lista de ids que formam o ciclo, ou None se o grafo for válido.\n\n\n\n\n\n\nDica\n\n\n\n\n\nFaça uma busca em profundidade (Capítulo 28) marcando os nós em três estados: não visitado, “em progresso” (está no caminho atual de recursão) e “concluído”. Se durante a busca você encontrar um vizinho que está “em progresso”, achou um ciclo. Repare que essa busca usa a pilha de chamadas da própria recursão (Capítulos 23–24) — não precisa manter uma pilha manual, mas vale comentar no código que é isso que está acontecendo.\n\n\n\n\n\n34.2.6 Passo 6 — Ordene as tarefas (algoritmo de Kahn)\nEscreva ordenar_topologicamente(grafo, tarefas). A ideia: comece pelas tarefas que não têm nenhuma dependência, “libere” as próximas conforme suas dependências vão sendo satisfeitas, e repita até acabar.\n\n\n\n\n\n\nDica\n\n\n\n\n\nEsse é o algoritmo de Kahn, e ele pede naturalmente uma fila (Capítulo 25 — collections.deque): comece enfileirando as tarefas com zero dependências pendentes (grau de entrada 0); ao processar uma tarefa, diminua o grau de entrada de quem depende dela e enfileire quem chegar a zero. Chame detectar_ciclo antes de rodar Kahn — sem checar isso primeiro, um grafo cíclico simplesmente nunca esvazia a fila e algumas tarefas ficam de fora silenciosamente.\n\n\n\n\n\n34.2.7 Passo 7 — Calcule o caminho crítico\nEscreva duracao_ate(tarefa_id, tarefas, cache=None): a duração acumulada do caminho mais longo até aquela tarefa, ou seja, a duração dela somada à maior duração entre suas dependências.\n\n\n\n\n\n\nDica\n\n\n\n\n\nÉ uma recursão natural (Capítulo 23): caso base é uma tarefa sem dependências (total = duracao); caso recursivo é duracao + max(duracao_ate(dep) para cada dependência). Sem cuidado, tarefas compartilhadas no meio do grafo são recalculadas várias vezes — guarde os resultados já calculados num dicionário cache (memoização, Capítulo 16, o mesmo princípio do lru_cache usado no Fibonacci).\n\n\n\n\n\n34.2.8 Passo 8 — Quais tarefas já podem começar?\nEscreva tarefas_prontas(tarefas, concluidas): dado um conjunto de ids já concluídos, devolva os ids que ainda faltam e cujas dependências todas já foram concluídas.\n\n\n\n\n\n\nDica\n\n\n\n\n\nUma list comprehension resolve em uma linha (Capítulo 11): [id_ for id_, t in tarefas.items() if id_ not in concluidas and all(dep in concluidas for dep in t.dependencias)]. O all(...) sobre um generator expression evita construir uma lista intermediária só para checar a condição.\n\n\n\n\n\n34.2.9 Passo 9 — Junte tudo numa CLI\nEscreva main() com argparse (Capítulo 19): --input (caminho do CSV), --acao (ordem, caminho-critico ou prontas) e --saida (caminho opcional para salvar um relatório JSON). Envolva a execução da ação escolhida com um decorator que imprime quanto tempo ela levou.\n\n\n\n\n\n\nDica\n\n\n\n\n\nO decorator de cronometragem é o exemplo do Capítulo 16 quase pronto: uma função wrapper(*args, **kwargs) que mede time.perf_counter() antes e depois de chamar a função original. Lembre do idioma if __name__ == \"__main__\": (Capítulo 19) para que planejador.py funcione tanto executado direto quanto importado. Erros de dados (ValueError, FileNotFoundError) devem virar uma mensagem amigável no terminal e sys.exit(1) — não um traceback cru.",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#requisitos-extras",
+    "href": "29-exercicios.html#requisitos-extras",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "34.3 Requisitos extras",
+    "text": "34.3 Requisitos extras\n\nTrate com mensagens claras: arquivo ausente, linha malformada, dependência inexistente e ciclo detectado.\ndetectar_ciclo e ordenar_topologicamente devem ter complexidade O(V + E) — comente no código por quê (Capítulo 22).\nNão rode ordenar_topologicamente sem checar ciclos antes: um grafo cíclico não tem ordenação válida.\n\n\n\n\n\n\n\nErro comum\n\n\n\nTestar apenas com o CSV de exemplo (sem ciclos) esconde bugs no detectar_ciclo. Crie também um CSV pequeno e deliberadamente cíclico (ex.: x depende de y, y depende de x) e confirme que o script recusa com uma mensagem — não com um RecursionError.",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#exemplo-de-uso",
+    "href": "29-exercicios.html#exemplo-de-uso",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "34.4 Exemplo de uso",
+    "text": "34.4 Exemplo de uso\npython planejador.py --input tarefas.csv --acao ordem\npython planejador.py --input tarefas.csv --acao caminho-critico --saida relatorio.json",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#onde-cada-capítulo-aparece",
+    "href": "29-exercicios.html#onde-cada-capítulo-aparece",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "34.5 Onde cada capítulo aparece",
+    "text": "34.5 Onde cada capítulo aparece\n\n\n\nEtapa\nCapítulo(s)\n\n\n\n\nTarefa\n17 — dataclasses\n\n\nler_linhas\n15 — generators, 18 — biblioteca padrão (csv)\n\n\ncarregar_tarefas\n11 — comprehensions, 12 — erros\n\n\nconstruir_grafo\n28 — grafos\n\n\ndetectar_ciclo\n23–24 — recursão e pilha\n\n\nordenar_topologicamente\n25 — fila, 22 — Big-O\n\n\nduracao_ate\n16 — decorators/memoização, 23 — recursão\n\n\ntarefas_prontas\n11 — comprehensions\n\n\nmain / CLI\n16 — decorators, 19 — CLI",
+    "crumbs": [
+      "Parte VI — Prática",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "29-exercicios.html#entregáveis",
+    "href": "29-exercicios.html#entregáveis",
+    "title": "34  Desafio integrador — Fundamentos de IA e Ciência de Dados",
+    "section": "34.6 Entregáveis",
+    "text": "34.6 Entregáveis\n\nplanejador.py — script único, executável via CLI;\num tarefas.csv de exemplo para testar;\nrelatório JSON gerado por --saida.\n\n\n\n\n\n\n\n\nBônus\n\n\n\n\n\nEscreva test_planejador.py com pytest (Capítulo 20) cobrindo ao menos três casos: grafo sem ciclo ordena corretamente, grafo com ciclo levanta erro, e duracao_ate calcula o caminho crítico esperado num grafo pequeno conhecido.",
     "crumbs": [
       "Parte VI — Prática",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Desafio integrador — Fundamentos de IA e Ciência de Dados</span>"

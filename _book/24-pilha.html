@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>24&nbsp; Estruturas de dados: Pilha (Stack) – Nivelamento em Python</title>
+<title>28&nbsp; Estruturas de dados: Pilha (Stack) – Nivelamento em Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./25-fila.html" rel="next">
-<link href="./23-recursao.html" rel="prev">
+<link href="./23a-exercicios-parte-iv.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./24-pilha.html">Parte V — Estruturas de dados</a></li><li class="breadcrumb-item"><a href="./24-pilha.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./24-pilha.html">Parte V — Estruturas de dados</a></li><li class="breadcrumb-item"><a href="./24-pilha.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -203,6 +203,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Type hints (anotações de tipo)</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08a-exercicios-parte-i.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Exercícios — Parte I</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -217,19 +223,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09-colecoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coleções nativas: listas, tuplas, dicionários e conjuntos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Coleções nativas: listas, tuplas, dicionários e conjuntos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10-strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Strings em profundidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Strings em profundidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./11-comprehensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Compreensões (comprehensions)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Compreensões (comprehensions)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11a-exercicios-parte-ii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Exercícios — Parte II</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,61 +258,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./12-erros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./13-modulos-pip-venv.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./14-oop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./15-iteradores-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Iteradores e generators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Iteradores e generators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./16-decorators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Decorators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Decorators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./17-dataclasses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Dataclasses</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Dataclasses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./18-biblioteca-padrao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biblioteca padrão essencial</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Biblioteca padrão essencial</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./19-cli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Interface de linha de comando</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Interface de linha de comando</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./20-testes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Testes e asserções</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Testes e asserções</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./21-arquivos-csv-json.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Arquivos, CSV e JSON</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Arquivos, CSV e JSON</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21a-exercicios-parte-iii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Exercícios — Parte III</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,13 +335,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./22-big-o.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./23-recursao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Recursão</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23a-exercicios-parte-iv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exercícios — Parte IV</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,48 +364,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./24-pilha.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-fila.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./26-listas-ligadas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Listas ligadas (Linked Lists)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Listas ligadas (Linked Lists)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./27-arvores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Árvores (Trees)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Árvores (Trees)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./28-grafos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Grafos (Graphs)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Grafos (Graphs)</span></span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span></a>
+  <a href="./28a-exercicios-parte-v.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Exercícios — Parte V</span></span></a>
   </div>
 </li>
       </ul>
@@ -396,19 +409,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#conceito" id="toc-conceito" class="nav-link active" data-scroll-target="#conceito"><span class="header-section-number">24.1</span> Conceito</a></li>
-  <li><a href="#implementação-com-lista" id="toc-implementação-com-lista" class="nav-link" data-scroll-target="#implementação-com-lista"><span class="header-section-number">24.2</span> Implementação com lista</a></li>
-  <li><a href="#aplicações-típicas" id="toc-aplicações-típicas" class="nav-link" data-scroll-target="#aplicações-típicas"><span class="header-section-number">24.3</span> Aplicações típicas</a></li>
-  <li><a href="#exemplo-aplicado-parênteses-balanceados" id="toc-exemplo-aplicado-parênteses-balanceados" class="nav-link" data-scroll-target="#exemplo-aplicado-parênteses-balanceados"><span class="header-section-number">24.4</span> Exemplo aplicado: parênteses balanceados</a></li>
+  <li><a href="#conceito" id="toc-conceito" class="nav-link active" data-scroll-target="#conceito"><span class="header-section-number">28.1</span> Conceito</a></li>
+  <li><a href="#implementação-com-lista" id="toc-implementação-com-lista" class="nav-link" data-scroll-target="#implementação-com-lista"><span class="header-section-number">28.2</span> Implementação com lista</a></li>
+  <li><a href="#aplicações-típicas" id="toc-aplicações-típicas" class="nav-link" data-scroll-target="#aplicações-típicas"><span class="header-section-number">28.3</span> Aplicações típicas</a></li>
+  <li><a href="#exemplo-aplicado-parênteses-balanceados" id="toc-exemplo-aplicado-parênteses-balanceados" class="nav-link" data-scroll-target="#exemplo-aplicado-parênteses-balanceados"><span class="header-section-number">28.4</span> Exemplo aplicado: parênteses balanceados</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./24-pilha.html">Parte V — Estruturas de dados</a></li><li class="breadcrumb-item"><a href="./24-pilha.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./24-pilha.html">Parte V — Estruturas de dados</a></li><li class="breadcrumb-item"><a href="./24-pilha.html"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></h1>
+<h1 class="title"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></h1>
 </div>
 
 
@@ -425,8 +438,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="conceito" class="level2" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="conceito"><span class="header-section-number">24.1</span> Conceito</h2>
+<section id="conceito" class="level2" data-number="28.1">
+<h2 data-number="28.1" class="anchored" data-anchor-id="conceito"><span class="header-section-number">28.1</span> Conceito</h2>
 <p>A pilha segue a política <strong>LIFO</strong> (<em>Last In, First Out</em>): o último elemento inserido é o primeiro a sair. A analogia clássica é uma pilha de pratos — só se coloca e se retira pelo topo.</p>
 <pre><code>        push(4)  →  |  4  | ← topo (próximo a sair)
                     |  3  |
@@ -460,8 +473,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="implementação-com-lista" class="level2" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="implementação-com-lista"><span class="header-section-number">24.2</span> Implementação com lista</h2>
+<section id="implementação-com-lista" class="level2" data-number="28.2">
+<h2 data-number="28.2" class="anchored" data-anchor-id="implementação-com-lista"><span class="header-section-number">28.2</span> Implementação com lista</h2>
 <p>A lista do Python oferece <code>append</code> (push) e <code>pop</code> em O(1) no final, o que a torna ideal para pilhas:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Pilha:</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
@@ -499,18 +512,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p.peek())    <span class="co"># 2</span></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(p))      <span class="co"># 2</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="aplicações-típicas" class="level2" data-number="24.3">
-<h2 data-number="24.3" class="anchored" data-anchor-id="aplicações-típicas"><span class="header-section-number">24.3</span> Aplicações típicas</h2>
+<section id="aplicações-típicas" class="level2" data-number="28.3">
+<h2 data-number="28.3" class="anchored" data-anchor-id="aplicações-típicas"><span class="header-section-number">28.3</span> Aplicações típicas</h2>
 <ul>
 <li><strong>Desfazer/refazer (Ctrl+Z)</strong> em editores;</li>
 <li><strong>Histórico de navegação</strong> (botão “voltar”);</li>
-<li><strong>Pilha de chamadas</strong> de funções — é ela que a recursão consome (Capítulo 23);</li>
+<li><strong>Pilha de chamadas</strong> de funções — é ela que a recursão consome (Capítulo 26);</li>
 <li><strong>Validação de expressões</strong> com parênteses balanceados;</li>
-<li><strong>Busca em profundidade (DFS)</strong> em grafos (Capítulo 28) — tema que reaparecerá em IA.</li>
+<li><strong>Busca em profundidade (DFS)</strong> em grafos (Capítulo 32) — tema que reaparecerá em IA.</li>
 </ul>
 </section>
-<section id="exemplo-aplicado-parênteses-balanceados" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="exemplo-aplicado-parênteses-balanceados"><span class="header-section-number">24.4</span> Exemplo aplicado: parênteses balanceados</h2>
+<section id="exemplo-aplicado-parênteses-balanceados" class="level2" data-number="28.4">
+<h2 data-number="28.4" class="anchored" data-anchor-id="exemplo-aplicado-parênteses-balanceados"><span class="header-section-number">28.4</span> Exemplo aplicado: parênteses balanceados</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> balanceada(expressao: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    pares <span class="op">=</span> {<span class="st">")"</span>: <span class="st">"("</span>, <span class="st">"]"</span>: <span class="st">"["</span>, <span class="st">"}"</span>: <span class="st">"{"</span>}</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    pilha <span class="op">=</span> Pilha()</span>
@@ -949,13 +962,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./23-recursao.html" class="pagination-link" aria-label="Recursão">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></span>
+      <a href="./23a-exercicios-parte-iv.html" class="pagination-link" aria-label="Exercícios — Parte IV">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exercícios — Parte IV</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./25-fila.html" class="pagination-link" aria-label="Estruturas de dados: Fila (Queue)">
-        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -50,7 +50,7 @@ c = ContaBancaria("Ana", 100)
 print(c)          # Conta(Ana, R$100.00)
 ```
 
-Outros que você reencontrará: `__len__` (habilita `len(obj)`), `__getitem__` (habilita `obj[i]`), `__iter__` (Capítulo 15).
+Outros que você reencontrará: `__len__` (habilita `len(obj)`), `__getitem__` (habilita `obj[i]`), `__iter__` (Capítulo 17).
 
 ## Herança e encapsulamento
 
@@ -64,5 +64,5 @@ O encapsulamento em Python é por convenção: o prefixo `_atributo` sinaliza "u
 
 ::: {.callout-note}
 ## Aonde isso vai dar
-Escrever `__init__`, `__repr__` e `__eq__` à mão para classes que só guardam dados é repetitivo. No Capítulo 17 (**Dataclasses**) você verá a forma moderna de gerar tudo isso com uma linha — mas antes precisamos de decorators (Capítulo 16), o mecanismo que a sustenta.
+Escrever `__init__`, `__repr__` e `__eq__` à mão para classes que só guardam dados é repetitivo. No Capítulo 19 (**Dataclasses**) você verá a forma moderna de gerar tudo isso com uma linha — mas antes precisamos de decorators (Capítulo 18), o mecanismo que a sustenta.
 :::

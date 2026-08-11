@@ -20,7 +20,7 @@ A fila segue a política **FIFO** (*First In, First Out*): o primeiro elemento i
 
 ## Por que não usar lista pura?
 
-`lista.pop(0)` remove da frente, mas custa **O(n)**: todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 22 para ler isso). A solução idiomática é o `collections.deque` (*double-ended queue*), que insere e remove das duas pontas em **O(1)**.
+`lista.pop(0)` remove da frente, mas custa **O(n)**: todos os demais elementos são deslocados uma posição (agora você tem o vocabulário do Capítulo 25 para ler isso). A solução idiomática é o `collections.deque` (*double-ended queue*), que insere e remove das duas pontas em **O(1)**.
 
 ## Implementação com `collections.deque`
 
@@ -68,7 +68,7 @@ print(f.front())      # Bruno
 - **Filas de atendimento** e sistemas de senhas;
 - **Buffers** de impressão, streaming e mensageria;
 - **Escalonamento de processos** em sistemas operacionais;
-- **Busca em largura (BFS)** em grafos (Capítulo 28) — dual do DFS;
+- **Busca em largura (BFS)** em grafos (Capítulo 32) — dual do DFS;
 - **Pipelines de dados**, processando registros na ordem de chegada.
 
 ## Exemplo aplicado: simulação de atendimento

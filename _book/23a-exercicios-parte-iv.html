@@ -365,23 +365,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -392,13 +375,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#exercícios-parte-iv" id="toc-exercícios-parte-iv" class="nav-link active" data-scroll-target="#exercícios-parte-iv"><span class="header-section-number">28</span> Exercícios — Parte IV</a>
-  <ul class="collapse">
-  <li><a href="#big-o-conceitual" id="toc-big-o-conceitual" class="nav-link" data-scroll-target="#big-o-conceitual"><span class="header-section-number">28.1</span> 1. Big-O (conceitual)</a></li>
-  <li><a href="#recursão-básica" id="toc-recursão-básica" class="nav-link" data-scroll-target="#recursão-básica"><span class="header-section-number">28.2</span> 2. Recursão básica</a></li>
-  <li><a href="#torres-de-hanoi" id="toc-torres-de-hanoi" class="nav-link" data-scroll-target="#torres-de-hanoi"><span class="header-section-number">28.3</span> 3. Torres de Hanoi</a></li>
-  <li><a href="#recursão-e-soma" id="toc-recursão-e-soma" class="nav-link" data-scroll-target="#recursão-e-soma"><span class="header-section-number">28.4</span> 4. Recursão e soma</a></li>
-  </ul></li>
+  <li><a href="#big-o-conceitual" id="toc-big-o-conceitual" class="nav-link active" data-scroll-target="#big-o-conceitual"><span class="header-section-number">27.1</span> Big-O (conceitual)</a></li>
+  <li><a href="#recursão-básica" id="toc-recursão-básica" class="nav-link" data-scroll-target="#recursão-básica"><span class="header-section-number">27.2</span> Recursão básica</a></li>
+  <li><a href="#torres-de-hanoi" id="toc-torres-de-hanoi" class="nav-link" data-scroll-target="#torres-de-hanoi"><span class="header-section-number">27.3</span> Torres de Hanoi</a></li>
+  <li><a href="#recursão-e-soma" id="toc-recursão-e-soma" class="nav-link" data-scroll-target="#recursão-e-soma"><span class="header-section-number">27.4</span> Recursão e soma</a></li>
   </ul>
 </nav>
     </div>
@@ -424,27 +404,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercícios-parte-iv" class="level1" data-number="28">
-<h1 data-number="28"><span class="header-section-number">28</span> Exercícios — Parte IV</h1>
 <p>Exercícios sobre complexidade e recursão.</p>
-<section id="big-o-conceitual" class="level2" data-number="28.1">
-<h2 data-number="28.1" class="anchored" data-anchor-id="big-o-conceitual"><span class="header-section-number">28.1</span> 1. Big-O (conceitual)</h2>
-<p>Explique, com exemplos curtos, como a execução muda se a entrada dobra para algoritmos <code>O(n)</code>, <code>O(n^2)</code> e <code>O(log n)</code>.</p>
+<section id="big-o-conceitual" class="level2" data-number="27.1">
+<h2 data-number="27.1" class="anchored" data-anchor-id="big-o-conceitual"><span class="header-section-number">27.1</span> Big-O (conceitual)</h2>
+<p><strong>Cenário.</strong> Um algoritmo roda em um segundo quando testado com mil registros. Em produção, a base tem um milhão. Antes de descobrir o problema no pior momento possível, é melhor saber prever como o tempo de execução vai se comportar.</p>
+<p><strong>Tarefa:</strong> Explique, com exemplos curtos, como o tempo de execução muda quando o tamanho da entrada dobra, para algoritmos <code>O(n)</code>, <code>O(n²)</code> e <code>O(log n)</code>.</p>
 </section>
-<section id="recursão-básica" class="level2" data-number="28.2">
-<h2 data-number="28.2" class="anchored" data-anchor-id="recursão-básica"><span class="header-section-number">28.2</span> 2. Recursão básica</h2>
-<p>Implemente o fatorial recursivo <code>fatorial(n: int) -&gt; int</code> e trate <code>n &lt; 0</code> com erro apropriado.</p>
+<section id="recursão-básica" class="level2" data-number="27.2">
+<h2 data-number="27.2" class="anchored" data-anchor-id="recursão-básica"><span class="header-section-number">27.2</span> Recursão básica</h2>
+<p><strong>Cenário.</strong> Um sistema de loteria precisa calcular de quantas formas diferentes <code>n</code> números podem ser sorteados em sequência — um cálculo que depende diretamente do fatorial de <code>n</code>.</p>
+<p><strong>Tarefa:</strong> Implemente o fatorial recursivo <code>fatorial(n: int) -&gt; int</code>, tratando <code>n &lt; 0</code> com um erro apropriado (fatorial não é definido para números negativos).</p>
 </section>
-<section id="torres-de-hanoi" class="level2" data-number="28.3">
-<h2 data-number="28.3" class="anchored" data-anchor-id="torres-de-hanoi"><span class="header-section-number">28.3</span> 3. Torres de Hanoi</h2>
-<p>Resolva as Torres de Hanoi para <code>n</code> discos imprimindo a sequência de movimentos.</p>
+<section id="torres-de-hanoi" class="level2" data-number="27.3">
+<h2 data-number="27.3" class="anchored" data-anchor-id="torres-de-hanoi"><span class="header-section-number">27.3</span> Torres de Hanoi</h2>
+<p><strong>Cenário.</strong> Um quebra-cabeça clássico: três pinos e discos de tamanhos diferentes, empilhados por tamanho no primeiro pino. A missão é mover a pilha inteira para o último pino, um disco de cada vez, nunca colocando um disco maior sobre um menor.</p>
+<p><strong>Tarefa:</strong> Resolva as Torres de Hanoi para <code>n</code> discos, imprimindo a sequência de movimentos necessária.</p>
 </section>
-<section id="recursão-e-soma" class="level2" data-number="28.4">
-<h2 data-number="28.4" class="anchored" data-anchor-id="recursão-e-soma"><span class="header-section-number">28.4</span> 4. Recursão e soma</h2>
-<p>Implemente função recursiva que some todos os números em uma lista (pode conter sublistas aninhadas).</p>
+<section id="recursão-e-soma" class="level2" data-number="27.4">
+<h2 data-number="27.4" class="anchored" data-anchor-id="recursão-e-soma"><span class="header-section-number">27.4</span> Recursão e soma</h2>
+<p><strong>Cenário.</strong> Um relatório de vendas chega em um formato aninhado: cada região é uma lista que pode conter tanto números de vendas quanto sublistas de sub-regiões. Somar tudo exige descer por essa estrutura sem saber, de antemão, quantos níveis de aninhamento existem.</p>
+<p><strong>Tarefa:</strong> Implemente uma função recursiva que some todos os números em uma lista, mesmo quando ela contém sublistas aninhadas em qualquer profundidade.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

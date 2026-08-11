@@ -63,7 +63,7 @@ def tem_duplicata(lista):        # O(n): usa set
 
 ## Complexidade de espaço
 
-O mesmo raciocínio vale para memória: a versão com `set` acima usa espaço O(n) extra, enquanto a ingênua usa O(1). Generators (Capítulo 15) são o exemplo clássico de troca consciente: tempo igual, espaço O(1) em vez de O(n).
+O mesmo raciocínio vale para memória: a versão com `set` acima usa espaço O(n) extra, enquanto a ingênua usa O(1). Generators (Capítulo 17) são o exemplo clássico de troca consciente: tempo igual, espaço O(1) em vez de O(n).
 
 ::: {.callout-note}
 O objetivo neste nivelamento é **saber classificar e comparar** — não demonstrações formais. Nas estruturas da Parte V, cada operação virá com seu custo anotado; aqui está o vocabulário para lê-los.

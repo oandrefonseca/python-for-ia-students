@@ -11,7 +11,8 @@ Este livro é o material de **nivelamento em Python** das disciplinas de Ciênci
 - **Parte III — Recursos intermediários:** o que torna o código pythônico e profissional — exceções, pip/venv, OOP, generators, decorators, dataclasses, biblioteca padrão, CLI, testes e arquivos.
 - **Parte IV — Complexidade e algoritmos:** o ferramental para raciocinar sobre eficiência (Big-O) e recursão.
 - **Parte V — Estruturas de dados:** pilha, fila, listas ligadas, árvores e grafos, com implementações completas.
-- **Parte VI — Prática:** exercícios integradores organizados por bloco.
+
+Cada parte termina com um capítulo de exercícios que consolida o conteúdo do bloco.
 
 A ordem foi pensada para que cada capítulo use apenas o que veio antes: Big-O e recursão precedem as estruturas de dados porque são usados nelas; decorators precedem dataclasses; type hints precedem dataclasses e testes.
 

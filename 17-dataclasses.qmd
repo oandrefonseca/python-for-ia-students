@@ -1,6 +1,6 @@
 # Dataclasses
 
-Escrever classes que só guardam dados exige `__init__`, `__repr__` e `__eq__` repetitivos (Capítulo 14). O decorator `@dataclass` (Capítulo 16) gera tudo isso automaticamente a partir das **anotações de tipo** (Capítulo 8) — este capítulo une os três.
+Escrever classes que só guardam dados exige `__init__`, `__repr__` e `__eq__` repetitivos (Capítulo 16). O decorator `@dataclass` (Capítulo 18) gera tudo isso automaticamente a partir das **anotações de tipo** (Capítulo 8) — este capítulo une os três.
 
 ## Antes e depois
 

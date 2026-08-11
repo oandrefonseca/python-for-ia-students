@@ -22,7 +22,7 @@ fila.appendleft(0)
 fila.popleft()
 ```
 
-O `deque` será a base da Fila (Capítulo 25) e o `defaultdict`, da lista de adjacência de Grafos (Capítulo 28).
+O `deque` será a base da Fila (Capítulo 29) e o `defaultdict`, da lista de adjacência de Grafos (Capítulo 32).
 
 ## `itertools`
 
@@ -35,7 +35,7 @@ list(product([0, 1], repeat=2))      # produto cartesiano
 list(chain([1, 2], [3, 4]))          # concatena iteráveis
 ```
 
-Todas as funções de `itertools` retornam **iteradores** (Capítulo 15) — memória constante mesmo para combinações enormes.
+Todas as funções de `itertools` retornam **iteradores** (Capítulo 17) — memória constante mesmo para combinações enormes.
 
 ## `datetime`
 

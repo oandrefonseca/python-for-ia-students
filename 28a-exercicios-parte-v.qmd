@@ -2,18 +2,28 @@
 title: "Exercícios — Parte V"
 ---
 
-# Exercícios — Parte V
-
 Exercícios sobre estruturas de dados: pilha, fila, listas ligadas, árvores e grafos.
 
-## 1. Pilha
-Implemente uma classe `Pilha` com `push`, `pop`, `top` e `is_empty`. Use-a para inverter uma string.
+## Pilha
 
-## 2. Fila
-Implemente uma fila usando `collections.deque` e simule uma fila de impressão onde cada documento tem `nome` e `paginas`.
+**Cenário.** Um editor de texto simples precisa de uma função "desfazer": a última ação feita é sempre a primeira a ser desfeita. Antes de implementar o editor inteiro, vale testar a estrutura de dados por trás dele com algo simples: inverter uma string, caractere por caractere.
 
-## 3. Lista ligada
-Implemente uma lista ligada simples com métodos `inserir_inicio`, `inserir_fim`, `remover(valor)` e `__len__`.
+**Tarefa:** Implemente uma classe `Pilha` com `push`, `pop`, `top` e `is_empty`. Use-a para inverter uma string.
 
-## 4. Grafos (conceitual + prático)
-Descreva como grafos modelam rotas; em seguida, represente um grafo como dicionário de adjacência e implemente busca em largura (BFS).
+## Fila
+
+**Cenário.** Uma impressora compartilhada do laboratório recebe vários documentos ao longo do dia e imprime na ordem de chegada: o primeiro documento enviado é o primeiro a sair, mesmo que outros cheguem enquanto ele ainda está sendo processado.
+
+**Tarefa:** Implemente uma fila usando `collections.deque` e simule uma fila de impressão, em que cada documento tem `nome` e `paginas`.
+
+## Lista ligada
+
+**Cenário.** Um app de streaming mantém o histórico de músicas tocadas: é fácil adicionar uma música no início (a mais recente) ou no fim (a mais antiga), remover uma música específica do meio do histórico e saber, a qualquer momento, quantas músicas já foram tocadas.
+
+**Tarefa:** Implemente uma lista ligada simples com os métodos `inserir_inicio`, `inserir_fim`, `remover(valor)` e `__len__`.
+
+## Grafos (conceitual + prático)
+
+**Cenário.** Um aplicativo de mapas precisa saber, a partir da sua localização atual, quais lugares são alcançáveis e em que ordem eles seriam visitados numa busca camada por camada — a base de qualquer cálculo de rota.
+
+**Tarefa:** Descreva, em poucas frases, como grafos modelam rotas entre lugares. Em seguida, represente um grafo como dicionário de adjacência e implemente uma busca em largura (BFS).

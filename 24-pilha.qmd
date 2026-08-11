@@ -66,9 +66,9 @@ print(len(p))      # 2
 
 - **Desfazer/refazer (Ctrl+Z)** em editores;
 - **Histórico de navegação** (botão "voltar");
-- **Pilha de chamadas** de funções — é ela que a recursão consome (Capítulo 23);
+- **Pilha de chamadas** de funções — é ela que a recursão consome (Capítulo 26);
 - **Validação de expressões** com parênteses balanceados;
-- **Busca em profundidade (DFS)** em grafos (Capítulo 28) — tema que reaparecerá em IA.
+- **Busca em profundidade (DFS)** em grafos (Capítulo 32) — tema que reaparecerá em IA.
 
 ## Exemplo aplicado: parênteses balanceados
 

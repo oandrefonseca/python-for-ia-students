@@ -4,7 +4,7 @@ Um grafo é um conjunto de **vértices** conectados por **arestas**. Modela rede
 
 ## Representação por lista de adjacência
 
-A forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o `defaultdict` do Capítulo 18:
+A forma mais comum: um dicionário que mapeia cada vértice à lista de seus vizinhos — construído com o `defaultdict` do Capítulo 20:
 
 ```python
 from collections import defaultdict, deque
@@ -18,7 +18,7 @@ class Grafo:
         self.adjacencia[v].append(u)     # não-direcionado; remova p/ direcionado
 
     def bfs(self, inicio) -> list:
-        """Busca em largura — usa FILA (Capítulo 25)."""
+        """Busca em largura — usa FILA (Capítulo 29)."""
         visitados = {inicio}
         fila = deque([inicio])
         ordem = []
@@ -32,7 +32,7 @@ class Grafo:
         return ordem
 
     def dfs(self, inicio, visitados=None) -> list:
-        """Busca em profundidade — usa PILHA via recursão (Capítulos 23-24)."""
+        """Busca em profundidade — usa PILHA via recursão (Capítulos 26 e 28)."""
         if visitados is None:
             visitados = set()
         visitados.add(inicio)
@@ -60,11 +60,11 @@ print(g.dfs("A"))    # ['A', 'B', 'D', 'C'] — vai fundo antes de voltar
 | Encontra caminho mais curto (sem pesos)? | **Sim** | Não garante |
 | Custo | O(V + E) | O(V + E) |
 
-O `set` de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do `set` (Capítulo 22) mantém o custo linear.
+O `set` de visitados é essencial: sem ele, ciclos no grafo causam repetição infinita — e o pertencimento em O(1) do `set` (Capítulo 25) mantém o custo linear.
 
 ## O fechamento do livro
 
-Repare como tudo se conectou: **BFS usa a fila** do Capítulo 25, **DFS usa pilha/recursão** dos Capítulos 23–24, a **lista de adjacência** usa o `defaultdict` do Capítulo 18, o nó com referências generaliza a **lista ligada** do Capítulo 26, e os custos O(V + E) se leem com o vocabulário do Capítulo 22.
+Repare como tudo se conectou: **BFS usa a fila** do Capítulo 29, **DFS usa pilha/recursão** dos Capítulos 26 e 28, a **lista de adjacência** usa o `defaultdict` do Capítulo 20, o nó com referências generaliza a **lista ligada** do Capítulo 30, e os custos O(V + E) se leem com o vocabulário do Capítulo 25.
 
 ::: {.callout-note}
 ## Conexão com IA

@@ -4,7 +4,7 @@ Uma lista ligada é uma sequência de **nós**, cada um contendo um valor e uma 
 
 ## O nó — duas formas de escrevê-lo
 
-Forma clássica e forma com `@dataclass` (Capítulo 17); escolha seu estilo:
+Forma clássica e forma com `@dataclass` (Capítulo 19); escolha seu estilo:
 
 ```python
 # Clássica
@@ -81,6 +81,6 @@ lista.percorrer()        # 2 -> 3 -> 4 -> None
 
 ## Por que estudar, se o Python já tem `list`?
 
-Porque o conceito de **nós encadeados por referência** é a base das estruturas seguintes: uma árvore é um nó com dois "próximos" (Capítulo 27), um grafo generaliza para vários vizinhos (Capítulo 28), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.
+Porque o conceito de **nós encadeados por referência** é a base das estruturas seguintes: uma árvore é um nó com dois "próximos" (Capítulo 31), um grafo generaliza para vários vizinhos (Capítulo 32), e tabelas hash resolvem colisões com encadeamento. Entender o nó aqui torna o resto da Parte V natural.
 
 Variantes que você encontrará na literatura: **duplamente ligada** (referência também ao anterior — é como o `deque` funciona) e **circular** (o último aponta para o primeiro).

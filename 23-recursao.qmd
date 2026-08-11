@@ -25,7 +25,7 @@ def fib(n: int) -> int:
 
 ## Memoização: de O(2ⁿ) para O(n)
 
-Guardar resultados já calculados elimina o retrabalho — e o decorator `lru_cache` (Capítulo 16) faz isso em uma linha:
+Guardar resultados já calculados elimina o retrabalho — e o decorator `lru_cache` (Capítulo 18) faz isso em uma linha:
 
 ```python
 from functools import lru_cache
@@ -39,7 +39,7 @@ fib_rapido(500)      # instantâneo
 
 ## Recursivo × iterativo
 
-Todo algoritmo recursivo tem versão iterativa (às vezes usando uma pilha explícita — Capítulo 24). A iterativa evita o limite de profundidade; a recursiva costuma ser mais legível quando o problema é naturalmente recursivo:
+Todo algoritmo recursivo tem versão iterativa (às vezes usando uma pilha explícita — Capítulo 28). A iterativa evita o limite de profundidade; a recursiva costuma ser mais legível quando o problema é naturalmente recursivo:
 
 ```python
 def fatorial_iterativo(n: int) -> int:
@@ -51,4 +51,4 @@ def fatorial_iterativo(n: int) -> int:
 
 ## Onde a recursão brilha
 
-Em estruturas **naturalmente recursivas**: uma árvore é um nó com subárvores; percorrê-la recursivamente é quase transcrever a definição (Capítulo 27). O DFS em grafos (Capítulo 28) segue o mesmo princípio.
+Em estruturas **naturalmente recursivas**: uma árvore é um nó com subárvores; percorrê-la recursivamente é quase transcrever a definição (Capítulo 31). O DFS em grafos (Capítulo 32) segue o mesmo princípio.

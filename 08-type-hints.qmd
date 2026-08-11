@@ -43,8 +43,8 @@ A forma moderna `int | None` (barra vertical) é preferida a partir do Python 3.
 
 ## Por que isso importa neste livro
 
-- **Dataclasses** (Capítulo 17) *exigem* anotações de tipo em seus campos.
-- **Testes** (Capítulo 20) ficam mais fáceis de escrever quando as assinaturas declaram o contrato.
+- **Dataclasses** (Capítulo 19) *exigem* anotações de tipo em seus campos.
+- **Testes** (Capítulo 22) ficam mais fáceis de escrever quando as assinaturas declaram o contrato.
 - Bibliotecas do ecossistema de dados (Pandas, Pydantic, FastAPI) usam type hints extensivamente — você vai lê-los o tempo todo.
 
 ::: {.callout-note}

@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./29-exercicios.html" rel="next">
 <link href="./28-grafos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -365,23 +364,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -392,13 +374,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#exercícios-parte-v" id="toc-exercícios-parte-v" class="nav-link active" data-scroll-target="#exercícios-parte-v"><span class="header-section-number">34</span> Exercícios — Parte V</a>
-  <ul class="collapse">
-  <li><a href="#pilha" id="toc-pilha" class="nav-link" data-scroll-target="#pilha"><span class="header-section-number">34.1</span> 1. Pilha</a></li>
-  <li><a href="#fila" id="toc-fila" class="nav-link" data-scroll-target="#fila"><span class="header-section-number">34.2</span> 2. Fila</a></li>
-  <li><a href="#lista-ligada" id="toc-lista-ligada" class="nav-link" data-scroll-target="#lista-ligada"><span class="header-section-number">34.3</span> 3. Lista ligada</a></li>
-  <li><a href="#grafos-conceitual-prático" id="toc-grafos-conceitual-prático" class="nav-link" data-scroll-target="#grafos-conceitual-prático"><span class="header-section-number">34.4</span> 4. Grafos (conceitual + prático)</a></li>
-  </ul></li>
+  <li><a href="#pilha" id="toc-pilha" class="nav-link active" data-scroll-target="#pilha"><span class="header-section-number">33.1</span> Pilha</a></li>
+  <li><a href="#fila" id="toc-fila" class="nav-link" data-scroll-target="#fila"><span class="header-section-number">33.2</span> Fila</a></li>
+  <li><a href="#lista-ligada" id="toc-lista-ligada" class="nav-link" data-scroll-target="#lista-ligada"><span class="header-section-number">33.3</span> Lista ligada</a></li>
+  <li><a href="#grafos-conceitual-prático" id="toc-grafos-conceitual-prático" class="nav-link" data-scroll-target="#grafos-conceitual-prático"><span class="header-section-number">33.4</span> Grafos (conceitual + prático)</a></li>
   </ul>
 </nav>
     </div>
@@ -424,27 +403,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercícios-parte-v" class="level1" data-number="34">
-<h1 data-number="34"><span class="header-section-number">34</span> Exercícios — Parte V</h1>
 <p>Exercícios sobre estruturas de dados: pilha, fila, listas ligadas, árvores e grafos.</p>
-<section id="pilha" class="level2" data-number="34.1">
-<h2 data-number="34.1" class="anchored" data-anchor-id="pilha"><span class="header-section-number">34.1</span> 1. Pilha</h2>
-<p>Implemente uma classe <code>Pilha</code> com <code>push</code>, <code>pop</code>, <code>top</code> e <code>is_empty</code>. Use-a para inverter uma string.</p>
+<section id="pilha" class="level2" data-number="33.1">
+<h2 data-number="33.1" class="anchored" data-anchor-id="pilha"><span class="header-section-number">33.1</span> Pilha</h2>
+<p><strong>Cenário.</strong> Um editor de texto simples precisa de uma função “desfazer”: a última ação feita é sempre a primeira a ser desfeita. Antes de implementar o editor inteiro, vale testar a estrutura de dados por trás dele com algo simples: inverter uma string, caractere por caractere.</p>
+<p><strong>Tarefa:</strong> Implemente uma classe <code>Pilha</code> com <code>push</code>, <code>pop</code>, <code>top</code> e <code>is_empty</code>. Use-a para inverter uma string.</p>
 </section>
-<section id="fila" class="level2" data-number="34.2">
-<h2 data-number="34.2" class="anchored" data-anchor-id="fila"><span class="header-section-number">34.2</span> 2. Fila</h2>
-<p>Implemente uma fila usando <code>collections.deque</code> e simule uma fila de impressão onde cada documento tem <code>nome</code> e <code>paginas</code>.</p>
+<section id="fila" class="level2" data-number="33.2">
+<h2 data-number="33.2" class="anchored" data-anchor-id="fila"><span class="header-section-number">33.2</span> Fila</h2>
+<p><strong>Cenário.</strong> Uma impressora compartilhada do laboratório recebe vários documentos ao longo do dia e imprime na ordem de chegada: o primeiro documento enviado é o primeiro a sair, mesmo que outros cheguem enquanto ele ainda está sendo processado.</p>
+<p><strong>Tarefa:</strong> Implemente uma fila usando <code>collections.deque</code> e simule uma fila de impressão, em que cada documento tem <code>nome</code> e <code>paginas</code>.</p>
 </section>
-<section id="lista-ligada" class="level2" data-number="34.3">
-<h2 data-number="34.3" class="anchored" data-anchor-id="lista-ligada"><span class="header-section-number">34.3</span> 3. Lista ligada</h2>
-<p>Implemente uma lista ligada simples com métodos <code>inserir_inicio</code>, <code>inserir_fim</code>, <code>remover(valor)</code> e <code>__len__</code>.</p>
+<section id="lista-ligada" class="level2" data-number="33.3">
+<h2 data-number="33.3" class="anchored" data-anchor-id="lista-ligada"><span class="header-section-number">33.3</span> Lista ligada</h2>
+<p><strong>Cenário.</strong> Um app de streaming mantém o histórico de músicas tocadas: é fácil adicionar uma música no início (a mais recente) ou no fim (a mais antiga), remover uma música específica do meio do histórico e saber, a qualquer momento, quantas músicas já foram tocadas.</p>
+<p><strong>Tarefa:</strong> Implemente uma lista ligada simples com os métodos <code>inserir_inicio</code>, <code>inserir_fim</code>, <code>remover(valor)</code> e <code>__len__</code>.</p>
 </section>
-<section id="grafos-conceitual-prático" class="level2" data-number="34.4">
-<h2 data-number="34.4" class="anchored" data-anchor-id="grafos-conceitual-prático"><span class="header-section-number">34.4</span> 4. Grafos (conceitual + prático)</h2>
-<p>Descreva como grafos modelam rotas; em seguida, represente um grafo como dicionário de adjacência e implemente busca em largura (BFS).</p>
+<section id="grafos-conceitual-prático" class="level2" data-number="33.4">
+<h2 data-number="33.4" class="anchored" data-anchor-id="grafos-conceitual-prático"><span class="header-section-number">33.4</span> Grafos (conceitual + prático)</h2>
+<p><strong>Cenário.</strong> Um aplicativo de mapas precisa saber, a partir da sua localização atual, quais lugares são alcançáveis e em que ordem eles seriam visitados numa busca camada por camada — a base de qualquer cálculo de rota.</p>
+<p><strong>Tarefa:</strong> Descreva, em poucas frases, como grafos modelam rotas entre lugares. Em seguida, represente um grafo como dicionário de adjacência e implemente uma busca em largura (BFS).</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -872,9 +852,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./29-exercicios.html" class="pagination-link" aria-label="Exercícios integradores">
-        <span class="nav-page-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

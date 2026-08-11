@@ -56,7 +56,7 @@ print(max(*numeros))                 # espalha a lista como argumentos
 
 ## Funções são objetos de primeira classe
 
-Podem ser passadas como argumento e retornadas — base dos decorators (Capítulo 16):
+Funções podem ser passadas como argumento e retornadas — base dos decorators (Capítulo 18):
 
 ```python
 def aplicar(func, valor):

@@ -365,23 +365,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -392,13 +375,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#exercícios-parte-iii" id="toc-exercícios-parte-iii" class="nav-link active" data-scroll-target="#exercícios-parte-iii"><span class="header-section-number">25</span> Exercícios — Parte III</a>
-  <ul class="collapse">
-  <li><a href="#classes-e-dataclasses" id="toc-classes-e-dataclasses" class="nav-link" data-scroll-target="#classes-e-dataclasses"><span class="header-section-number">25.1</span> 1. Classes e dataclasses</a></li>
-  <li><a href="#generators" id="toc-generators" class="nav-link" data-scroll-target="#generators"><span class="header-section-number">25.2</span> 2. Generators</a></li>
-  <li><a href="#módulos-e-testes" id="toc-módulos-e-testes" class="nav-link" data-scroll-target="#módulos-e-testes"><span class="header-section-number">25.3</span> 3. Módulos e testes</a></li>
-  <li><a href="#cli" id="toc-cli" class="nav-link" data-scroll-target="#cli"><span class="header-section-number">25.4</span> 4. CLI</a></li>
-  </ul></li>
+  <li><a href="#classes-e-dataclasses" id="toc-classes-e-dataclasses" class="nav-link active" data-scroll-target="#classes-e-dataclasses"><span class="header-section-number">24.1</span> Classes e dataclasses</a></li>
+  <li><a href="#generators" id="toc-generators" class="nav-link" data-scroll-target="#generators"><span class="header-section-number">24.2</span> Generators</a></li>
+  <li><a href="#módulos-e-testes" id="toc-módulos-e-testes" class="nav-link" data-scroll-target="#módulos-e-testes"><span class="header-section-number">24.3</span> Módulos e testes</a></li>
+  <li><a href="#cli" id="toc-cli" class="nav-link" data-scroll-target="#cli"><span class="header-section-number">24.4</span> CLI</a></li>
   </ul>
 </nav>
     </div>
@@ -424,27 +404,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="exercícios-parte-iii" class="level1" data-number="25">
-<h1 data-number="25"><span class="header-section-number">25</span> Exercícios — Parte III</h1>
 <p>Exercícios sobre recursos intermediários: módulos, OOP, generators, decorators, dataclasses, CLI e testes.</p>
-<section id="classes-e-dataclasses" class="level2" data-number="25.1">
-<h2 data-number="25.1" class="anchored" data-anchor-id="classes-e-dataclasses"><span class="header-section-number">25.1</span> 1. Classes e dataclasses</h2>
-<p>Modele um <code>Produto</code> com <code>@dataclass</code> (nome, preço, estoque) e implemente <code>valor_total()</code> que retorna <code>preço * estoque</code>.</p>
+<section id="classes-e-dataclasses" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="classes-e-dataclasses"><span class="header-section-number">24.1</span> Classes e dataclasses</h2>
+<p><strong>Cenário.</strong> Uma loja quer controlar o valor total do seu estoque: para cada produto, é preciso saber o preço, quantas unidades existem e quanto isso representa em reais.</p>
+<p><strong>Tarefa:</strong> Modele um <code>Produto</code> com <code>@dataclass</code> (<code>nome</code>, <code>preco</code>, <code>estoque</code>) e implemente o método <code>valor_total()</code>, que retorna <code>preco * estoque</code>.</p>
 </section>
-<section id="generators" class="level2" data-number="25.2">
-<h2 data-number="25.2" class="anchored" data-anchor-id="generators"><span class="header-section-number">25.2</span> 2. Generators</h2>
-<p>Implemente um generator que produza pares <code>(n, n*n)</code> para <code>n</code> de 1 a 10 e consuma com <code>next()</code>.</p>
+<section id="generators" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="generators"><span class="header-section-number">24.2</span> Generators</h2>
+<p><strong>Cenário.</strong> Um painel precisa plotar pares número/quadrado sob demanda, sem montar a lista inteira de antemão — cada ponto é consumido um de cada vez, conforme o gráfico é desenhado.</p>
+<p><strong>Tarefa:</strong> Implemente um generator que produza pares <code>(n, n*n)</code> para <code>n</code> de 1 a 10, e consuma os valores chamando <code>next()</code> manualmente.</p>
 </section>
-<section id="módulos-e-testes" class="level2" data-number="25.3">
-<h2 data-number="25.3" class="anchored" data-anchor-id="módulos-e-testes"><span class="header-section-number">25.3</span> 3. Módulos e testes</h2>
-<p>Crie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste <code>pytest</code> cobrindo entrada válida e inválida.</p>
+<section id="módulos-e-testes" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="módulos-e-testes"><span class="header-section-number">24.3</span> Módulos e testes</h2>
+<p><strong>Cenário.</strong> Uma aplicação carrega configurações de um arquivo JSON escrito por outra pessoa da equipe. Antes de confiar nesses dados, é preciso validar que o arquivo existe e está no formato esperado — e garantir, com testes, que essa validação continua funcionando conforme o projeto evolui.</p>
+<p><strong>Tarefa:</strong> Crie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste <code>pytest</code> cobrindo uma entrada válida e uma entrada inválida.</p>
 </section>
-<section id="cli" class="level2" data-number="25.4">
-<h2 data-number="25.4" class="anchored" data-anchor-id="cli"><span class="header-section-number">25.4</span> 4. CLI</h2>
-<p>Implemente um script CLI que receba <code>--arquivo</code> e imprima o número de linhas do arquivo, tratando erros de arquivo ausente.</p>
+<section id="cli" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="cli"><span class="header-section-number">24.4</span> CLI</h2>
+<p><strong>Cenário.</strong> Antes de processar um arquivo de log gigante, um analista quer uma forma rápida de conferir, pelo terminal, quantas linhas ele tem — sem abrir o arquivo em um editor de texto.</p>
+<p><strong>Tarefa:</strong> Implemente um script CLI que receba <code>--arquivo</code> e imprima o número de linhas do arquivo, tratando o erro de arquivo ausente com uma mensagem clara.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

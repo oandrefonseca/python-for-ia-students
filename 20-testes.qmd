@@ -14,7 +14,7 @@ def media(valores: list[float]) -> float:
 assert media([4, 8, 6]) == 6.0
 ```
 
-Use `assert` para invariantes internas e verificações rápidas em notebooks — não para validar entrada de usuário (para isso, `raise ValueError`, Capítulo 12).
+Use `assert` para invariantes internas e verificações rápidas em notebooks — não para validar entrada de usuário (para isso, `raise ValueError`, Capítulo 14).
 
 ## Testes com `pytest`
 

@@ -38,7 +38,7 @@ raise SaldoInsuficiente("saldo insuficiente para o saque")
 
 ## Exceções como controle de fluxo
 
-Em Python, exceções não sinalizam apenas erros: também encerram protocolos. O exemplo mais importante é `StopIteration`, que indica o fim de um iterador — mecanismo que sustenta o `for` e os generators (Capítulo 15).
+Em Python, exceções não sinalizam apenas erros: também encerram protocolos. O exemplo mais importante é `StopIteration`, que indica o fim de um iterador — mecanismo que sustenta o `for` e os generators (Capítulo 17).
 
 ## Exceções frequentes em código de dados
 

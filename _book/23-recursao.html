@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>23&nbsp; Recursão – Nivelamento em Python</title>
+<title>26&nbsp; Recursão – Nivelamento em Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./24-pilha.html" rel="next">
+<link href="./23a-exercicios-parte-iv.html" rel="next">
 <link href="./22-big-o.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./22-big-o.html">Parte IV — Complexidade e algoritmos</a></li><li class="breadcrumb-item"><a href="./23-recursao.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./22-big-o.html">Parte IV — Complexidade e algoritmos</a></li><li class="breadcrumb-item"><a href="./23-recursao.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Recursão</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -203,6 +203,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Type hints (anotações de tipo)</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08a-exercicios-parte-i.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Exercícios — Parte I</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -217,19 +223,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09-colecoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coleções nativas: listas, tuplas, dicionários e conjuntos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Coleções nativas: listas, tuplas, dicionários e conjuntos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10-strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Strings em profundidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Strings em profundidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./11-comprehensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Compreensões (comprehensions)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Compreensões (comprehensions)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11a-exercicios-parte-ii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Exercícios — Parte II</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,61 +258,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./12-erros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./13-modulos-pip-venv.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./14-oop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./15-iteradores-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Iteradores e generators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Iteradores e generators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./16-decorators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Decorators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Decorators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./17-dataclasses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Dataclasses</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Dataclasses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./18-biblioteca-padrao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biblioteca padrão essencial</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Biblioteca padrão essencial</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./19-cli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Interface de linha de comando</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Interface de linha de comando</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./20-testes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Testes e asserções</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Testes e asserções</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./21-arquivos-csv-json.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Arquivos, CSV e JSON</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Arquivos, CSV e JSON</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21a-exercicios-parte-iii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Exercícios — Parte III</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,13 +335,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./22-big-o.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./23-recursao.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Recursão</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23a-exercicios-parte-iv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exercícios — Parte IV</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,48 +364,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./24-pilha.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-fila.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./26-listas-ligadas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Listas ligadas (Linked Lists)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Listas ligadas (Linked Lists)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./27-arvores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Árvores (Trees)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Árvores (Trees)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./28-grafos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Grafos (Graphs)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Grafos (Graphs)</span></span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Parte VI — Prática</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span></a>
+  <a href="./28a-exercicios-parte-v.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Exercícios — Parte V</span></span></a>
   </div>
 </li>
       </ul>
@@ -396,20 +409,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#anatomia" id="toc-anatomia" class="nav-link active" data-scroll-target="#anatomia"><span class="header-section-number">23.1</span> Anatomia</a></li>
-  <li><a href="#o-custo-da-recursão-ingênua" id="toc-o-custo-da-recursão-ingênua" class="nav-link" data-scroll-target="#o-custo-da-recursão-ingênua"><span class="header-section-number">23.2</span> O custo da recursão ingênua</a></li>
-  <li><a href="#memoização-de-o2ⁿ-para-on" id="toc-memoização-de-o2ⁿ-para-on" class="nav-link" data-scroll-target="#memoização-de-o2ⁿ-para-on"><span class="header-section-number">23.3</span> Memoização: de O(2ⁿ) para O(n)</a></li>
-  <li><a href="#recursivo-iterativo" id="toc-recursivo-iterativo" class="nav-link" data-scroll-target="#recursivo-iterativo"><span class="header-section-number">23.4</span> Recursivo × iterativo</a></li>
-  <li><a href="#onde-a-recursão-brilha" id="toc-onde-a-recursão-brilha" class="nav-link" data-scroll-target="#onde-a-recursão-brilha"><span class="header-section-number">23.5</span> Onde a recursão brilha</a></li>
+  <li><a href="#anatomia" id="toc-anatomia" class="nav-link active" data-scroll-target="#anatomia"><span class="header-section-number">26.1</span> Anatomia</a></li>
+  <li><a href="#o-custo-da-recursão-ingênua" id="toc-o-custo-da-recursão-ingênua" class="nav-link" data-scroll-target="#o-custo-da-recursão-ingênua"><span class="header-section-number">26.2</span> O custo da recursão ingênua</a></li>
+  <li><a href="#memoização-de-o2ⁿ-para-on" id="toc-memoização-de-o2ⁿ-para-on" class="nav-link" data-scroll-target="#memoização-de-o2ⁿ-para-on"><span class="header-section-number">26.3</span> Memoização: de O(2ⁿ) para O(n)</a></li>
+  <li><a href="#recursivo-iterativo" id="toc-recursivo-iterativo" class="nav-link" data-scroll-target="#recursivo-iterativo"><span class="header-section-number">26.4</span> Recursivo × iterativo</a></li>
+  <li><a href="#onde-a-recursão-brilha" id="toc-onde-a-recursão-brilha" class="nav-link" data-scroll-target="#onde-a-recursão-brilha"><span class="header-section-number">26.5</span> Onde a recursão brilha</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./22-big-o.html">Parte IV — Complexidade e algoritmos</a></li><li class="breadcrumb-item"><a href="./23-recursao.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./22-big-o.html">Parte IV — Complexidade e algoritmos</a></li><li class="breadcrumb-item"><a href="./23-recursao.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Recursão</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></h1>
+<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Recursão</span></h1>
 </div>
 
 
@@ -427,24 +440,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Uma função recursiva resolve um problema chamando a si mesma sobre um caso menor, até atingir um <strong>caso base</strong>. Toda recursão consome a <em>pilha de chamadas</em> — ligação direta com o próximo capítulo.</p>
-<section id="anatomia" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="anatomia"><span class="header-section-number">23.1</span> Anatomia</h2>
+<section id="anatomia" class="level2" data-number="26.1">
+<h2 data-number="26.1" class="anchored" data-anchor-id="anatomia"><span class="header-section-number">26.1</span> Anatomia</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fatorial(n: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:                       <span class="co"># caso base: onde a recursão para</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n <span class="op">*</span> fatorial(n <span class="op">-</span> <span class="dv">1</span>)       <span class="co"># passo recursivo: problema menor</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Sem caso base (ou sem convergir para ele), a recursão não termina e o Python interrompe com <code>RecursionError</code> ao estourar o limite de profundidade (~1000 chamadas; ajustável com <code>sys.setrecursionlimit</code>, com cautela).</p>
 </section>
-<section id="o-custo-da-recursão-ingênua" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="o-custo-da-recursão-ingênua"><span class="header-section-number">23.2</span> O custo da recursão ingênua</h2>
+<section id="o-custo-da-recursão-ingênua" class="level2" data-number="26.2">
+<h2 data-number="26.2" class="anchored" data-anchor-id="o-custo-da-recursão-ingênua"><span class="header-section-number">26.2</span> O custo da recursão ingênua</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fibonacci ingênuo: O(2ⁿ) — recalcula os mesmos valores muitas vezes</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(n: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">2</span> <span class="cf">else</span> fib(n <span class="op">-</span> <span class="dv">1</span>) <span class="op">+</span> fib(n <span class="op">-</span> <span class="dv">2</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>fib(35)</code> já leva segundos: a árvore de chamadas explode exponencialmente.</p>
 </section>
-<section id="memoização-de-o2ⁿ-para-on" class="level2" data-number="23.3">
-<h2 data-number="23.3" class="anchored" data-anchor-id="memoização-de-o2ⁿ-para-on"><span class="header-section-number">23.3</span> Memoização: de O(2ⁿ) para O(n)</h2>
-<p>Guardar resultados já calculados elimina o retrabalho — e o decorator <code>lru_cache</code> (Capítulo 16) faz isso em uma linha:</p>
+<section id="memoização-de-o2ⁿ-para-on" class="level2" data-number="26.3">
+<h2 data-number="26.3" class="anchored" data-anchor-id="memoização-de-o2ⁿ-para-on"><span class="header-section-number">26.3</span> Memoização: de O(2ⁿ) para O(n)</h2>
+<p>Guardar resultados já calculados elimina o retrabalho — e o decorator <code>lru_cache</code> (Capítulo 18) faz isso em uma linha:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> lru_cache</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">@lru_cache</span>(maxsize<span class="op">=</span><span class="va">None</span>)</span>
@@ -453,18 +466,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>fib_rapido(<span class="dv">500</span>)      <span class="co"># instantâneo</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="recursivo-iterativo" class="level2" data-number="23.4">
-<h2 data-number="23.4" class="anchored" data-anchor-id="recursivo-iterativo"><span class="header-section-number">23.4</span> Recursivo × iterativo</h2>
-<p>Todo algoritmo recursivo tem versão iterativa (às vezes usando uma pilha explícita — Capítulo 24). A iterativa evita o limite de profundidade; a recursiva costuma ser mais legível quando o problema é naturalmente recursivo:</p>
+<section id="recursivo-iterativo" class="level2" data-number="26.4">
+<h2 data-number="26.4" class="anchored" data-anchor-id="recursivo-iterativo"><span class="header-section-number">26.4</span> Recursivo × iterativo</h2>
+<p>Todo algoritmo recursivo tem versão iterativa (às vezes usando uma pilha explícita — Capítulo 28). A iterativa evita o limite de profundidade; a recursiva costuma ser mais legível quando o problema é naturalmente recursivo:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fatorial_iterativo(n: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    resultado <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        resultado <span class="op">*=</span> i</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> resultado</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="onde-a-recursão-brilha" class="level2" data-number="23.5">
-<h2 data-number="23.5" class="anchored" data-anchor-id="onde-a-recursão-brilha"><span class="header-section-number">23.5</span> Onde a recursão brilha</h2>
-<p>Em estruturas <strong>naturalmente recursivas</strong>: uma árvore é um nó com subárvores; percorrê-la recursivamente é quase transcrever a definição (Capítulo 27). O DFS em grafos (Capítulo 28) segue o mesmo princípio.</p>
+<section id="onde-a-recursão-brilha" class="level2" data-number="26.5">
+<h2 data-number="26.5" class="anchored" data-anchor-id="onde-a-recursão-brilha"><span class="header-section-number">26.5</span> Onde a recursão brilha</h2>
+<p>Em estruturas <strong>naturalmente recursivas</strong>: uma árvore é um nó com subárvores; percorrê-la recursivamente é quase transcrever a definição (Capítulo 31). O DFS em grafos (Capítulo 32) segue o mesmo princípio.</p>
 
 
 </section>
@@ -890,12 +903,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./22-big-o.html" class="pagination-link" aria-label="Complexidade e notação Big-O">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./24-pilha.html" class="pagination-link" aria-label="Estruturas de dados: Pilha (Stack)">
-        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./23a-exercicios-parte-iv.html" class="pagination-link" aria-label="Exercícios — Parte IV">
+        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exercícios — Parte IV</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -54,9 +54,6 @@ book:
         - 27-arvores.qmd
         - 28-grafos.qmd
         - 28a-exercicios-parte-v.qmd
-    - part: "Parte VI — Prática"
-      chapters:
-        - 29-exercicios.qmd
 
 format:
   html:

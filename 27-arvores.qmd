@@ -47,7 +47,7 @@ class ArvoreBusca:
         if resultado is None:
             resultado = []
         if no:
-            self.em_ordem(no.esquerda, resultado)   # recursão (Capítulo 23)!
+            self.em_ordem(no.esquerda, resultado)   # recursão (Capítulo 26)!
             resultado.append(no.valor)
             self.em_ordem(no.direita, resultado)
         return resultado

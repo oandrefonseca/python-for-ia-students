@@ -94,4 +94,4 @@ unicos = set(repetidos)     # {1, 2, 3} — remove duplicatas em uma linha
 | Dicionário | `{"a": 1}` | Sim | Sim (inserção) | Chaves não | **O(1)** | Mapeamentos |
 | Conjunto | `{1, 2}` | Sim | Não | Não | **O(1)** | Unicidade |
 
-Os custos O(1) e O(n) serão formalizados no Capítulo sobre Big-O.
+Os custos O(1) e O(n) serão formalizados no capítulo de Big-O (Capítulo 25).

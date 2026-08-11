@@ -2,18 +2,28 @@
 title: "Exercícios — Parte IV"
 ---
 
-# Exercícios — Parte IV
-
 Exercícios sobre complexidade e recursão.
 
-## 1. Big-O (conceitual)
-Explique, com exemplos curtos, como a execução muda se a entrada dobra para algoritmos `O(n)`, `O(n^2)` e `O(log n)`.
+## Big-O (conceitual)
 
-## 2. Recursão básica
-Implemente o fatorial recursivo `fatorial(n: int) -> int` e trate `n < 0` com erro apropriado.
+**Cenário.** Um algoritmo roda em um segundo quando testado com mil registros. Em produção, a base tem um milhão. Antes de descobrir o problema no pior momento possível, é melhor saber prever como o tempo de execução vai se comportar.
 
-## 3. Torres de Hanoi
-Resolva as Torres de Hanoi para `n` discos imprimindo a sequência de movimentos.
+**Tarefa:** Explique, com exemplos curtos, como o tempo de execução muda quando o tamanho da entrada dobra, para algoritmos `O(n)`, `O(n²)` e `O(log n)`.
 
-## 4. Recursão e soma
-Implemente função recursiva que some todos os números em uma lista (pode conter sublistas aninhadas).
+## Recursão básica
+
+**Cenário.** Um sistema de loteria precisa calcular de quantas formas diferentes `n` números podem ser sorteados em sequência — um cálculo que depende diretamente do fatorial de `n`.
+
+**Tarefa:** Implemente o fatorial recursivo `fatorial(n: int) -> int`, tratando `n < 0` com um erro apropriado (fatorial não é definido para números negativos).
+
+## Torres de Hanoi
+
+**Cenário.** Um quebra-cabeça clássico: três pinos e discos de tamanhos diferentes, empilhados por tamanho no primeiro pino. A missão é mover a pilha inteira para o último pino, um disco de cada vez, nunca colocando um disco maior sobre um menor.
+
+**Tarefa:** Resolva as Torres de Hanoi para `n` discos, imprimindo a sequência de movimentos necessária.
+
+## Recursão e soma
+
+**Cenário.** Um relatório de vendas chega em um formato aninhado: cada região é uma lista que pode conter tanto números de vendas quanto sublistas de sub-regiões. Somar tudo exige descer por essa estrutura sem saber, de antemão, quantos níveis de aninhamento existem.
+
+**Tarefa:** Implemente uma função recursiva que some todos os números em uma lista, mesmo quando ela contém sublistas aninhadas em qualquer profundidade.

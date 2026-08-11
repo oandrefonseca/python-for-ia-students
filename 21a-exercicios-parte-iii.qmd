@@ -2,18 +2,28 @@
 title: "Exercícios — Parte III"
 ---
 
-# Exercícios — Parte III
-
 Exercícios sobre recursos intermediários: módulos, OOP, generators, decorators, dataclasses, CLI e testes.
 
-## 1. Classes e dataclasses
-Modele um `Produto` com `@dataclass` (nome, preço, estoque) e implemente `valor_total()` que retorna `preço * estoque`.
+## Classes e dataclasses
 
-## 2. Generators
-Implemente um generator que produza pares `(n, n*n)` para `n` de 1 a 10 e consuma com `next()`.
+**Cenário.** Uma loja quer controlar o valor total do seu estoque: para cada produto, é preciso saber o preço, quantas unidades existem e quanto isso representa em reais.
 
-## 3. Módulos e testes
-Crie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste `pytest` cobrindo entrada válida e inválida.
+**Tarefa:** Modele um `Produto` com `@dataclass` (`nome`, `preco`, `estoque`) e implemente o método `valor_total()`, que retorna `preco * estoque`.
 
-## 4. CLI
-Implemente um script CLI que receba `--arquivo` e imprima o número de linhas do arquivo, tratando erros de arquivo ausente.
+## Generators
+
+**Cenário.** Um painel precisa plotar pares número/quadrado sob demanda, sem montar a lista inteira de antemão — cada ponto é consumido um de cada vez, conforme o gráfico é desenhado.
+
+**Tarefa:** Implemente um generator que produza pares `(n, n*n)` para `n` de 1 a 10, e consuma os valores chamando `next()` manualmente.
+
+## Módulos e testes
+
+**Cenário.** Uma aplicação carrega configurações de um arquivo JSON escrito por outra pessoa da equipe. Antes de confiar nesses dados, é preciso validar que o arquivo existe e está no formato esperado — e garantir, com testes, que essa validação continua funcionando conforme o projeto evolui.
+
+**Tarefa:** Crie um módulo que valide e carregue um JSON de dados. Escreva ao menos um teste `pytest` cobrindo uma entrada válida e uma entrada inválida.
+
+## CLI
+
+**Cenário.** Antes de processar um arquivo de log gigante, um analista quer uma forma rápida de conferir, pelo terminal, quantas linhas ele tem — sem abrir o arquivo em um editor de texto.
+
+**Tarefa:** Implemente um script CLI que receba `--arquivo` e imprima o número de linhas do arquivo, tratando o erro de arquivo ausente com uma mensagem clara.

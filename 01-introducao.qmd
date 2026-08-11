@@ -1,6 +1,6 @@
 # Introdução à linguagem Python
 
-Python é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica, criada por Guido van Rossum e lançada em 1991. Ela se tornou a linguagem padrão em Ciência de Dados e Inteligência Artificial por três motivos principais: a sintaxe é legível e próxima do pseudocódigo, o ecossistema de bibliotecas científicas é vasto (NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow) e a comunidade é enorme, o que facilita encontrar soluções e documentação.
+Python é uma linguagem de programação de alto nível, interpretada e de tipagem dinâmica, criada por Guido van Rossum e lançada em 1991. Ela se tornou a linguagem padrão em Ciência de Dados e Inteligência Artificial por três motivos principais: a sintaxe é legível e próxima do pseudocódigo; o ecossistema de bibliotecas científicas é vasto (NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow); e a comunidade é enorme, o que facilita encontrar soluções e documentação.
 
 ## Características importantes
 
@@ -14,7 +14,7 @@ Python é uma linguagem de programação de alto nível, interpretada e de tipag
 
 - Não há `++`, `--` nem `switch` clássico (há `match/case` desde o Python 3.10).
 - Valores "falsy": `0`, `0.0`, `""`, `[]`, `{}`, `set()` e `None` avaliam como `False` em contexto booleano; o resto é `True`. Isso permite `if lista:` em vez de `if len(lista) > 0:`.
-- Idiomas que surpreendem:
+- Expressões idiomáticas que surpreendem:
 
 ```python
 a, b = b, a                       # troca sem variável temporária

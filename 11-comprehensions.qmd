@@ -40,5 +40,5 @@ iniciais = {nome[0] for nome in notas}
 Prefira comprehensions quando o objetivo é **construir uma coleção** a partir de outra — é mais legível e geralmente mais rápido que `for` + `append`. Para lógica complexa (vários `if`s, efeitos colaterais, mais de duas dimensões), o laço explícito continua preferível: legibilidade vence concisão.
 
 ::: {.callout-tip}
-No Capítulo sobre generators você verá a *generator expression* — a mesma sintaxe com parênteses, `(x ** 2 for x in ...)` — que produz os valores sob demanda, sem materializar a lista na memória.
+No capítulo de generators (Capítulo 17) você verá a *generator expression* — a mesma sintaxe com parênteses, `(x ** 2 for x in ...)` — que produz os valores sob demanda, sem materializar a lista na memória.
 :::
