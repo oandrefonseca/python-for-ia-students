@@ -20,18 +20,19 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget gdebi-core
+          sudo apt-get install -y curl
 
       - name: Install Quarto CLI
         run: |
-          # Try to download the latest Linux .deb from the official releases
-          wget -qO quarto.deb https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb || true
-          if [ -s quarto.deb ]; then
-            sudo apt-get install -y ./quarto.deb || (sudo dpkg -i quarto.deb && sudo apt-get install -f -y)
-          else
+          set -euo pipefail
+          echo "Downloading Quarto CLI..."
+          curl -L --retry 5 --retry-delay 5 --output quarto.deb \
+            https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb
+          if [ ! -s quarto.deb ]; then
             echo "Failed to download quarto .deb. Exiting." >&2
             exit 1
           fi
+          sudo dpkg -i quarto.deb || sudo apt-get install -f -y
 
       - name: Render Quarto site
         run: quarto render
