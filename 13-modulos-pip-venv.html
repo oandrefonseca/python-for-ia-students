@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Módulos, pacotes e ambientes (pip e venv) – Nivelamento em Python</title>
+<title>15&nbsp; Módulos, pacotes e ambientes (pip e venv) – Nivelamento em Python</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d1ce83cbcf7f21d8208077a0fee83aa1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9d48ed9de51e4db89a51ee292ab6623e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-erros.html">Parte III — Recursos intermediários da linguagem</a></li><li class="breadcrumb-item"><a href="./13-modulos-pip-venv.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-erros.html">Parte III — Recursos intermediários da linguagem</a></li><li class="breadcrumb-item"><a href="./13-modulos-pip-venv.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -211,6 +211,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Type hints (anotações de tipo)</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08a-exercicios-parte-i.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Exercícios — Parte I</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -225,19 +231,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09-colecoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Coleções nativas: listas, tuplas, dicionários e conjuntos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Coleções nativas: listas, tuplas, dicionários e conjuntos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10-strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Strings em profundidade</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Strings em profundidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./11-comprehensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Compreensões (comprehensions)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Compreensões (comprehensions)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11a-exercicios-parte-ii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Exercícios — Parte II</span></span></a>
   </div>
 </li>
       </ul>
@@ -254,61 +266,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./12-erros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./13-modulos-pip-venv.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./14-oop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./15-iteradores-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Iteradores e generators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Iteradores e generators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./16-decorators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Decorators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Decorators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./17-dataclasses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Dataclasses</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Dataclasses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./18-biblioteca-padrao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biblioteca padrão essencial</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Biblioteca padrão essencial</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./19-cli.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Interface de linha de comando</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Interface de linha de comando</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./20-testes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Testes e asserções</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Testes e asserções</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./21-arquivos-csv-json.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Arquivos, CSV e JSON</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Arquivos, CSV e JSON</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21a-exercicios-parte-iii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Exercícios — Parte III</span></span></a>
   </div>
 </li>
       </ul>
@@ -325,13 +343,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./22-big-o.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complexidade e notação Big-O</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./23-recursao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Recursão</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Recursão</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./23a-exercicios-parte-iv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exercícios — Parte IV</span></span></a>
   </div>
 </li>
       </ul>
@@ -348,31 +372,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./24-pilha.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Estruturas de dados: Pilha (Stack)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./25-fila.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Estruturas de dados: Fila (Queue)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./26-listas-ligadas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Listas ligadas (Linked Lists)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Listas ligadas (Linked Lists)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./27-arvores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Árvores (Trees)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Árvores (Trees)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./28-grafos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Grafos (Graphs)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Grafos (Graphs)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./28a-exercicios-parte-v.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Exercícios — Parte V</span></span></a>
   </div>
 </li>
       </ul>
@@ -389,7 +419,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./29-exercicios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Exercícios integradores</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Desafio integrador — Fundamentos de IA e Ciência de Dados</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,20 +434,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#importando-módulos" id="toc-importando-módulos" class="nav-link active" data-scroll-target="#importando-módulos"><span class="header-section-number">13.1</span> Importando módulos</a></li>
-  <li><a href="#seus-próprios-módulos" id="toc-seus-próprios-módulos" class="nav-link" data-scroll-target="#seus-próprios-módulos"><span class="header-section-number">13.2</span> Seus próprios módulos</a></li>
-  <li><a href="#instalando-pacotes-com-pip" id="toc-instalando-pacotes-com-pip" class="nav-link" data-scroll-target="#instalando-pacotes-com-pip"><span class="header-section-number">13.3</span> Instalando pacotes com pip</a></li>
-  <li><a href="#ambientes-virtuais-venv" id="toc-ambientes-virtuais-venv" class="nav-link" data-scroll-target="#ambientes-virtuais-venv"><span class="header-section-number">13.4</span> Ambientes virtuais (venv)</a></li>
-  <li><a href="#bibliotecas-que-usaremos-na-disciplina" id="toc-bibliotecas-que-usaremos-na-disciplina" class="nav-link" data-scroll-target="#bibliotecas-que-usaremos-na-disciplina"><span class="header-section-number">13.5</span> Bibliotecas que usaremos na disciplina</a></li>
+  <li><a href="#importando-módulos" id="toc-importando-módulos" class="nav-link active" data-scroll-target="#importando-módulos"><span class="header-section-number">15.1</span> Importando módulos</a></li>
+  <li><a href="#seus-próprios-módulos" id="toc-seus-próprios-módulos" class="nav-link" data-scroll-target="#seus-próprios-módulos"><span class="header-section-number">15.2</span> Seus próprios módulos</a></li>
+  <li><a href="#instalando-pacotes-com-pip" id="toc-instalando-pacotes-com-pip" class="nav-link" data-scroll-target="#instalando-pacotes-com-pip"><span class="header-section-number">15.3</span> Instalando pacotes com pip</a></li>
+  <li><a href="#ambientes-virtuais-venv" id="toc-ambientes-virtuais-venv" class="nav-link" data-scroll-target="#ambientes-virtuais-venv"><span class="header-section-number">15.4</span> Ambientes virtuais (venv)</a></li>
+  <li><a href="#bibliotecas-que-usaremos-na-disciplina" id="toc-bibliotecas-que-usaremos-na-disciplina" class="nav-link" data-scroll-target="#bibliotecas-que-usaremos-na-disciplina"><span class="header-section-number">15.5</span> Bibliotecas que usaremos na disciplina</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-erros.html">Parte III — Recursos intermediários da linguagem</a></li><li class="breadcrumb-item"><a href="./13-modulos-pip-venv.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-erros.html">Parte III — Recursos intermediários da linguagem</a></li><li class="breadcrumb-item"><a href="./13-modulos-pip-venv.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Módulos, pacotes e ambientes (pip e venv)</span></h1>
 </div>
 
 
@@ -435,8 +465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Um <strong>módulo</strong> é um arquivo <code>.py</code> com código reutilizável; um <strong>pacote/biblioteca</strong> é um conjunto de módulos. Este capítulo cobre as duas metades do mesmo assunto: como <strong>obter</strong> bibliotecas externas (pip, venv) e como <strong>importá-las e usá-las</strong>.</p>
-<section id="importando-módulos" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="importando-módulos"><span class="header-section-number">13.1</span> Importando módulos</h2>
+<section id="importando-módulos" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="importando-módulos"><span class="header-section-number">15.1</span> Importando módulos</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sqrt(<span class="dv">16</span>))      <span class="co"># 4.0</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.pi)            <span class="co"># 3.141592...</span></span>
@@ -450,12 +480,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(st.median([<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">6</span>]))   <span class="co"># mediana</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Evite <code>from modulo import *</code>: polui o espaço de nomes e esconde a origem das funções.</p>
 </section>
-<section id="seus-próprios-módulos" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="seus-próprios-módulos"><span class="header-section-number">13.2</span> Seus próprios módulos</h2>
+<section id="seus-próprios-módulos" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="seus-próprios-módulos"><span class="header-section-number">15.2</span> Seus próprios módulos</h2>
 <p>Qualquer arquivo <code>.py</code> é importável. Se <code>utilidades.py</code> define <code>def normalizar(x): ...</code>, outro arquivo na mesma pasta pode fazer <code>from utilidades import normalizar</code>.</p>
 </section>
-<section id="instalando-pacotes-com-pip" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="instalando-pacotes-com-pip"><span class="header-section-number">13.3</span> Instalando pacotes com pip</h2>
+<section id="instalando-pacotes-com-pip" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="instalando-pacotes-com-pip"><span class="header-section-number">15.3</span> Instalando pacotes com pip</h2>
 <p>O <code>pip</code> é o gerenciador de pacotes do Python, que instala bibliotecas do PyPI (Python Package Index):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas              <span class="co"># instala</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas==2.2.0       <span class="co"># versão específica</span></span>
@@ -465,8 +495,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt <span class="co"># reproduz o ambiente em outra máquina</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>No Colab/Jupyter, prefixe com <code>!</code>: <code>!pip install pandas</code>.</p>
 </section>
-<section id="ambientes-virtuais-venv" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="ambientes-virtuais-venv"><span class="header-section-number">13.4</span> Ambientes virtuais (venv)</h2>
+<section id="ambientes-virtuais-venv" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="ambientes-virtuais-venv"><span class="header-section-number">15.4</span> Ambientes virtuais (venv)</h2>
 <p>Projetos diferentes exigem versões diferentes das mesmas bibliotecas. O <strong>ambiente virtual</strong> isola as dependências de cada projeto:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv            <span class="co"># cria o ambiente na pasta .venv</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -490,8 +520,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="bibliotecas-que-usaremos-na-disciplina" class="level2" data-number="13.5">
-<h2 data-number="13.5" class="anchored" data-anchor-id="bibliotecas-que-usaremos-na-disciplina"><span class="header-section-number">13.5</span> Bibliotecas que usaremos na disciplina</h2>
+<section id="bibliotecas-que-usaremos-na-disciplina" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="bibliotecas-que-usaremos-na-disciplina"><span class="header-section-number">15.5</span> Bibliotecas que usaremos na disciplina</h2>
 <ul>
 <li><code>numpy</code> — computação numérica com arrays;</li>
 <li><code>pandas</code> — tabelas e análise de dados;</li>
@@ -906,12 +936,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./12-erros.html" class="pagination-link" aria-label="Tratamento de erros">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tratamento de erros</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./14-oop.html" class="pagination-link" aria-label="Noções de orientação a objetos">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Noções de orientação a objetos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
